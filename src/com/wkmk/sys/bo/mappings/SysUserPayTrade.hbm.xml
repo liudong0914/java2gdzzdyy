@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.sys.bo.SysUserPayTrade" table="sys_user_pay_trade">
+<id name="tradeid" type="java.lang.Integer" column="tradeid">  <generator class="native" /> </id>
+<property  name="outtradeno" type="java.lang.String" column="outtradeno"/>
+<property  name="subject" type="java.lang.String" column="subject"/>
+<property  name="price" type="java.lang.Float" column="price"/>
+<property  name="quantity" type="java.lang.Integer" column="quantity"/>
+<property  name="amount" type="java.lang.Float" column="amount"/>
+<property  name="paytype" type="java.lang.String" column="paytype"/>
+<property  name="body" type="java.lang.String" column="body"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+<property  name="userip" type="java.lang.String" column="userip"/>
+<property  name="state" type="java.lang.String" column="state"/>
+<property  name="userid" type="java.lang.Integer" column="userid"/>
+<property  name="tradetype" type="java.lang.String" column="tradetype"/>
+<property  name="tradetypeid" type="java.lang.String" column="tradetypeid"/>
+</class>
+</hibernate-mapping>

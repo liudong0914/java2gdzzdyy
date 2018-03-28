@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.tk.bo.TkPaperStyle" table="tk_paper_style">
+<id name="styleid" type="java.lang.Integer" column="styleid">  <generator class="native" /> </id>
+<property  name="paperid" type="java.lang.Integer" column="paperid"/>
+<property  name="userid" type="java.lang.Integer" column="userid"/>
+<property  name="subjectid" type="java.lang.Integer" column="subjectid"/>
+<property  name="xueduanid" type="java.lang.Integer" column="xueduanid"/>
+<property  name="h1state" type="java.lang.String" column="h1state"/>
+<property  name="h1value" type="java.lang.String" column="h1value"/>
+<property  name="h2state" type="java.lang.String" column="h2state"/>
+<property  name="h2value" type="java.lang.String" column="h2value"/>
+<property  name="h3state" type="java.lang.String" column="h3state"/>
+<property  name="h4state" type="java.lang.String" column="h4state"/>
+<property  name="h4value" type="java.lang.String" column="h4value"/>
+<property  name="h5state" type="java.lang.String" column="h5state"/>
+<property  name="h5value" type="java.lang.String" column="h5value"/>
+<property  name="h6state" type="java.lang.String" column="h6state"/>
+<property  name="h6value" type="java.lang.String" column="h6value"/>
+<property  name="h7state" type="java.lang.String" column="h7state"/>
+<property  name="h8state" type="java.lang.String" column="h8state"/>
+<property  name="h8value" type="java.lang.String" column="h8value"/>
+<property  name="h9state" type="java.lang.String" column="h9state"/>
+<property  name="h9value" type="java.lang.String" column="h9value"/>
+<property  name="h9value2" type="java.lang.String" column="h9value2"/>
+<property  name="h10state" type="java.lang.String" column="h10state"/>
+<property  name="h10value" type="java.lang.String" column="h10value"/>
+<property  name="h10value2" type="java.lang.String" column="h10value2"/>
+</class>
+</hibernate-mapping>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.zx.bo.ZxHomeworkOrder" table="zx_homework_order">
+<id name="orderid" type="java.lang.Integer" column="orderid">  <generator class="native" /> </id>
+<property  name="questionid" type="java.lang.Integer" column="questionid"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+<property  name="userip" type="java.lang.String" column="userip"/>
+<property  name="money" type="java.lang.Float" column="money"/>
+<property  name="status" type="java.lang.String" column="status"/>
+<property  name="userid" type="java.lang.Integer" column="userid"/>
+</class>
+</hibernate-mapping>

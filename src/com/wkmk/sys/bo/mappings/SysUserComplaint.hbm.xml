@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.sys.bo.SysUserComplaint" table="sys_user_complaint">
+<id name="usercomplaintid" type="java.lang.Integer" column="usercomplaintid">  <generator class="native" /> </id>
+<property  name="complaintid" type="java.lang.Integer" column="complaintid"/>
+<property  name="type" type="java.lang.String" column="type"/>
+<property  name="userid" type="java.lang.Integer" column="userid"/>
+<property  name="descript" type="java.lang.String" column="descript"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+<property  name="enddate" type="java.lang.String" column="enddate"/>
+</class>
+</hibernate-mapping>

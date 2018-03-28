@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.tk.bo.TkPaperCart" table="tk_paper_cart">
+<id name="cartid" type="java.lang.Integer" column="cartid">  <generator class="native" /> </id>
+<property  name="userid" type="java.lang.Integer" column="userid"/>
+<property  name="subjectid" type="java.lang.Integer" column="subjectid"/>
+<property  name="xueduanid" type="java.lang.Integer" column="xueduanid"/>
+<property  name="paperid" type="java.lang.Integer" column="paperid"/>
+<property  name="orderindex" type="java.lang.Integer" column="orderindex"/>
+<property  name="questionsid" type="java.lang.Integer" column="questionsid"/>
+<property  name="score" type="java.lang.Float" column="score"/>
+</class>
+</hibernate-mapping>

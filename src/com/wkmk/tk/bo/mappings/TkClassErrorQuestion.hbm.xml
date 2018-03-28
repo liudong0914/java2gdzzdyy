@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.tk.bo.TkClassErrorQuestion" table="tk_class_error_question">
+<id name="cerrorid" type="java.lang.Integer" column="cerrorid">  <generator class="native" /> </id>
+<property  name="contentid" type="java.lang.Integer" column="contentid"/>
+<property  name="type" type="java.lang.String" column="type"/>
+<property  name="bookcontentid" type="java.lang.Integer" column="bookcontentid"/>
+<property  name="classid" type="java.lang.Integer" column="classid"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+</class>
+</hibernate-mapping>

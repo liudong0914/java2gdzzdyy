@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.sys.bo.SysModuleInfo" table="sys_module_info" lazy="false">
+<id name="moduleid" type="java.lang.Integer" column="moduleid">  <generator class="native" /> </id>
+<property  name="moduleno" type="java.lang.String" column="moduleno"/>
+<property  name="parentno" type="java.lang.String" column="parentno"/>
+<property  name="modulename" type="java.lang.String" column="modulename"/>
+<property  name="moduleicon" type="java.lang.String" column="moduleicon"/>
+<property  name="linkurl" type="java.lang.String" column="linkurl"/>
+<property  name="status" type="java.lang.String" column="status"/>
+<property  name="descript" type="java.lang.String" column="descript"/>
+<property  name="autoopen" type="java.lang.String" column="autoopen"/>
+<property  name="productid" type="java.lang.Integer" column="productid"/>
+</class>
+</hibernate-mapping>

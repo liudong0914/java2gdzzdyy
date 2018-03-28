@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="java2jbxt"
+  id="myeclipse.1359092647253"
+  context-root="/"
+  j2ee-spec="5.0"
+  archive="java2jbxt.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

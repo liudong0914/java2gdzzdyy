@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.sys.bo.SysAreaInfo" table="sys_area_info">
+<id name="areaid" type="java.lang.Integer" column="areaid">  <generator class="native" /> </id>
+<property  name="areaname" type="java.lang.String" column="areaname"/>
+<property  name="areano" type="java.lang.String" column="areano"/>
+<property  name="parentno" type="java.lang.String" column="parentno"/>
+<property  name="citycode" type="java.lang.String" column="citycode"/>
+<property  name="postcode" type="java.lang.String" column="postcode"/>
+<property  name="telecode" type="java.lang.String" column="telecode"/>
+<property  name="pinyin" type="java.lang.String" column="pinyin"/>
+<property  name="shortname" type="java.lang.String" column="shortname"/>
+</class>
+</hibernate-mapping>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.tk.bo.TkBookFile" table="tk_book_file">
+<id name="fileid" type="java.lang.Integer" column="fileid">  <generator class="native" /> </id>
+<property  name="filename" type="java.lang.String" column="filename"/>
+<property  name="filepath" type="java.lang.String" column="filepath"/>
+<property  name="pdfpath" type="java.lang.String" column="pdfpath"/>
+<property  name="pagenum" type="java.lang.Integer" column="pagenum"/>
+<property  name="imagepath" type="java.lang.String" column="imagepath"/>
+<property  name="filesize" type="java.lang.Integer" column="filesize"/>
+<property  name="fileext" type="java.lang.String" column="fileext"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+<property  name="convertstatus" type="java.lang.String" column="convertstatus"/>
+<property  name="type" type="java.lang.String" column="type"/>
+<property  name="downloads" type="java.lang.Integer" column="downloads"/>
+<property  name="bookcontentid" type="java.lang.Integer" column="bookcontentid"/>
+<property  name="bookid" type="java.lang.Integer" column="bookid"/>
+<property  name="userid" type="java.lang.Integer" column="userid"/>
+</class>
+</hibernate-mapping>

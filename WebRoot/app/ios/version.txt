@@ -1,0 +1,2 @@
+Client-Version:1.0.0.0
+Client-File:/app/ios/update/v1.0/1.0.0.0.ipa

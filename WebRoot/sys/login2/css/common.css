@@ -1,0 +1,53 @@
+*{margin:0;padding:0;}
+body{color:#666;font-size:14px;font-family: "Microsoft YaHei",Tahoma,Arial,sans-serif;}
+ul,li{list-style:none}
+img{border:0;}
+a:link, a:visited {color:#666;text-decoration:none;}
+a:hover, a:active {color:#40A9FF;text-decoration:none;}
+a{blr:expression(this.onFocus=this.blur()); /* IE Opera */ outline:none; /* FF Opera */ } 
+a:focus{ -moz-outline-style: none; /* FF */ } 
+h2{color:#000;font-weight:normal;font-size:22px;}
+h3{color:#333;font-weight:normal;font-size:18px;}
+/************** bug ************/
+.clearfix:after {content:""; display:block; height:0px; clear:both; overflow:hidden;}
+.clearfix {display:inline-block;}
+.clearfix {display:block;}
+.mar_1{margin-left:10px;}
+.mar_2{margin-left:30px;}
+.mar_3{margin-right:5px;}
+.mar_4{margin:0 69px;}
+.mar_5{margin-bottom:10px;}
+.mar_6{margin-right:30px;}
+.mar_7{margin:20px 0 10px 0;}
+.mar_8{margin-top:5px;}
+.mar_9{margin-top:55px;}
+.mar_10{margin-top:30px;}
+.mar_11{margin-top:25px;}
+.mar_12{margin-bottom:20px;}
+.mar_13{margin-bottom:50px;}
+.mar_13_1{margin-right:10px;}
+.mar_14{margin-top:10px;}
+.pad_1{padding-left:50px;}
+.pad_2{padding-left:20px;}
+.pad_3{padding-top:10px;}
+.font_1{font-size:12px;}
+.font_2{font-size:24px;}
+.color_2{color:#5fb41b !important;}
+.color_3{color:#666 !important;}
+.color_4{color:#fff108}
+.color_5{color:#c30d23;}
+.color_6{color:#40A9FF !important;}
+.color_7{color:#000;}
+.color_8{color:#c51e32}
+.color_9{color:#fff;}
+.float1{float:left;}
+.float2{float:right}
+.bor_1{border-top:1px solid #eee;border-bottom:1px solid #eee;}
+.bor_2{border-bottom:1px solid #ddd;}
+.back_1{background:#fff;}
+.wap{width:1200px;height:40px;border-bottom:1px solid #ccc;}
+.wap ul{background:url(../images/ico_wap.png) no-repeat left top;width:1170px;height:30px;float:left;padding-left:30px;}
+.wap ul li{float:left;font-size:16px;margin-right:5px;margin-top:5px;}
+.input_1{background:#e6e6e6;height:27px;line-height:27px;border:none;width:200px;padding:5px 10px;float:left;margin-left:2px;}
+.input_2{width:110px;margin-right:10px;background:#e6e6e6;height:27px;line-height:27px;border:none;padding:5px 10px;float:left;margin-left:2px;}
+.sub_1{/*background:#40a8ff;*/background:#47d6aa;border:none;width:257px;height:37px;padding:5px 0;cursor:pointer;font-size:18px;color:#fff;font-family: "Microsoft YaHei";}

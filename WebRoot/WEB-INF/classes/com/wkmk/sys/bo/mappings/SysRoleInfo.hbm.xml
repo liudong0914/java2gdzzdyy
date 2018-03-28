@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.sys.bo.SysRoleInfo" table="sys_role_info">
+<id name="roleid" type="java.lang.Integer" column="roleid">  <generator class="native" /> </id>
+<property  name="roleno" type="java.lang.String" column="roleno"/>
+<property  name="rolename" type="java.lang.String" column="rolename"/>
+<property  name="status" type="java.lang.String" column="status"/>
+<property  name="unitid" type="java.lang.Integer" column="unitid"/>
+</class>
+</hibernate-mapping>

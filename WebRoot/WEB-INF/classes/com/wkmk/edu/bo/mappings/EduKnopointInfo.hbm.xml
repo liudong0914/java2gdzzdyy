@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.edu.bo.EduKnopointInfo" table="edu_knopoint_info">
+<id name="knopointid" type="java.lang.Integer" column="knopointid">  <generator class="native" /> </id>
+<property  name="title" type="java.lang.String" column="title"/>
+<property  name="knopointno" type="java.lang.String" column="knopointno"/>
+<property  name="parentno" type="java.lang.String" column="parentno"/>
+<property  name="kno" type="java.lang.String" column="kno"/>
+<property  name="type" type="java.lang.String" column="type"/>
+<property  name="status" type="java.lang.String" column="status"/>
+<property  name="descript" type="java.lang.String" column="descript"/>
+<property  name="gradetype" type="java.lang.String" column="gradetype"/>
+<property  name="subjectid" type="java.lang.Integer" column="subjectid"/>
+<property  name="updatetime" type="java.lang.String" column="updatetime"/>
+</class>
+</hibernate-mapping>

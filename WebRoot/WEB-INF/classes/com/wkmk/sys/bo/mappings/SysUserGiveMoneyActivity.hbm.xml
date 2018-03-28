@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.sys.bo.SysUserGiveMoneyActivity" table="sys_user_give_money_activity">
+<id name="activityid" type="java.lang.Integer" column="activityid">  <generator class="native" /> </id>
+<property  name="name" type="java.lang.String" column="name"/>
+<property  name="money" type="java.lang.Float" column="money"/>
+<property  name="maxmoney" type="java.lang.Float" column="maxmoney"/>
+<property  name="discount" type="java.lang.Float" column="discount"/>
+<property  name="type" type="java.lang.String" column="type"/>
+<property  name="status" type="java.lang.String" column="status"/>
+<property  name="startdate" type="java.lang.String" column="startdate"/>
+<property  name="enddate" type="java.lang.String" column="enddate"/>
+</class>
+</hibernate-mapping>

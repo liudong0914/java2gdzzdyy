@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.sys.bo.SysAutomationCache" table="sys_automation_cache">
+<id name="cacheid" type="java.lang.Integer" column="cacheid">  <generator class="native" /> </id>
+<property  name="keyid" type="java.lang.String" column="keyid"/>
+<property  name="keyvalue" type="java.lang.Integer" column="keyvalue"/>
+<property  name="livetime" type="java.lang.Long" column="livetime"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+</class>
+</hibernate-mapping>

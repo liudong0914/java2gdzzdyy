@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+	    <property name="driverClass"> 
+	     	<value>${c3p0.driverClass}</value> 
+	    </property> 
+	    <property name="jdbcUrl"> 
+	     	<value>${c3p0.jdbcUrl}</value> 
+	    </property> 
+	    <property name="user"> 
+	     	<value>${c3p0.user}</value> 
+	    </property> 
+	    <property name="password"> 
+	     	<value>${c3p0.password}</value> 
+	    </property> 
+	    <property name="minPoolSize"> 
+	     	<value>${c3p0.minPoolSize}</value>
+	    </property>
+	    <property name="maxPoolSize"> 
+	     	<value>${c3p0.maxPoolSize}</value> 
+	    </property> 
+	    <property name="initialPoolSize"> 
+	     	<value>${c3p0.initialPoolSize}</value> 
+	    </property> 
+	    <property name="maxIdleTime"> 
+	     	<value>${c3p0.maxIdleTime}</value> 
+	    </property> 
+	    <property name="acquireIncrement"> 
+	     	<value>${c3p0.acquireIncrement}</value> 
+	    </property> 
+	    <property name="acquireRetryAttempts"> 
+	     	<value>${c3p0.acquireRetryAttempts}</value> 
+	    </property> 
+	    <property name="acquireRetryDelay"> 
+	     	<value>${c3p0.acquireRetryDelay}</value> 
+	    </property> 
+	    <property name="testConnectionOnCheckin"> 
+	     	<value>${c3p0.testConnectionOnCheckin}</value> 
+	    </property>
+	    <property name="automaticTestTable"> 
+	     	<value>${c3p0.automaticTestTable}</value> 
+	    </property> 
+	    <property name="idleConnectionTestPeriod"> 
+	     	<value>${c3p0.idleConnectionTestPeriod}</value> 
+	    </property>
+	   <property name="checkoutTimeout"> 
+	     	<value>${c3p0.checkoutTimeout}</value> 
+	    </property>
+	</bean>
+    
+    <bean name="hibernateProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+	    <property name="properties">
+	        <props>
+	            <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+	            <prop key="hibernate.show_sql">false</prop>
+	            <prop key="hibernate.default_batch_fetch_size">30</prop>
+				<prop key="hibernate.autoReconnect">true</prop>
+	            <prop key="hibernate.query.factory_class">org.hibernate.hql.ast.ASTQueryTranslatorFactory</prop>
+	        </props>
+	    </property>
+	</bean>
+    
+    <!-- Hibernate SessionFactory -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="mappingDirectoryLocations">
+               <list>                    
+                    <value>classpath:/com/wkmk/sys/bo/mappings/</value>
+                    <value>classpath:/com/wkmk/vwh/bo/mappings/</value>
+                    <value>classpath:/com/wkmk/edu/bo/mappings/</value>
+                    <value>classpath:/com/wkmk/tk/bo/mappings/</value>
+                    <value>classpath:/com/wkmk/zx/bo/mappings/</value>
+                    <value>classpath:/com/wkmk/cms/bo/mappings/</value>
+               </list>
+         </property>
+        <property name="hibernateProperties" ref="hibernateProperties"/>
+    </bean>
+    
+    <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    
+    <bean id="txProxyTemplate" abstract="true"
+        class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+        <property name="transactionManager" ref="transactionManager"/>
+        <property name="transactionAttributes">
+             <props>
+                <prop key="add*">PROPAGATION_REQUIRED</prop>
+                <prop key="update*">PROPAGATION_REQUIRED</prop>
+                <prop key="del*">PROPAGATION_REQUIRED</prop>
+                <prop key="get*">PROPAGATION_REQUIRED,readOnly</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="baseDAO" class="com.util.dao.hibernate.BaseDAOHibernate">
+	   <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    
+</beans>

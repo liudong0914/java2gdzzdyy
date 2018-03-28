@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+<bean id="tkPaperInfoManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkPaperInfoManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkPaperContentManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkPaperContentManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkPaperAnswerManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkPaperAnswerManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkQuestionsKnopointManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkQuestionsKnopointManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkPaperStyleManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkPaperStyleManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkPaperCartManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkPaperCartManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkQuestionsInfoManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkQuestionsInfoManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkQuestionsTypeManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkQuestionsTypeManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkQuestionsFilmManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkQuestionsFilmManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkQuestionsSimilarManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkQuestionsSimilarManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkBookInfoManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkBookInfoManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkBookContentManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkBookContentManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkBookContentQuestionManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkBookContentQuestionManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkClassInfoManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkClassInfoManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkClassUserManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkClassUserManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkClassPasswordManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkClassPasswordManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkClassGroupManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkClassGroupManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkClassGroupUserManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkClassGroupUserManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkClassUploadManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkClassUploadManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkClassErrorQuestionManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkClassErrorQuestionManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkUserErrorQuestionManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkUserErrorQuestionManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkBookContentTaskManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkBookContentTaskManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkUserBookContentManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkUserBookContentManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkQuestionsSimilarWatchManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkQuestionsSimilarWatchManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkBookContentWatchManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkBookContentWatchManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkBookContentPowerManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkBookContentPowerManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkBookContentFilmManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkBookContentFilmManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkBookFileManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkBookFileManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkBookFileDownloadManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkBookFileDownloadManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkBookContentPriceManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkBookContentPriceManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkBookContentBuyManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkBookContentBuyManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkQuestionsInfoFileManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkQuestionsInfoFileManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkBookContentFilmAuditionManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkBookContentFilmAuditionManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkBookContentFilmAuditionWatchManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkBookContentFilmAuditionWatchManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkBookContentFilmWatchManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkBookContentFilmWatchManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkBookContentCommentManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkBookContentCommentManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkPaperTypeManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkPaperTypeManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkPaperFileManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkPaperFileManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkPaperFileDownloadManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkPaperFileDownloadManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkBookContentGoodfilmManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkBookContentGoodfilmManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkTextBookInfoManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkTextBookInfoManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="tkTextBookBuyManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.tk.service.impl.TkTextBookBuyManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+</beans>

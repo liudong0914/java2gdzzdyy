@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+<bean id="vwhComputerInfoManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.vwh.service.impl.VwhComputerInfoManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="vwhFilmInfoManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.vwh.service.impl.VwhFilmInfoManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="vwhFilmPixManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.vwh.service.impl.VwhFilmPixManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="vwhFilmKnopointManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.vwh.service.impl.VwhFilmKnopointManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="vwhFilmWatchManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.vwh.service.impl.VwhFilmWatchManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+</beans>

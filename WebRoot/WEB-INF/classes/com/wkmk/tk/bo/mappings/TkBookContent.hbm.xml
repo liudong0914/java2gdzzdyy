@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.tk.bo.TkBookContent" table="tk_book_content" lazy="false">
+<id name="bookcontentid" type="java.lang.Integer" column="bookcontentid">  <generator class="native" /> </id>
+<property  name="title" type="java.lang.String" column="title"/>
+<property  name="contentno" type="java.lang.String" column="contentno"/>
+<property  name="parentno" type="java.lang.String" column="parentno"/>
+<property  name="beforeclass" type="java.lang.String" column="beforeclass"/>
+<property  name="beforeclasstwocode" type="java.lang.String" column="beforeclasstwocode"/>
+<property  name="teachingcase" type="java.lang.String" column="teachingcase"/>
+<property  name="teachingcasetwocode" type="java.lang.String" column="teachingcasetwocode"/>
+<property  name="mp3path" type="java.lang.String" column="mp3path"/>
+<property  name="mp3pathtwocode" type="java.lang.String" column="mp3pathtwocode"/>
+<property  name="paperid" type="java.lang.Integer" column="paperid"/>
+<property  name="bookid" type="java.lang.Integer" column="bookid"/>
+<property  name="pagenum" type="java.lang.String" column="pagenum"/>
+</class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.vwh.bo.VwhFilmInfo" table="vwh_film_info" lazy="false">
+<id name="filmid" type="java.lang.Integer" column="filmid">  <generator class="native" /> </id>
+<property  name="title" type="java.lang.String" column="title"/>
+<property  name="keywords" type="java.lang.String" column="keywords"/>
+<property  name="descript" type="java.lang.String" column="descript"/>
+<property  name="actor" type="java.lang.String" column="actor"/>
+<property  name="sketch" type="java.lang.String" column="sketch"/>
+<property  name="sketchimg" type="java.lang.String" column="sketchimg"/>
+<property  name="orderindex" type="java.lang.Integer" column="orderindex"/>
+<property  name="hits" type="java.lang.Integer" column="hits"/>
+<property  name="status" type="java.lang.String" column="status"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+<property  name="updatetime" type="java.lang.String" column="updatetime"/>
+<property  name="computerid" type="java.lang.Integer" column="computerid"/>
+<many-to-one name="eduGradeInfo" class="com.wkmk.edu.bo.EduGradeInfo" cascade="none" column="gradeid" not-null="true"/>
+<many-to-one name="sysUserInfo" class="com.wkmk.sys.bo.SysUserInfo" cascade="none" column="userid" not-null="true"/>
+<property  name="unitid" type="java.lang.Integer" column="unitid"/>
+<property  name="twocodepath" type="java.lang.String" column="twocodepath"/>
+</class>
+</hibernate-mapping>

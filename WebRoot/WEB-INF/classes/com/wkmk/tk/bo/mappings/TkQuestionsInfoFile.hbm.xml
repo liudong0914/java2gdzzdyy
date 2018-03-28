@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.tk.bo.TkQuestionsInfoFile" table="tk_questions_info_file">
+<id name="fileid" type="java.lang.Integer" column="fileid">  <generator class="native" /> </id>
+<property  name="filepath" type="java.lang.String" column="filepath"/>
+<property  name="questionsfilepath" type="java.lang.String" column="questionsfilepath"/>
+<property  name="titlefilepath" type="java.lang.String" column="titlefilepath"/>
+<property  name="option1filepath" type="java.lang.String" column="option1filepath"/>
+<property  name="option2filepath" type="java.lang.String" column="option2filepath"/>
+<property  name="option3filepath" type="java.lang.String" column="option3filepath"/>
+<property  name="option4filepath" type="java.lang.String" column="option4filepath"/>
+<property  name="option5filepath" type="java.lang.String" column="option5filepath"/>
+<property  name="option6filepath" type="java.lang.String" column="option6filepath"/>
+<property  name="option7filepath" type="java.lang.String" column="option7filepath"/>
+<property  name="option8filepath" type="java.lang.String" column="option8filepath"/>
+<property  name="option9filepath" type="java.lang.String" column="option9filepath"/>
+<property  name="option10filepath" type="java.lang.String" column="option10filepath"/>
+<property  name="rightansfilepath" type="java.lang.String" column="rightansfilepath"/>
+<property  name="descriptfilepath" type="java.lang.String" column="descriptfilepath"/>
+<property  name="questionid" type="java.lang.Integer" column="questionid"/>
+</class>
+</hibernate-mapping>

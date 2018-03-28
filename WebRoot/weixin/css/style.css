@@ -1,0 +1,1331 @@
+@charset "utf-8";
+/* CSS Document */
+/***********登录*********/
+#content{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	padding-bottom:0px;
+	}
+.content_user{
+	width:186px;
+	height:175px;
+	margin:0 auto;
+	margin-top:30px;
+	text-align:center;
+	font-size:16px;
+	color:#1b1a1f;
+	}
+.content_user p{
+	margin-top:12px;
+	}
+.content_input{
+	width:80%;
+	height:50px;
+	margin:0 auto;
+	border-bottom:1px solid #eee;
+	margin-top:1%;
+	}
+.content_input_img{
+	margin-left:16px;
+	line-height:50px;
+	margin-top:23px;
+	}
+.input{
+	position: absolute;
+	width:68%;
+	margin: 0 auto;
+	height: 32px;
+	line-height:34px;
+	font-size: 16px;
+	margin-left: 1%;
+	margin-right: auto;
+	margin-top: 17px;
+	border: 0px;
+	}
+.content_botton{
+	position:relative;
+	width:auto;
+	}
+.botton1,.botton4{
+	width:80%;
+	height:34px;
+	border:1px solid #3cd5a1;
+	margin:0 auto;
+	margin-top:20px;
+	border-radius:8px;
+	-webkit-border-radius:8px;
+	color:#fff;
+	line-height:34px;
+	text-align:center;
+	font-size:16px;
+	background-color:#3cd5a1;
+	}
+.botton2,.botton3{
+	width:80%;
+	height:34px;
+	border:1px solid #3cd5a1;
+	margin:0 auto;
+	margin-top:16px;
+	border-radius:8px;
+	-webkit-border-radius:8px;
+	color:#45d4a2;
+	line-height:34px;
+	text-align:center;
+	font-size:16px;
+	}
+.tips{
+	width:85%;
+	height:35px;
+	margin-left:10%;
+	margin-top:10px;
+	text-align:left;
+	font-size:12px;
+	color:#ff0000;
+	margin-right:5%;
+	}
+/***********注册*********/
+#container{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	padding-bottom:0px;
+	margin-top:10px;
+	font-size:16px;
+	}
+.container_1{
+	width:100%;
+	height:50px;
+	border-bottom:1px solid #eee;
+	border-top:1px solid #eee;
+	background-color:#fff;
+	}
+.container_1_size{
+	margin:0 auto;
+	width:100%;
+	height:50px;
+	line-height:50px;
+	color:#18181d;
+	}
+.container_1_radio{
+	margin-left:1.5%;
+	color:#45d4a2;
+}
+.label{
+	margin-left:2.5%;
+	}
+.container_1_size_style{
+	width: 22px;
+	height: 22px;
+	padding-top: 3px;
+	cursor: pointer;
+	text-align: center;
+	margin-right: 10px;
+	background-image: url(../images/radio.png);
+	background-repeat: no-repeat;
+	}
+.container_2{
+	margin:0 auto;
+	width:100%;
+	height:50px;
+	border-bottom:1px solid #eee;
+	background-color:#fff;
+	color:#18181d;
+	}
+.container_2_size{
+	width:auto;
+	margin-left:18px;
+	height:50px;
+	}
+.container_2_input{
+	font-family: Microsoft YaHei;
+	width:100%;
+	height:50px;
+	border:0px;
+	line-height:50px;
+	font-size:16px;
+	color:#18181d;
+	}
+.container_2_more{
+	float:right;
+	margin-top:17.5px;
+	margin-right:18px;
+	}
+.container_2_size_span{
+	display:block;
+	float:left;
+	line-height:50px;
+	}
+
+.container_3{
+	width:80%;
+	margin:0 auto;
+	}
+.container_3 a{
+	display:block;
+	width:100%;
+	height:34px;
+	border-radius:5px;
+	background-color:#45d4a2;
+	text-align:center;
+	line-height:34px;
+	color:#fff;
+	margin-top:36px;
+	letter-spacing:2px;
+	}
+
+.container_2_size_img{
+	float:right;
+	margin-top:20px;
+	}
+
+/*************注册成功*************/
+.content_font{
+	width:100%;
+	height:65px;
+	margin:0 auto;
+	font-size:16px;
+	color:#8c8c8c;
+	line-height:24px;
+	text-align:center;
+	}
+	
+/**************创建班级*************/
+.container_4{
+	width:100%;
+	height:50px;
+	border-bottom:1px solid #eee;
+	border-top:1px solid #eee;
+	background-color:#fff;
+	margin-top:10px;
+	}
+.container_1_size_cj{
+	width:80px;
+	height:50px;
+	float:left;
+	margin-left:18px;
+	}
+.container_1_radio2{
+	width:65%;
+	height:50px;
+	font-size:16px;
+	line-height:52px;
+	border:0px;
+	text-indent:1px;
+	letter-spacing:1px;
+	}
+.container_1_size_11{
+	display:block;
+	width:175px;
+	height:50px;
+	float:left;
+	line-height:50px;
+	margin-left:18px;
+	}
+.container_1_size_111{
+	display:block;
+	width:auto;
+	height:50px;
+	float:left;
+	line-height:50px;
+	margin-left:18px;
+	}
+.container_4_form{
+	float:right;
+	width: auto;
+	height:auto;
+	line-height:50px;
+	margin-right:18px;
+	}
+.container_4_font{
+	margin-left:6px;
+	}
+.conrainer_4_div{
+	top:-10px;
+	width:96%;
+	margin:0 auto;
+	position: relative;
+	height:100px;
+	display:none;
+	background-color:#fff;
+	}
+
+/***************作业本列表**************/
+.box{
+	width:100%;
+	height:100%;
+	margin:0 auto;
+	font-size:16px;
+	}
+.box_1{
+	height:50px;
+	border-bottom:1px solid #eee;
+	background-color:#fff;
+	line-height:47px;
+	top:0;
+	}
+.box_1_size{
+	width:auto;
+	margin:0 auto;
+	height:50px;
+	margin-left:18px;
+	}
+.box_1_size_1_img{
+	position: relative;
+	padding-top:22px;
+	padding-left:1px;
+	float:left;
+	}
+.box_1_size_1_input{
+	margin-left:8px;
+	width:46%;
+	height:32px;
+	float:left;
+	margin-top:8px;
+	border-radius:5px;
+	text-indent:2px;
+	line-height:32px;
+	float:left;
+	border:0px;
+	background-color:#eee;
+	}
+.box_1_size_2{
+	float:left;
+	width:16.5%;
+	height:32px;
+	border-radius:5px;
+	background-color:#45d4a2;
+	line-height:32px;
+	text-align:center;
+	margin-top:8px;
+	margin-left:1.5%;
+	color:#fff;
+	}
+.container_4_form_1{
+	float:right;
+	}
+.container_4_radio_list{
+	float:right;
+	margin-top:30px;
+	}
+.container_4_radio_list1{
+	margin-right:18px;
+	margin-top:19.5px;
+	}
+.container_5{
+	height:50px;
+	border-bottom:1px solid #eee;
+	background-color:#fff;
+	line-height:50px;
+	}
+.container_6{
+	width:80%;
+	height:100px;
+	margin:0 auto;
+	margin-top:30px;
+	}
+.container_6_size{
+	width:100%;
+	background-color:#45d4a2;
+	border-radius:5px;
+	height:36px;
+	text-align:center;
+	font-size:16px;
+	color:#fff;
+	line-height:36px;
+	margin:0 auto;
+	}
+.box_div2_1{
+	background-image:url(../images/box_div2_1_bg.png);
+	width:100%;
+	height:100%;
+	display:none;
+	position:absolute;
+	color:#707070;
+	}
+.box_div2_1_1{
+	width:100%;
+	height:25%;
+	background-color:#eee;
+	}
+.box_div2_1_a{
+	width:20%;
+	height:30px;
+	border:1px solid #d1d1d1;
+	background-color:#fff;
+	text-align:center;
+	line-height:30px;
+	float:left;
+	margin-left:3.5%;
+	margin-top:2%;
+	display:block;
+	color:#707070;
+	}
+
+.box_div2_1_a a:visited { color:#707070; background-color:#dcdcdc;text-decoration:none;}
+.box_div2_1_a:visited { color:#707070; background-color:#dcdcdc;text-decoration:none;}
+.box_div2_1_a:hover { color:#707070;background-color:#dcdcdc;text-decoration:none; }
+.box_div2_1_a:active { color:#707070;background-color:#dcdcdc;text-decoration:none; }
+
+/*******************添加班级*****************/
+#container_add{
+	width:100%;
+	height:100%;
+	padding-top:1%;
+	overflow:hidden;
+	padding-bottom:74px;
+	}
+.container_add_moble{
+	position:relative;
+	width:26.5%;
+	padding-bottom:26.5%;
+	height:0;
+	background-color:#78e0bf;
+	border-radius:10px;
+	margin-left:5%;
+	text-align:center;
+	float:left;
+	margin-top:3%;
+	}
+.container_add_moble1{
+	position:relative;
+	width:26.5%;
+	padding-bottom:26.5%;
+	height:0;
+	background-color:#8bebdf;
+	border-radius:10px;
+	margin-left:5%;
+	text-align:center;
+	float:left;
+	margin-top:3%;
+	}
+.container_add_moble1:visited,.container_add_moble:visited{
+	background-color:#e5e5e5;
+	}
+.container_add_moble2{
+	position:relative;
+	width:26.3%;
+	padding-bottom:26.3%;
+	height:0;
+	border:1px solid #78dfbe;
+	border-radius:10px;
+	margin-left:5%;
+	text-align:center;
+	float:left;
+	margin-top:3%;
+	}
+.container_add_moble2_img{
+	margin-top:24%;
+	}
+.container_add_moble_img{
+	position:absolute;
+	top:0px;
+	right:0px;
+	}
+.container_add_moble_p{
+	margin:auto auto;
+	}
+.container_add_moble_p1{
+	color:#fff;
+	font-size:16px;
+	padding-top:22%;
+	}
+.container_add_moble_p2{
+	color:#bfffea;
+	font-size:14px;
+	padding-top:8%;
+	}
+.container_add_moble_p3{
+	color:#dafffa;
+	font-size:14px;
+	padding-top:8%;
+	}
+
+/****************作业本目录列表***************/
+#container_list{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	padding-bottom:74px;
+	}
+.container_7{
+	height:100%;
+	border-bottom:1px solid #eee;
+	border-top:1px solid #eee;
+	background-color:#fff;
+	margin-top:14px;
+	overflow:hidden;
+	}
+.container_7_size{
+	margin-left:18px;
+	height:100%;
+	color:#18181d;
+	font-size:16px;
+	line-height:34px;
+	padding-top:8px;
+	}
+.container_7_size_moble{
+	color:#7c7c7c;
+	display:block;
+	width:100%;
+	height: auto;
+	float:none;
+	overflow:hidden;
+	font-size:14px;
+	line-height:24px;
+	}
+
+.conrainer_7_size_moble_img{
+	text-align: right;
+	vertical-align:middle;
+	padding-right: 0px;
+	float:right;
+	margin-top:12px;
+	}
+.school_img{
+	margin-top:5px;
+	margin-right:18px;
+	}
+.container_7_size_font{
+	width:auto;
+	height:38px;
+	padding-top:8px;
+	margin-right:18px;
+	}
+.conrainer_7_moble_span{
+	width:80%;
+	height:100%;
+	float:left;
+	line-height:22px;
+	}
+.container_7_size_a{
+	display:block;
+	border:1px solid #3cd4a1;
+	border-radius:5px;
+	width:19%;
+	height:24px;
+	font-size:12px;
+	text-align:center;
+	color:#3cd4a1;
+	line-height:24px;
+	/*float:right;
+	margin-left:5%;*/
+	float:left;
+	margin-left:3.6%;
+	margin-right:0px;
+	}
+.container_8{
+	height:100%;
+	border-bottom:1px solid #eee;
+	background-color:#fff;
+	}
+.container_8_size{
+	margin-left:18px;
+	width:auto;
+	height:100%;
+	color:#18181d;
+	font-size:20px;
+	line-height:44px;
+	padding-top:10px;
+	}
+	
+/************错题本*************/
+.container_9{
+	height:100%;
+	margin-top:10px;
+	border-top:1px solid #eee;
+	border-bottom:1px solid #eee;
+	background-color:#fff;
+	}
+.container_9_size{
+	width:100%;
+	height:100%;
+	margin:0 auto;
+	color:#18181d;
+	font-size:20px;
+	line-height:44px;
+	padding-top:5px;
+	}
+.container_9_size_moble{
+	display:block;
+	overflow:hidden;
+	font-size:14px;
+	line-height:30px;
+	width:100%;
+	height:auto;
+	float:none;
+	}
+.conrainer_9_moble_span{
+	width:80%;
+	height:100%;
+	float:left;
+	line-height:22px;
+	margin-left:18px;
+	padding-top:7px;
+	padding-bottom:12px;
+	}
+.container_9_size_font{
+	width:100%;
+	height:44px;
+	margin-top:10px;
+	}
+.conrainer_9_size_moble_img{
+	text-align: right;
+	vertical-align:middle;
+	padding-right: 0px;
+	float:right;
+	margin-top:12px;
+	margin-right:18px;
+	}
+.container_9_size_a1{
+	background-color:#3cd4a1;
+	display:block;
+	border:1px solid #3cd4a1;
+	border-radius:5px;
+	width:23%;
+	height:24px;
+	font-size:14px;
+	text-align:center;
+	color:#fff;
+	line-height:24px;
+	float:right;
+	margin-left:2%;
+	margin-right:18px;
+	}
+.container_9_size_a{
+	display:block;
+	border:1px solid #3cd4a1;
+	border-radius:5px;
+	width:23%;
+	height:24px;
+	font-size:14px;
+	text-align:center;
+	color:#3cd4a1;
+	line-height:24px;
+	float:right;
+	margin-left:2%;
+	margin-right:0px;
+	}
+.container_10{
+	height:100%;
+	border-bottom:1px solid #eee;
+	background-color:#fff;
+	}
+.container_11{
+	width:80%;
+	height:70px;
+	margin:0 auto;
+	margin-top:50px;
+	}
+.container_12{
+	width:80%;
+	height:50px;
+	margin:0 auto;
+	margin-top:20px;
+	}
+.container_11_size{
+	width:100%;
+	background-color:#45d4a2;
+	border-radius:5px;
+	height:36px;
+	text-align:center;
+	font-size:16px;
+	color:#fff;
+	line-height:36px;
+	margin:0 auto;
+	}
+/****************题******************/
+.container_question{
+	width:100%;
+	height:100%;
+	margin:0 auto;
+	background-color:#fff;
+	border-top:1px solid #eee;
+	border-bottom:1px solid #eee;
+	}
+.container_question_size{
+	width:100%;
+	height:100%;
+	margin:0 auto;
+	font-size:16px;
+	padding-top:14px;
+	padding-bottom:14px;
+	overflow:hidden;
+	}
+.container_answer_size{
+	width:100%;
+	height:100%;
+	margin:0 auto;
+	font-size:14px;
+	padding-top:10px;
+	padding-bottom:10px;
+	overflow:hidden;
+	
+	}
+.container_question_size_title{
+	width:90%;
+	/*width:auto;*/
+	height:auto;
+	display:block;
+	float:left;
+	margin-left:18px;
+	margin-right:18px;
+	line-height:20px;
+	}
+.container_question_size_title1{
+	float:right;
+	display:block;
+	margin-right:18px;
+	margin-top:-1px;
+	}
+.container_answer{
+	width:100%;
+	height:100%;
+	margin:0 auto;
+	margin-top:10px;
+	background-color:#fff;
+	border-top:1px solid #eee;
+	border-bottom:1px solid #eee;
+	}
+.container_answer_size label{
+	line-height:22px;
+	margin-left:8px;
+	color:#6e6e6e;
+	width:80%;
+	}
+.container_answer_size_radio{
+	width:90%;
+	height:auto;
+	margin-left:18px;
+	padding-top:7px;
+	padding-bottom:7px;
+	}
+.container_answer_size_radio_input{
+	border-bottom:1px solid #18181d;
+	border-top:0px;
+	border-left:0px;
+	border-right:0px;
+	height:20px;
+	line-height:20px;
+	font-size:16px;
+	width:75%;
+	}
+/***********学生注册成功*************/
+.botton5{
+	width:200px;
+	margin:0 auto;
+	display:block;
+	text-align:center;
+	font-size:14px;
+	margin-top:14px;
+	color:#8c8c8c;
+	}
+.botton6{
+	width:96%;
+	height:34px;
+	line-height:34px;
+	border:0px;
+	margin-top:0px;
+	font-size:16px;
+	background-color:#f3f3f3;
+	}
+/***********学生绑定作业本*****************/
+.container_add_moble_p4{
+	color:#000;
+	font-size:16px;
+	padding-top:22%;
+	}
+.container_add_moble_p5{
+	color:#848484;
+	padding-top:8%;
+	font-size:14px;
+	}
+.container_add_moble_p6{
+	color:#000;
+	font-size:16px;
+	padding-top:38%;
+	}
+/******************学生题*******************/
+.conrainer_button{
+	width:90%;
+	height:70px;
+	margin:0 auto;
+	padding-top:30px;
+	}
+.conrainer_button1{
+	display:block;
+	width:25%;
+	height:28px;
+	float:right;
+	text-align:center;
+	font-size:16px;
+	color:#fff;
+	line-height:28px;
+	background-color:#46d4a2;
+	border-radius:5px;
+	margin-left:3%;
+	}
+/****************学生看微课****************/
+.container_class{
+	width:100%;
+	height:100%;
+	margin:0 auto;
+	background-color:#fff;
+	border-top:1px solid #eee;
+	border-bottom:1px solid #eee;
+	}
+.container_class_title{
+	width:100%;
+	height:100%;
+	background-color:#fff;
+	border-top:1px solid #eee;
+	border-bottom:1px solid #eee;
+	padding-top:14px;
+	padding-bottom:14px;
+	margin-top:10px;
+	font-size:16px;
+	}
+.container_class_title_size{
+	width:93%;
+	height:100%;
+	margin-left:18px;
+	color:#000;
+	line-height:20px;
+	}
+.container_class_other{
+	width:100%;
+	height:100%;
+	margin:0 auto;
+	background-color:#fff;
+	border-top:1px solid #eee;
+	border-bottom:1px solid #eee;
+	margin-top:10px;
+	line-height:24px;
+	font-size:14px;
+	}
+.container_class_other1{
+	width:100%;
+	height:100%;
+	margin:0 auto;
+	background-color:#fff;
+	border-bottom:1px solid #eee;
+	line-height:24px;
+	font-size:14px;
+	}
+.container_class_other a,.container_class_other1 a{
+	color:#787878;
+	}
+.container_class_other_size{
+	height:100%;
+	padding-top:11px;
+	padding-bottom:6px;
+	margin-left:18px;
+	color:#787878;
+	overflow:hidden;
+	}
+.container_class_other_size_left{
+	display:block;
+	float:left;
+	position:relative;
+	width:90%;
+	height:100%;
+	}
+.container_class_other_size_right{
+	float:right;
+	width:30px;
+	height:30px;
+	margin-right:0px;
+	}
+.container_class_other_size_right_img{
+	position:absolute;
+	margin-top:5px;
+	margin-left:6px;
+	}
+	
+/****************拍照上传*****************/
+/*
+.conrainer_photo{
+	width:96%;
+	height:100%;
+	margin:0 auto;
+	overflow:hidden;
+	}
+.conrainer_photo_img{
+	float:left;
+	margin:0.5%;
+	width:24%;
+	height:auto;
+	}
+*/
+.conrainer_photo{
+	width:97%;
+	height:100%;
+	margin:0 auto;
+	overflow:hidden;
+	}
+.conrainer_photo_img{
+	float:left;
+	margin:0.5%;
+	width:23.8%;
+	height:23vw;	
+	}
+/*******************填答题卡******************/
+#container_answer_card{
+	width:100%;
+	height:100%;
+	margin:0 auto;
+	padding-bottom:76px;
+	}
+.container_answer_card1,.container_answer_card2{
+	width:100%;
+	height:100%;
+	margin:0 auto;
+	background-color:#fff;
+	border-top:1px solid #eee;
+	border-bottom:1px solid #eee;
+	line-height:24px;
+	font-size:16px;
+	margin-top:10px;
+	}
+.container_answer_card1_size{
+	width:100%;
+	height:auto;
+	padding-top:12px;
+	padding-bottom:12px;
+	margin:0 auto;
+	overflow:hidden;
+	}
+.container_answer_card1_size p{
+	width:6%;
+	display:block;
+	float:left;
+	margin-left:18px;
+	}
+.container_answer_card2_size p{
+	width:6%;
+	display:block;
+	float:left;
+	margin-top:5px;
+	margin-left:18px;
+	}
+.container_answer_card1_size_radio{
+	margin-left:5px;
+	}
+.container_answer_card1_size_input{
+	width:16%;
+	float:left;
+	margin-left:5.5%;
+	}
+.container_answer_card2_size_text{
+	width:82%;
+	height:34px;
+	border:none;
+	border-bottom:1px solid #e2e2e2;
+	margin-left:2%
+	}	
+.container_answer_card2_size{
+	width:100%;
+	height:auto;
+	padding-top:7px;
+	padding-bottom:7px;
+	margin:0 auto;
+	}
+.container_answer_card3{
+	width:100%;
+	height:100%;
+	margin:0 auto;
+	background-color:#fff;
+	border-top:1px solid #eee;
+	border-bottom:1px solid #eee;
+	line-height:24px;
+	font-size:16px;
+	margin-top:10px;
+	}
+.container_answer_card3_size{
+	width:100%;
+	height:auto;
+	padding-top:5px;
+	padding-bottom:10px;
+	margin:0 auto;
+	overflow:hidden;
+	}
+.container_answer_card3_size p{
+	width:6%;
+	display:block;
+	float:left;
+	margin-top:10px;
+	margin-left:18px;
+	}
+.container_answer_card3_right{
+	float:left;
+	width:84%;
+	height:auto;
+	overflow:hidden;
+	margin-left:2%;
+	}
+.container_answer_card4_right{
+	float:left;
+	width:90%;
+	height:auto;
+	overflow:hidden;
+	margin-left:2%;
+	}
+.container_answer_card3_size_text{
+	width:99%;
+	height:34px;
+	line-height:34px;
+	border:none;
+	border-bottom:1px solid #e2e2e2;
+	margin-top:5px;
+	}
+.container_answer_card3_size_input{
+	width:20%;
+	float:left;
+	margin-left:3%;
+	}
+.container_answer_card3_size_radio{
+	margin-left:5px;
+	}
+.container_answer_card3_size span{
+	width:6%;
+	display:block;
+	float:left;
+	margin-left:5px;
+	}
+.container_answer_card3_right_div{
+	padding-top:5px;
+	padding-bottom:5px;
+	width:100%;
+	height:auto;
+	overflow:hidden;
+	margin-top:5px;
+	}
+.container_answer_card4_size_text{
+	width:99%;
+	height:34px;
+	float:left;
+	line-height:34px;
+	border:none;
+	border-bottom:1px solid #e2e2e2;
+	}
+/***********弹出窗口样式************/
+.tanchu_wx{
+	width:300px;
+	height:auto;
+	position:absolute;
+	left:50%;
+	margin-left:-150px;
+	top:50%;
+	margin-top:-120px;	
+}
+.tanchu_wx img{
+	display:inline-block;
+}
+.fade1{
+	height:100%;
+	width:100%;
+	position:fixed;
+	background-image: url(../images/bjtc.png);
+	z-index:9999;
+	display:none;
+	margin-top:-10px;
+}
+.tanchu_fade{
+	width:300px;
+	height:auto;
+	background-color:#fff;
+	border-radius:5px;
+	padding:5px;
+	font-size:16px;
+	line-height:22px;
+	color:#000;
+	}
+.tanchu_fade_font{
+	width:280px;
+	height:auto;
+	margin:0 auto;
+	overflow:hidden;
+	}
+.tanchu_fade_font_form{
+	float:right;
+	padding:5px;
+	margin-top:5px;
+	}
+.tanchu_fade_font input{
+	width:70px;
+	height:30px;
+	}
+/************新添加班级列表***********/
+.container_bj{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	padding-bottom:55px;
+	font-size:16px;
+	}
+.conrainer_4_bj{
+	float:left;
+	margin-left:18px;
+	margin-top:3px;
+	}
+.conrainer_4_bj_1{
+	font-size:16px;
+	color:#000;
+	line-height:30px;
+	}
+.conrainer_4_bj_2{
+	font-size:14px;
+	color:#c2c2c2;
+	line-height:18px;
+	}
+.conrainer_4_bj_3{
+	font-size:16px;
+	color:#000;
+	line-height:50px;
+	}
+.conrainer_4_bj_a{
+	float:right;
+	line-height:20px;
+	margin-right:18px;
+	display:block;
+	width:62px;
+	height:20px;
+	font-size:14px;
+	color:#fff;
+	background-color:#b8d8cd;
+	text-align:center;
+	border-radius:3px;
+	margin-top:9px;
+	}
+.conrainer_4_bj_a1{
+	line-height:20px;
+	float:right;
+	margin-right:18px;
+	display:block;
+	width:62px;
+	height:20px;
+	font-size:14px;
+	color:#fff;
+	background-color:#b8d8cd;
+	text-align:center;
+	border-radius:3px;
+	margin-top:19px;
+	}
+.container_44{
+	width:100%;
+	height:60px;
+	border-bottom:1px solid #eee;
+	border-top:1px solid #eee;
+	background-color:#fff;
+	margin-top:10px;
+	}
+.container_3_size_bj{
+	margin-top:50px;
+	}
+/****************添加班级详情页*****************/
+.container_bjxq{
+	width:100%;
+	height:270px;
+	margin:0 auto;
+	text-align:center;
+	}
+.container_bjxq img{
+	margin-top:20px;
+
+	}
+.container_bjxq_font{
+	width:auto;
+	height:50px;
+	line-height:50px;
+	color:#18181d;
+	margin-left:18px;
+	overflow:hidden;
+}
+.container_bjxq_font_p{
+	display:block;
+	float:left;
+	}
+.container_bjxq_font_a{
+	float:right;
+	display:block;
+	width:70px;
+	height:24px;
+	border:1px solid #45d4a2;
+	color:#45d4a2;
+	font-size:14px;
+	border-radius:3px;
+	margin-right:18px;
+	line-height:24px;
+	text-align:center;
+	margin-top:12px;
+	}
+/**************确认页面**************/
+.container_nr{
+	width:80%;
+	height:auto;
+	border:1px solid #eee;
+	margin:0 auto;
+	padding:12px;
+	background-color:#fff;
+	margin-top:20px;
+	border-radius:8px;
+	}
+.conrainer_nr_font{
+	width:97%;
+	font-size:14px;
+	height:auto;
+	/*text-indent:2em;*/
+	margin:0 auto;
+	}
+.container_nr_moble{
+	width:80%;
+	height:80px;
+	margin:0 auto;
+	margin-top:20px;
+}
+.container_nr_moble1{
+	width:34%;
+	height:34px;
+	text-align:center;
+	background-color:#45d4a2;
+	border-radius:5px;
+	font-size:16px;
+	color:#fff;
+	line-height:36px;
+	float:left;
+	margin-left:10%;
+	}
+.container_nr_moble2{
+	width:34%;
+	height:34px;
+	text-align:center;
+	background-color:#45d4a2;
+	border-radius:5px;
+	font-size:16px;
+	color:#fff;
+	line-height:36px;
+	float:left;
+	margin-left:10%;
+	}
+.container_nr_moble3{
+	width:34%;
+	height:34px;
+	text-align:center;
+	border:1px solid #3cd5a1;
+	border-radius:8px;
+	-webkit-border-radius:8px;
+	color:#45d4a2;
+	border-radius:5px;
+	font-size:16px;
+	line-height:36px;
+	float:left;
+	margin-left:10%;
+	}
+/**************确认页面**************/
+.container_welcome{
+	width:86%;
+	height:auto;
+	padding:2%;
+	border:1px solid #eee;
+	margin:0 auto;
+	background-color:#fff;
+	margin-top:20px;
+	border-radius:8px;
+	}
+.conrainer_welcome_font{
+	width:100%;
+	font-size:14px;
+	height:auto;
+	text-indent:2em;
+	margin:0 auto;
+	}
+.container_welcome_moble{
+	width:90%;
+	height:80px;
+	margin:0 auto;
+	margin-top:20px;
+}
+.container_welcome_moble0{
+	width:100%;
+	height:34px;
+	text-align:center;
+	background-color:#45d4a2;
+	border-radius:5px;
+	font-size:16px;
+	color:#fff;
+	line-height:36px;
+	float:left;
+	}
+.container_tips{
+	width:95%;
+	height:auto;
+	padding:2%;
+	border:1px solid #eee;
+	margin:0 auto;
+	background-color:#fff;
+	margin-top:5px;
+	border-radius:8px;
+	}
+.conrainer_tips_font{
+	width:100%;
+	font-size:12px;
+	height:auto;
+	margin:0 auto;
+	}
+/*****************听力页面*****************/
+.music{
+	width:100%;
+	height:auto;
+	margin:0 auto;
+	padding-bottom:55px;
+	}
+.music_tltle{
+	width:100%;
+	height:50px;
+	border-bottom:1px solid #eee;
+	border-top:1px solid #eee;
+	background-color:#fff;
+	margin-top:20px;
+	}
+.music_tltle_font{
+	width:auto;
+	height:50px;
+	line-height:50px;
+	color:#727171;
+	margin-left:18px;
+	margin-right:18px;
+	overflow:hidden;
+	font-size:16px;
+	}
+.music_main{
+	width:309px;
+	height:330px;
+	margin:0 auto;
+	margin-top:50px;
+	}
+
+/*分页*/
+.page{ position:relative;letter-spacing:0px;height:40px;margin-top:20px; padding-left:2px;}
+.page ul,li{list-style:none}
+.page ul{padding-left:0px;}
+.page ul li{float:left;}
+.page ul li a{padding:5px 13px;color:#666;background:#fff;margin:0 2px;border:1px solid #eee;}
+.page ul li a:hover{background:#45d4a2;color:#fff !important;}
+.page ul li a.curss{background:#45d4a2;color:#fff !important;}
+
+/***********  浮动层    ***********/ 
+.category{width:94%; height:100%; padding:3%; background:url(../images/f01.png); position:fixed; top:0px; color:#FFFFFF; line-height:26px; font-size:14px; overflow:auto; z-index:1000;}
+.category dl{margin-bottom:20px; overflow:hidden; border-bottom:#999 1px solid;}
+.category dl dt{ float:left; font-weight:bold; color:#fff; text-align:right; width:15%;}
+.category dl dd{float:left; width:85%;}
+.category dl dd span{margin:0 1%; padding:0 1%; float:left; margin-bottom:2px;}
+.category a{color:#FFFFFF;}
+.category a:hover{color:#FFFFFF;}
+.category dl dd span:hover{ background:#45d4a2; color:#FFFFFF;}
+
+.tips_right{float:right; text-align:right; color:#009900; font-size:20px; padding-right:10px;}
+.tips_wrong{float:right; text-align:right; color:#FF0000; font-size:20px; padding-right:10px;}
+.tips_noanswer{float:right; text-align:right; color:#FF0000; font-size:12px; padding-right:10px;}
+
+.conrainer_fixed{ width:100%; height:120px; position:fixed;bottom:52px;background-color:#f3f3f3;}
+.conrainer_fixed1{ width:100%; height:70px; position:fixed;bottom:52px;background-color:#f3f3f3;}

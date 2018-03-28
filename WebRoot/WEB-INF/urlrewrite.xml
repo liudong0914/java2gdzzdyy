@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 2.6//EN"
+        "http://tuckey.org/res/dtds/urlrewrite2.6.dtd">
+
+<!--
+
+    Configuration file for UrlRewriteFilter
+    http://tuckey.org/urlrewrite/
+
+-->
+<urlrewrite>
+	<!--规则说明：第一个参数为模版对应扩展类名，第二个参数为方法名，第三个参数为单位id或专题id，第四个参数为该方法所需要的参数（如：栏目id、栏目编号）-->
+    <rule>
+	    <from>^/index.htm$</from>
+        <to>/zyb.bo?method=index</to>
+	</rule>
+    <rule>
+	    <from>^/([a-zA-Z0-9+]{1,15})-([a-zA-Z0-9+]{1,15})-([0-9+]{1,11})-([0-9+]{1,20}).htm$</from>
+        <to>/$1.bo?method=$2&amp;siteid=$3&amp;objid=$4</to>
+	</rule>
+	<rule>
+	    <from>^/course/([0-9+]{1,20}).htm$</from>
+        <to>/course.bo?method=info&amp;courseid=$1</to>
+	</rule>
+	<rule>
+	    <from>^/index/([0-9+]{1,20}).htm$</from>
+        <to>/course.bo?method=index&amp;typeid=$1</to>
+	</rule>
+</urlrewrite>

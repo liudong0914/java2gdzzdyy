@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.edu.bo.EduCourseFileColumn" table="edu_course_file_column">
+<id name="filecolumnid" type="java.lang.Integer" column="filecolumnid">  <generator class="native" /> </id>
+<property  name="title" type="java.lang.String" column="title"/>
+<property  name="columnno" type="java.lang.String" column="columnno"/>
+<property  name="status" type="java.lang.String" column="status"/>
+<property  name="unitid" type="java.lang.Integer" column="unitid"/>
+<property  name="isopen" type="java.lang.String" column="isopen"/>
+<property  name="secondtitle" type="java.lang.String" column="secondtitle"/>
+</class>
+</hibernate-mapping>

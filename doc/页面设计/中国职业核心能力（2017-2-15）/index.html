@@ -1,0 +1,413 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>北京师范大学总中心-----首页</title>
+
+<link rel="stylesheet" href="css/css_01.css" />
+<script>
+<!--
+/*第一种形式 第二种形式 更换显示样式*/
+function setTab(name,cursel,n){
+for(i=1;i<=n;i++){
+var menu=document.getElementById(name+i);
+var con=document.getElementById("con_"+name+"_"+i);
+menu.className=i==cursel?"hover":"";
+con.style.display=i==cursel?"block":"none";
+}
+}
+//-->
+</script>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+
+<script type="text/javascript" src="js/base.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+$(document).ready(function() {
+			/*	2nd example	*/
+			
+			$("#menu2 li .menu_a").wrapInner( '<span class="out"></span>' );
+			
+			$("#menu2 li .menu_a").each(function() {
+				$( '<span class="over">' +  $(this).text() + '</span>' ).appendTo( this );
+			});
+
+			$("#menu2 li .menu_a").hover(function() {
+				$(".out",	this).stop().animate({'top':	'54px'},	200); // move down - hide
+				$(".over",	this).stop().animate({'top':	'0px'},		200); // move down - show
+
+			}, function() {
+				$(".out",	this).stop().animate({'top':	'0px'},		200); // move up - show
+				$(".over",	this).stop().animate({'top':	'-54px'},	200); // move up - hide
+			});
+		}); 
+
+
+</script>
+
+
+<script>
+$(document).ready(function() {
+			/*	2nd example	*/
+			
+			$("#menu2_01 li .menu_a_01").wrapInner( '<span class="out"></span>' );
+			
+			$("#menu2_01 li .menu_a_01").each(function() {
+				$( '<span class="over">' +  $(this).text() + '</span>' ).appendTo( this );
+			});
+
+			$("#menu2_01 li .menu_a_01").hover(function() {
+				$(".out",	this).stop().animate({'top':	'54px'},	200); // move down - hide
+				$(".over",	this).stop().animate({'top':	'0px'},		200); // move down - show
+
+			}, function() {
+				$(".out",	this).stop().animate({'top':	'0px'},		200); // move up - show
+				$(".over",	this).stop().animate({'top':	'-54px'},	200); // move up - hide
+			});
+		}); 
+
+
+</script>
+
+
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.event.drag-1.5.min.js"></script>
+<script type="text/javascript" src="js/jquery.touchSlider.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$(".main_visual").hover(function(){
+		$("#btn_prev,#btn_next").fadeIn()
+	},function(){
+		$("#btn_prev,#btn_next").fadeOut()
+	});
+	
+	$dragBln = false;
+	
+	$(".main_image").touchSlider({
+		flexible : true,
+		speed : 200,
+		btn_prev : $("#btn_prev"),
+		btn_next : $("#btn_next"),
+		paging : $(".flicking_con a"),
+		counter : function (e){
+			$(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
+		}
+	});
+	
+	$(".main_image").bind("mousedown", function() {
+		$dragBln = false;
+	});
+	
+	$(".main_image").bind("dragstart", function() {
+		$dragBln = true;
+	});
+	
+	$(".main_image a").click(function(){
+		if($dragBln) {
+			return false;
+		}
+	});
+	
+	timer = setInterval(function(){
+		$("#btn_next").click();
+	}, 4000);
+	
+	$(".main_visual").hover(function(){
+		clearInterval(timer);
+	},function(){
+		timer = setInterval(function(){
+			$("#btn_next").click();
+		},4000);
+	});
+	
+	$(".main_image").bind("touchstart",function(){
+		clearInterval(timer);
+	}).bind("touchend", function(){
+		timer = setInterval(function(){
+			$("#btn_next").click();
+		}, 4000);
+	});
+	
+});
+</script>
+</head>
+
+<body>
+
+<div id="banner">
+   <div class="main_visual">
+	<div class="flicking_con">
+		<a href="#">1</a>
+		<a href="#">2</a>
+	</div>
+	<div class="main_image">
+		<ul>
+			<li><span class="img_1"></span></li>
+			<li><span class="img_2"></span></li>
+		</ul>
+		<a href="javascript:;" id="btn_prev"></a>
+		<a href="javascript:;" id="btn_next"></a>
+	</div>
+</div>
+</div> 
+<!-- 大图片滚动 e-->
+
+<!--菜单 开始-->
+<div class="header_nav">
+    	<div id="menu2" class="menu" >
+	     <ul>
+	     <li><a class="menu_a" href="#">首页</a>
+         </li>
+         <li class="menu_li"><a class="menu_a" href="#"> 项目简介                                                                         </a>
+         	<div class="menu_li_subnav">
+     			<a class="menu_li_subnav_a" href="#">中心简介</a>
+      			<a class="menu_li_subnav_a" href="#">理事会</a>
+      			<a class="menu_li_subnav_a" href="#">中心领导</a>
+                <a class="menu_li_subnav_a" href="#">组织机构</a>
+                <a class="menu_li_subnav_a" href="#">协同单位</a>
+                <a class="menu_li_subnav_a" href="#">中心大事记</a>
+    		</div>
+         </li>
+	     <li class="menu_li"><a class="menu_a" href="#">专家团队</a>
+         	<div class="menu_li_subnav">
+     			<a class="menu_li_subnav_a" href="#">监测工具</a>
+      			<a class="menu_li_subnav_a" href="#">数据采集</a>
+      			<a class="menu_li_subnav_a" href="#">数据库</a>
+                <a class="menu_li_subnav_a" href="#">监测报告</a>
+                <a class="menu_li_subnav_a" href="#">政策咨询</a>
+    		</div>
+         </li>
+         <li class="menu_li"><a class="menu_a" href="#">教练师资</a>
+         </li>
+	     <li class="menu_li"><a class="menu_a" href="#">应用院校</a>
+         	<div class="menu_li_subnav">
+     			<a class="menu_li_subnav_a" href="#">团队首席专家</a>
+      			<a class="menu_li_subnav_a" href="#">任务首席专家</a>
+      			<a class="menu_li_subnav_a" href="#">骨干研究员</a>
+    		</div>
+         </li>
+         <li class="menu_li"><a class="menu_a" href="#">合作县区 </a>
+         	<div class="menu_li_subnav">
+     			<a class="menu_li_subnav_a" href="#">人才培养动态</a>
+      			<a class="menu_li_subnav_a" href="#">人才培养成果</a>
+    		</div>
+         </li>
+	     <li class="menu_li"><a class="menu_a" href="#"> 合作机构</a>
+         	<div class="menu_li_subnav">
+     			<a class="menu_li_subnav_a" href="#">科研项目</a>
+      			<a class="menu_li_subnav_a" href="#">科研成果</a>
+    		</div>
+         </li>
+         <li class="menu_li"><a class="menu_a" href="#"> 联系我们</a>
+         </li>
+         
+         </ul>
+       </div>
+    </div>
+<!--菜单结束-->
+
+<!--主要内容 开始-->
+<div id="main">
+<div class="main_top">
+<div class="index_news">
+<div class="news_title">
+<div class="news_title_div">
+	<p class="news_title_div_p01">通知公告</p>
+    <p class="news_title_div_p02">NOTICE</p>
+</div>
+<h4><a href="#">更多+</a></h4>
+</div>
+<div class="news_top">
+<a href="#" class="news_top_first">中国基础教育质量监测协同创新中育阶段学校中国基础教育质量监测协同创新中育阶段学校</a>
+<dl>
+<dt><a href="#"><img src="images/z05.jpg" /></a></dt>
+<dd><a class="news_top_p">5月22日，北京师范大学中国基础教育质量监测协同创新中心召开发布会，依据北师大首创的义务教育阶段学校积...</a><span><a href="#">[详情]</a></span></dd>
+</dl>
+</div>
+<!--news_top 结束-->
+
+<div class="news_list">
+<dl>
+<dt><a href="#">山东淄博：三线并进构建小初高“大美育”体三线并进构建小初高三线并进构建小初高</a></dt>
+<dd>2016-3-23</dd>
+</dl>
+<dl>
+<dt><a href="#">从中考学生家长最纠结的事看“教育均衡发展</a></dt>
+<dd>2016-3-23</dd>
+</dl>
+</div>
+<!--news_list 结束-->
+
+</div>
+<!--通知公告 结束-->
+
+<div class="notice">
+<div class="news_title">
+<div class="news_title_div">
+	<p class="news_title_div_p01">新闻中心</p>
+    <p class="news_title_div_p02">NEWS</p>
+</div>
+<h4><a href="#">更多+</a></h4>
+</div>
+
+<div class="news_list news_list01">
+<dl>
+<dt><a href="#">山东淄博：三线并进构建小初高“大美育”体三线并进构建小初高三线并进构建小初高</a></dt>
+<dd>2016-3-23</dd>
+</dl>
+<dl>
+<dt><a href="#">从中考学生家长最纠结的事看“教育均衡发展</a></dt>
+<dd>2016-3-23</dd>
+</dl>
+<dl>
+<dt><a href="#">山东淄博：三线并进构建小初高“大美育”体三线并进构建小初高三线并进构建小初高</a></dt>
+<dd>2016-3-23</dd>
+</dl>
+<dl>
+<dt><a href="#">从中考学生家长最纠结的事看“教育均衡发展</a></dt>
+<dd>2016-3-23</dd>
+</dl>
+<dl>
+<dt><a href="#">山东淄博：三线并进构建小初高“大美育”体三线并进构建小初高三线并进构建小初高</a></dt>
+<dd>2016-3-23</dd>
+</dl>
+<dl>
+<dt><a href="#">从中考学生家长最纠结的事看“教育均衡发展</a></dt>
+<dd>2016-3-23</dd>
+</dl>
+</div>
+<!--news_list 结束-->
+</div>
+<!--新闻动态 结束-->
+<div class="owl_demo_div">
+	<iframe src="two.html" width="370" height="270" frameborder="0"></iframe>
+</div>
+<!--owl_demo_div 结束-->
+</div>
+<!--main_top 结束-->
+<div class="main_bottom">
+<div class="index_news class">
+<div class="news_title">
+<div class="news_title_div">
+	<p class="news_title_div_p01">进步学堂</p>
+    <p class="news_title_div_p02">PROGRESS</p>
+</div>
+<h4><a href="#">更多+</a></h4>
+</div>
+<div class="class_main">
+	<div class="class_main_div">
+    	<img src="images/img01.jpg" />
+        <a href="#">院校企业教学</a>
+    </div>
+    <div class="class_main_div class_main_div01">
+    	<img src="images/img02.jpg" />
+        <a href="#">退役军人培训</a>
+    </div>
+    <div class="class_main_div">
+    	<img src="images/img03.jpg" />
+        <a href="#">医护行业培训</a>
+    </div>
+</div>
+<!--class_main 结束-->
+</div>
+<!--进步学堂 结束-->
+<div class="main_bottom_right">
+	<div id="Tab1">
+        <div class="Menubox">
+            <ul>
+            <li id="one1" onclick="setTab('one',1,4)"  class="hover">教材订购&nbsp;></li>
+            <li id="one2" onclick="setTab('one',2,4)" >证书查询&nbsp;></li>
+            <li id="one3" onclick="setTab('one',3,4)">资源下载&nbsp;></li>
+            <li id="one4" onclick="setTab('one',4,4)">成果展示&nbsp;></li>
+            </ul>
+        </div>
+        <div class="Contentbox">
+            <div id="con_one_1" class="hover">
+            	<iframe src="three.html" width="235" height="243" frameborder="0"></iframe>
+            </div>
+            <div id="con_one_2" style="display:none">
+            	<div class="book">
+                	<p>【师资培训类证书】</p>
+                    <a href="#">•&nbsp;国家职业核心能力指导师证书</a>
+                    <a href="#">•&nbsp;国家职业核心能力高级指导师证</a>
+                    <p>【学员等级认证类证书】</p>
+                    <a href="#">•&nbsp;职业核心能力（单模块）初级证</a>
+                    <a href="#">•&nbsp;职业核心能力（单模块）中级证</a>
+                </div>
+            </div>
+            <div id="con_one_3" style="display:none">
+            	<div class="fruit">
+                    <a href="#">•&nbsp;与人交流能力课程标准</a>
+                    <a href="#">•&nbsp;与人合作能力课程标准</a>
+                    <a href="#">•&nbsp;计算机及软件专业与人交流课程标准</a>
+                    <a href="#">•&nbsp;会计电算化专业与人交流能力课程标准</a>
+                    <a href="#">•&nbsp;解决问题能力课程标准</a>
+                    <a href="#">•&nbsp;自我学习能力课程标准</a>
+                </div>
+            </div>
+            <div id="con_one_4" style="display:none">
+            	<div class="fruit">
+                    <a href="#">【国家级成果奖】</a>
+                    <a href="#">【省级成果奖】</a>
+                    <a href="#">【课题研究成果】</a>
+                    <a href="#">【全国教育科学规划“十一五”教育部重点课题】</a>
+                    <a href="#">【教育部人文社科“十二五”规划课题】</a>
+                    <a href="#">【国家社科基金子课题】</a>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+</div>
+<!--main_bottom 结束-->
+</div>
+<!--主要内容 结束-->
+
+<div class="f_main">
+<div class="f_list_01">
+<p class="f_list_01_p">友情链接</p>
+<div class="f_list_01_div01"><a href="#"><img src="images/z09.png"/><p>人社部技能鉴定中心</p></a></div>
+<div class="f_list_01_div02"><a href="#"><img src="images/z10.png"/><p>教育部中国成人教育学会</p></a></div>
+<div class="f_list_01_div03"><a href="#"><img src="images/z11.png"/><p>中国退役军人就业创业服务促进会网站</p></a></div>
+<div class="f_list_01_div04"><a href="#"><img src="images/z12.png"/><p>深圳国泰安梦想学堂网站</p></a></div>
+<div class="f_list_01_div05"><a href="#"><img src="images/z13.png"/><p>国家数字化学习资源中心网站</p></a></div>
+</div>
+</div>
+<!--分中心网站链接 结束-->
+
+
+
+<div id="foot">
+<div class="foot_nr">
+<span class="foot_nr_one"><img src="images/z19.png" /></a></span>
+<span class="foot_nr_two">
+全国职业核心能力测评培训网 2007-2011 版权所有 | 京ICP备13009817号<br /> 
+技术支持：北京师科阳光信息技术有限公司
+</span>
+
+
+
+<div class="menu_footer">
+<img src="images/z25.jpg">
+<p>微信公众号</p>
+</div>
+<!-- menu_footer E -->
+
+</div><!--版权内容 结束-->
+
+</div><!--版权 结束-->
+
+
+
+
+
+</body>
+</html>

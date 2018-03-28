@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.sys.bo.SysUserPay" table="sys_user_pay">
+<id name="payid" type="java.lang.Integer" column="payid">  <generator class="native" /> </id>
+<property  name="changemoney" type="java.lang.Float" column="changemoney"/>
+<property  name="changetype" type="java.lang.Integer" column="changetype"/>
+<property  name="lastmoney" type="java.lang.Float" column="lastmoney"/>
+<property  name="remark" type="java.lang.String" column="remark"/>
+<property  name="userid" type="java.lang.Integer" column="userid"/>
+<property  name="userip" type="java.lang.String" column="userip"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+<property  name="paytype" type="java.lang.String" column="paytype"/>
+<property  name="outtradeno" type="java.lang.String" column="outtradeno"/>
+<property  name="tradeno" type="java.lang.String" column="tradeno"/>
+<property  name="openid" type="java.lang.String" column="openid"/>
+<property  name="feetype" type="java.lang.String" column="feetype"/>
+<property  name="banktype" type="java.lang.String" column="banktype"/>
+</class>
+</hibernate-mapping>

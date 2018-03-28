@@ -1,0 +1,456 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- 强制转换内核↓ -->
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
+<title>创建课程</title>
+<!-- style.css为各客户端和后期新增零散样式 -->
+<link href="css/style.css" rel="stylesheet"/>
+<script src="js/jquery-1.8.2.min.js"></script>
+<script>
+$(function(){
+	function select_simulated(select_style,bomb_con_style){
+		$(document).click(function(){
+			$(bomb_con_style).hide();
+			})
+		$(select_style).live('click',function(e){
+			var thisinput=$(this);
+			var local=$(this).position();
+			var bomb_con=$(bomb_con_style);
+				$(this).parents("li").siblings().find(bomb_con_style).hide();
+				$(this).parent().find(bomb_con_style).width($(this).width());//下拉框的宽度
+				$(this).parent().find(bomb_con_style).show();
+				e?e.stopPropagation():event.cancelBubble = true;
+				bomb_con.find("dd").click(function(e){
+				var bomb_text=$(this).text();
+				$(this).addClass("selected").siblings().removeClass("selected");
+				$(this).parents(bomb_con_style).hide();
+				$(this).parents("li").find(select_style).val(bomb_text);
+				e?e.stopPropagation():event.cancelBubble = true;
+				
+		});	
+		});
+		 return false;
+	}
+	select_simulated(".provin_select",".provin_con");
+	
+	  
+	$(".local").focus(function(){
+		$(this).addClass("local3");
+	});
+	$(".local").blur(function(){
+		$(this).removeClass("local3");
+	});
+	})
+</script>
+</head>
+<!-- 一般在body上区分客户端，如管理员端、教师端等，id和class皆可↓ -->
+<body>
+
+<div class="container clearfix">
+    <div class="leftCon">
+<div class="sideHead clearfix">
+	<div class="head-ico">
+		<b class="head-circle">
+			<!-- 这是头像那个灰色的圈，不要放东西。头像是下面的img↓ -->
+		</b> <a href="#"><img
+			src="images/header.png"
+			alt="我的头像" /></a>
+	</div>
+	<div class="head-links">
+		<h3 class="head-name ellipsis" style="display:inline-block;width:80px;" title="赵崇平">赵崇平</h3>
+		<p class="links">
+			<a href="#">设置</a><b>|</b><a href="#">充值</a>
+		</p>
+	</div>
+	<a class="level-ico" title="等级">LV1</a>
+	<div class="level-bar">
+		<p style="width:0%;" title="进度0%">
+			<!-- 进度是多少，style里面的百分比就改为多少 -->
+		</p>
+	</div>
+</div>
+<div class="homeLink">
+	<a href="#">个人中心</a>
+</div>
+<div class="sideMenu">
+	<dl>
+		<dt>
+			<span>教授课程</span>
+		</dt>
+		<dd >
+			<a href="#"><b class="ico ico-01"></b>创建课程</a>
+		</dd>
+		<dd >
+			<a href="#"><b class="ico ico-02"></b>点播课程</a>
+		</dd>
+	</dl>
+	<dl>
+		<dt></dt>
+		<dd >
+			<a href="#"><b class="ico ico-03"></b>学习课程</a>
+		</dd>
+	</dl>
+	<dl>
+		<dt>
+			<span>答疑中心</span>
+		</dt>
+		<dd >
+			<a href="#"><b class="ico ico-04"></b>答疑日历</a>
+		</dd>
+		<dd >
+			<a href="#"><b class="ico ico-05"></b>求助问题</a>
+		</dd>
+		<dd >
+			<a href="#"><b class="ico ico-06"></b>我的关注</a>
+		</dd>
+	</dl>
+	<dl>
+		<dt>
+			<span>收藏中心</span>
+		</dt>
+		<dd >
+			<a href="#"><b class="ico ico-07"></b>课程收藏</a>
+		</dd>
+		<dd >
+			<a href="#"><b class="ico ico-08"></b>职位收藏</a>
+		</dd>
+		<dd >
+			<a href="#"><b class="ico ico-09"></b>认证收藏</a>
+		</dd>
+	</dl>
+	<dl>
+		<dt></dt>
+		<dd >
+			<a href="#"><b class="ico ico-13"></b>设置中心</a>
+		</dd>
+	</dl>
+	<dl>
+		<dt>
+			<span>订单中心</span>
+		</dt>
+		<dd >
+			<a href="#"><b class="ico ico-10"></b>我的订单</a>
+		</dd>
+		<dd >
+			<a href="#"><b class="ico ico-11"></b>课程订单</a>
+		</dd>
+	</dl>
+	<dl>
+		<dt></dt>
+		<dd >
+			<a href="#"><b class="ico ico-12"></b>我的账户</a>
+		</dd>
+	</dl>
+	<dl>
+		<dt></dt>
+		<dd >
+			<a href="#"><b class="ico ico-14"></b>通知</a>
+		</dd>
+	</dl>
+</div>
+ </div>
+    <div class="rightCon">
+
+<div class="main">
+<div class="mainBox">
+<div class="mainTit">
+<h3 class="title">创建课程</h3>
+</div>
+<div class="mainCon">
+<div class="mainCon-hd">
+<div class="creat-steps">
+<ul>
+<li class="cur">
+<span>第一步：填写课程基础信息</span>
+</li>
+<li>
+<span>第二步：创建课程大纲</span>
+</li>
+<li>
+<span>第三步：上传课程课件</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="mainCon-bd">
+<div class="form-body creatCourseStep">
+	<div class="form-row" style="display: none;">
+	<div class="label">
+	<label>
+	<span class="text-red must">*</span>
+	课程类型：
+	</label>
+	</div>
+	<div class="input">
+	<input id="vedioTpye1" class="mr10 input-radio" value="0" name="type" checked="checked" onclick="checkType(this);" type="radio">
+	<label for="vedioTpye1">
+	<span class="mr10">直播课程</span>
+	</label>
+	<input id="vedioTpye2" class="mr10 input-radio" value="1" name="type" onclick="checkType(this);" type="radio">
+	<label for="vedioTpye2">
+	<span>点播课程</span>
+	</label>
+	</div>
+	</div>
+	<form id="step1ValidateForm1">
+	<div class="form-row form-row01">
+	<div class="label">
+	<label>
+	<i class="text-red must">*</i>
+	所属岗位：
+	</label>
+	</div>
+	<div id="selectBox" class="input jobWrap">
+	<div class="area">
+						<ul class="clearfix">
+							<li class="return_reques">
+								<input type="text" placeholder="选择岗位"  name="" class="local select_style provin_select" readonly>
+								<div class="clearfix">
+									<div class="bomb_con_style provin_con none">
+									   <dl>
+										  <dd>教师</dd>
+										 <dd>北京</dd>
+										  <dd>北京</dd>
+										  <dd>北京</dd>
+										  <dd>北京</dd>
+										  <dd>北京</dd>
+									   </dl>
+									</div>
+								</div>
+							</li>   
+						</ul>
+					</div><!----area-e---->
+	<div id="jobList" class="selected list"> </div>
+	</div>
+	</div>
+	
+	</form>
+	<div class="form-row form-row01">
+<div class="label">
+<label>
+<i class="text-red must">*</i>
+课程名：
+</label>
+</div>
+<div class="input">
+<input id="courseName" class="ipt-text formEleToVali" tipmsg="请输入1-20个字符" name="courseName" onblur="checkName();" onpropertychange="subCourseName();" oninput="subCourseName();" value="" style="width: 314px;" width="314" type="text">
+<p class="formValidator hide">
+<input name="oldCourseName" value="" type="hidden">
+		</div>
+	</div>
+	<div class="form-row">
+	<div class="label">
+	<label>
+	<i class="text-red must">*</i>
+	课程图片：
+	</label>
+	</div>
+	<div class="input fileupload fileupload-exists" data-provides="fileupload">
+	<div id="picWrap" class="text-img img01 picWrap">
+	<img class="pic" alt="" src="images/text-img01.jpg" width="100%" height="100%">
+	</div>
+	<br>
+	<div class="photo">
+		<div class="uploadify" style="height: 28px; width: 81px;">
+		<a href="#" class="uploadify-button-text">上传图片</a>
+		</div>
+		<p class="validation fl" >
+		<i class="tip-icon"></i>
+		<span class="warning">支持最大500KB的jpg、png图片，最佳大小328*170像素</span>
+		</p>
+	</div>
+	<input id="titlePageOriginalName" class="formEleToVali" style="margin-left: 80px;" name="titlePageOriginalName" value="" type="hidden">
+	</div>
+	</div>
+<div class="form-row">
+	<div class="label">
+	<label><i class="text-red must">*</i>课程简介：</label>
+	</div>
+	<div class="input relative">
+	<div class="fl" width="550">
+	<textarea id="supResourceText" class="formEleToVali" name="supResourceText" tipmsg="请输入0-800个字符" ></textarea>
+	</div>
+	</div>
+</div>
+<div class="form-row">
+	<div class="label">
+	<label><i class="text-red must">*</i>课程目标：</label>
+	</div>
+	<div class="input relative">
+	<div class="fl" width="550">
+	<textarea id="supResourceText" class="formEleToVali" name="supResourceText" tipmsg="请输入0-800个字符" ></textarea>
+	</div>
+	</div>
+</div>
+<div class="form-row">
+	<div class="label">
+	<label>导读视频：</label>
+	</div>
+	<div class="input relative">
+	<div class="photo">
+		<div class="uploadify" style="height: 28px; width: 81px; padding-top:2px;">
+		<a href="#" class="uploadify-button-text">上传视频</a>
+		</div>
+		<p class="validation fl" style=" margin-top: 5px;">
+		<i class="tip-icon"></i>
+		<span class="warning">支持最大500KB的jpg、png图片，最佳大小328*170像素</span>
+		</p>
+	</div>
+	</div>
+</div>
+<div class="form-row">
+	<div class="label">
+	<label>辅助资源：</label>
+	</div>
+	<div class="input relative">
+	<div class="fl" width="550">
+	<textarea id="supResourceText" class="formEleToVali" name="supResourceText" tipmsg="请输入0-800个字符" ></textarea>
+	</div>
+	<div class="photo">
+		<div class="uploadify" style="height: 28px; width: 81px;">
+		<a href="#" class="uploadify-button-text">上传文件</a>
+		</div>
+		<p class="validation fl" >
+		<i class="tip-icon"></i>
+		<span class="warning">支持最大500KB的jpg、png图片，最佳大小328*170像素</span>
+		</p>
+	</div>
+	</div>
+</div>
+<div class="form-row">
+	<div class="label">
+	<label>教师手册：</label>
+	</div>
+	<div class="input relative">
+	<div class="fl" width="550">
+	<textarea id="supResourceText" class="formEleToVali" name="supResourceText" tipmsg="请输入0-800个字符" ></textarea>
+	</div>
+	<div class="photo">
+		<div class="uploadify" style="height: 28px; width: 81px;">
+		<a href="#" class="uploadify-button-text">上传文件</a>
+		</div>
+		<p class="validation fl" >
+		<i class="tip-icon"></i>
+		<span class="warning">支持最大500KB的jpg、png图片，最佳大小328*170像素</span>
+		</p>
+	</div>
+	</div>
+</div>
+<div class="form-row">
+	<div class="label">
+	<label>学员手册：</label>
+	</div>
+	<div class="input relative">
+	<div class="fl" width="550">
+	<textarea id="supResourceText" class="formEleToVali" name="supResourceText" tipmsg="请输入0-800个字符" ></textarea>
+	</div>
+	<div class="photo">
+		<div class="uploadify" style="height: 28px; width: 81px;">
+		<a href="#" class="uploadify-button-text">上传文件</a>
+		</div>
+		<p class="validation fl" >
+		<i class="tip-icon"></i>
+		<span class="warning">支持最大500KB的jpg、png图片，最佳大小328*170像素</span>
+		</p>
+	</div>
+	</div>
+</div>
+<div class="form-row">
+	<div class="label">
+	<label>多媒体教材：</label>
+	</div>
+	<div class="input relative">
+	<div class="fl" width="550">
+	<textarea id="supResourceText" class="formEleToVali" name="supResourceText" tipmsg="请输入0-800个字符" ></textarea>
+	</div>
+	<div class="photo">
+		<div class="uploadify" style="height: 28px; width: 81px;">
+		<a href="#" class="uploadify-button-text">上传文件</a>
+		</div>
+		<p class="validation fl" >
+		<i class="tip-icon"></i>
+		<span class="warning">支持最大500KB的jpg、png图片，最佳大小328*170像素</span>
+		</p>
+	</div>
+	</div>
+</div>
+<div class="form-row">
+	<div class="label">
+	<label>测评指导：</label>
+	</div>
+	<div class="input relative">
+	<div class="fl" width="550">
+	<textarea id="supResourceText" class="formEleToVali" name="supResourceText" tipmsg="请输入0-800个字符" ></textarea>
+	</div>
+	<div class="photo">
+		<div class="uploadify" style="height: 28px; width: 81px;">
+		<a href="#" class="uploadify-button-text">上传文件</a>
+		</div>
+		<p class="validation fl" >
+		<i class="tip-icon"></i>
+		<span class="warning">支持最大500KB的jpg、png图片，最佳大小328*170像素</span>
+		</p>
+	</div>
+	</div>
+</div>
+<div class="form-row" style="overflow: hidden;">
+<div class="label">
+<label>
+<i class="text-red must">*</i>
+课程价格：
+</label>
+</div>
+<div class="input">
+<input id="courseName" class="ipt-text ipt-text01 formEleToVali" tipmsg="请输入1-20个字符" name="courseName" onblur="checkName();" onpropertychange="subCourseName();" oninput="subCourseName();" value="" type="text">
+<p class="formValidator hide">
+<input name="oldCourseName" value="" type="hidden">
+		</div>
+	</div>
+
+<div class="form-row" style="overflow: hidden;">
+<div class="label">
+<label>
+<i class="text-red must">*</i>
+开始时间：
+</label>
+</div>
+<div class="input">
+<input id="courseName" class="ipt-text formEleToVali" tipmsg="请输入1-20个字符" name="courseName" onblur="checkName();" onpropertychange="subCourseName();" oninput="subCourseName();" value="" style="float: left;" type="text">
+<div class="date">
+	<img src="images/a03.png" />
+</div>
+<p class="formValidator hide">
+<input name="oldCourseName" value="" type="hidden">
+		</div>
+	</div>
+<div class="form-row" style="overflow: hidden;">
+<div class="label">
+<label>
+<i class="text-red must">*</i>
+结束时间：
+</label>
+</div>
+<div class="input">
+<input id="courseName" class="ipt-text ipt-text01 formEleToVali" tipmsg="请输入1-20个字符" name="courseName" onblur="checkName();" onpropertychange="subCourseName();" oninput="subCourseName();" value="" style=" float: left;" type="text">
+<div class="date">
+	<img src="images/a03.png" />
+</div>
+<p class="formValidator hide">
+<input name="oldCourseName" value="" type="hidden">
+		</div>
+	</div>
+<div class="next-steps clearfix mt20">
+<span class="next" style="cursor: pointer;">下一步</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+  </div>
+</body>
+<script src="/js/personalcenter/teacenter.js"></script>
+</html>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+<bean id="eduXueduanInfoManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.edu.service.impl.EduXueduanInfoManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="eduSubjectInfoManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.edu.service.impl.EduSubjectInfoManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="eduGradeInfoManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.edu.service.impl.EduGradeInfoManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="eduKnopointInfoManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.edu.service.impl.EduKnopointInfoManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="eduCourseInfoManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.edu.service.impl.EduCourseInfoManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="eduCourseColumnManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.edu.service.impl.EduCourseColumnManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="eduCourseBuyManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.edu.service.impl.EduCourseBuyManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="eduCourseCollectManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.edu.service.impl.EduCourseCollectManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="eduCourseFileManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.edu.service.impl.EduCourseFileManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="eduCourseFilmManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.edu.service.impl.EduCourseFilmManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="eduCourseStudyManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.edu.service.impl.EduCourseStudyManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="eduCourseUserManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.edu.service.impl.EduCourseUserManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="eduCourseFileDownloadManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.edu.service.impl.EduCourseFileDownloadManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="eduCourseCommentManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.edu.service.impl.EduCourseCommentManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="eduCourseClassManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.edu.service.impl.EduCourseClassManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="eduCourseUserModuleManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.edu.service.impl.EduCourseUserModuleManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="eduCourseAnswerQuestionManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.edu.service.impl.EduCourseAnswerQuestionManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="eduBookInfoManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.edu.service.impl.EduBookInfoManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="eduCourseFileColumnManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.edu.service.impl.EduCourseFileColumnManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+</beans>

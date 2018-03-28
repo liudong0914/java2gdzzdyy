@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+<bean id="sysKeywordFilterManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.sys.service.impl.SysKeywordFilterManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="sysModuleInfoManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.sys.service.impl.SysModuleInfoManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="sysProductInfoManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.sys.service.impl.SysProductInfoManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="sysRoleInfoManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.sys.service.impl.SysRoleInfoManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="sysRoleModuleManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.sys.service.impl.SysRoleModuleManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="sysUnitDeptManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.sys.service.impl.SysUnitDeptManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="sysUnitDeptMemberManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.sys.service.impl.SysUnitDeptMemberManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="sysUnitInfoManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.sys.service.impl.SysUnitInfoManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="sysUserInfoManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.sys.service.impl.SysUserInfoManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="sysUserInfoDetailManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.sys.service.impl.SysUserInfoDetailManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="sysUserLogManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.sys.service.impl.SysUserLogManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="sysUserRoleManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.sys.service.impl.SysUserRoleManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="sysUserTeachingManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.sys.service.impl.SysUserTeachingManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="sysAreaInfoManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.sys.service.impl.SysAreaInfoManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="sysUserAttentionManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.sys.service.impl.SysUserAttentionManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="sysUserMoneyManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.sys.service.impl.SysUserMoneyManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="sysUserPayManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.sys.service.impl.SysUserPayManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="sysUserPayTradeManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.sys.service.impl.SysUserPayTradeManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="sysMessageInfoManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.sys.service.impl.SysMessageInfoManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="sysUserSearchKeywordsManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.sys.service.impl.SysUserSearchKeywordsManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="sysSmsInfoManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.sys.service.impl.SysSmsInfoManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="sysPayPasswordManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.sys.service.impl.SysPayPasswordManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="sysMessageUserManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.sys.service.impl.SysMessageUserManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="sysTeacherQualificationManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.sys.service.impl.SysTeacherQualificationManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="sysUserComplaintManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.sys.service.impl.SysUserComplaintManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="sysPaymentAccountManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.sys.service.impl.SysPaymentAccountManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="sysAutomationCacheManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.sys.service.impl.SysAutomationCacheManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="sysUserGiveMoneyManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.sys.service.impl.SysUserGiveMoneyManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="sysUserGiveMoneyActivityManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.sys.service.impl.SysUserGiveMoneyActivityManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="sysUserDisableManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.sys.service.impl.SysUserDisableManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+</beans>

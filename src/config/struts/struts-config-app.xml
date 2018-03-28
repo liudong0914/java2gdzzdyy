@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+ <form-beans>
+ 	<form-bean name="fileUploadActionForm" type="com.wkmk.util.service.form.FileUploadActionForm" />
+ </form-beans>
+ <global-forwards>
+ 	<forward name="welcome" contextRelative="true" path="/weixin/index/welcome.jsp" />
+ 	<forward name="error" contextRelative="true" path="/weixin/index/error.jsp"/>
+ 	<forward name="tips" contextRelative="true" path="/weixin/index/tips.jsp" />
+ 	<forward name="login" contextRelative="true" path="/weixin/index/login.jsp"/>
+	<forward name="userindex" contextRelative="true" path="/weixinAccountIndex.app?method=userindex" />
+	<forward name="scan" contextRelative="true" path="/weixinScanQRCode.app?method=scan" />
+	<forward name="scantips" contextRelative="true" path="/weixin/index/scan_tips.jsp"/>
+	<forward name="subscribetips" contextRelative="true" path="/weixin/tip/tips.jsp"/>
+	<forward name="loginstatetips" contextRelative="true" path="/weixin/tip/loginstate_tips.jsp"/>
+ </global-forwards>
+ <action-mappings>
+ 	<action name="fileUploadActionForm" path="/api/client/clientService" scope="request" type="com.wkmk.util.service.client.ClientServiceAction" validate="false"/>
+ 	<action name="fileUploadActionForm" path="/api/app/appService" scope="request" type="com.util.service.action.AppServiceAction" validate="false"/>
+ 	<action name="fileUploadActionForm" path="/api/app/appWeikeService" scope="request" type="com.util.service.action.AppWeikeServiceAction" validate="false"/>
+ 	<action name="fileUploadActionForm" path="/api/app/tkQuestionToolsService" scope="request" type="com.util.service.action.TkQuestionToolsServiceAction" validate="false"/>
+ 	<action path="/automationOrder" scope="request" type="com.util.socket.http.AutomationOrderAction" validate="false"/>
+ 	<action path="/weixinService" scope="request" type="com.wkmk.weixin.web.action.WeixinServiceAction" validate="false"/>
+	<action path="/weixinRegister" scope="request" type="com.wkmk.weixin.web.action.WeixinRegisterAction" validate="false"/>
+	<action path="/weixinScanQRCode" parameter="method" scope="request" type="com.wkmk.weixin.web.action.WeixinScanQRCodeAction" validate="false"/>
+	<action path="/weixinAccountIndex" parameter="method" scope="request" type="com.wkmk.weixin.web.action.WeixinAccountIndexAction" validate="false">
+		<forward contextRelative="true" name="register" path="/weixin/index/register.jsp"/>
+		<forward contextRelative="true" name="selectschool" path="/weixin/index/select_school.jsp"/>
+		<forward contextRelative="true" name="registerok" path="/weixin/index/register_ok.jsp"/>
+		<forward contextRelative="true" name="teacher" path="/weixin/teacher/index.jsp"/>
+		<forward contextRelative="true" name="student" path="/weixin/student/index.jsp"/>
+		<forward contextRelative="true" name="aboutus" path="/weixin/index/aboutus.jsp"/>
+		<forward contextRelative="true" name="myaccount" path="/weixin/index/my_account.jsp"/>
+		<forward contextRelative="true" name="logoutcomfirm" path="/weixin/index/logout_comfirm.jsp"/>
+		<forward contextRelative="true" name="updatepwd" path="/weixin/index/update_pwd.jsp"/>
+		<forward contextRelative="true" name="updateinfo" path="/weixin/index/update_info.jsp"/>
+		
+		<forward contextRelative="true" name="teacherindex" path="/weixin/account/teacher_index.jsp"/>
+		<forward contextRelative="true" name="studentindex" path="/weixin/account/student_index.jsp"/>
+		<forward contextRelative="true" name="indexnews" path="/weixin/account/index_news.jsp"/>
+		<forward contextRelative="true" name="daohang" path="/weixin/account/daohang.jsp"/>
+		
+		<forward contextRelative="true" name="servercenter" path="/weixin/account/servercenter.jsp"/>
+		<forward contextRelative="true" name="messagelist" path="/weixin/account/message_list.jsp"/>
+		<forward contextRelative="true" name="messageinfo" path="/weixin/account/messageinfo.jsp"/>
+		<!-- 个人中心 -->
+		<forward contextRelative="true" name="personalcenter" path="/weixin/account/personal_center.jsp"/>
+		<forward contextRelative="true" name="user_manager" path="/weixin/account/user_manager.jsp"/>
+		<forward contextRelative="true" name="editnickname" path="/weixin/account/edit_nickname.jsp"/>
+		<forward contextRelative="true" name="clearattention" path="/weixin/account/clearattention.jsp"/>
+		<forward contextRelative="true" name="updatepwd" path="/weixin/account/updatepwd.jsp"/>
+		<forward contextRelative="true" name="beforemobile" path="/weixin/account/before_mobile.jsp"/>
+		<forward contextRelative="true" name="mycourse" path="/weixin/account/my_course.jsp"/>
+		<forward contextRelative="true" name="userteaching" path="/weixin/account/user_teaching.jsp"/>
+		<forward contextRelative="true" name="subjectgrade" path="/weixin/account/subject_grade.jsp"/>
+		<!-- 资讯 -->
+		<forward contextRelative="true" name="newscolumnlist" path="/weixin/news/newscolumn_list.jsp"/>
+		<forward contextRelative="true" name="newsinfolist" path="/weixin/news/newsinfo_list.jsp"/>
+		<forward contextRelative="true" name="newsinfo" path="/weixin/news/newsinfo.jsp"/>
+		
+		<forward contextRelative="true" name="tip" path="/weixin/account/tip.jsp"/>
+	</action>
+	<action path="/weixinMenu" parameter="method" scope="request" type="com.wkmk.weixin.web.action.WeixinMenuAction" validate="false">
+		<forward contextRelative="true" name="aboutus" path="/weixinAccountIndex.app?method=aboutus"/>
+	</action>
+	<action path="/weixinTeacher" parameter="method" scope="request" type="com.wkmk.weixin.web.action.WeixinTeacherAction" validate="false">
+		<forward contextRelative="true" name="createclass" path="/weixin/teacher/create_class.jsp"/>
+		<forward contextRelative="true" name="selectbook" path="/weixin/teacher/select_book.jsp"/>
+		<forward contextRelative="true" name="classlist" path="/weixin/teacher/class_list.jsp"/>
+		<forward contextRelative="true" name="classinfo" path="/weixin/teacher/class_info.jsp"/>
+		<forward contextRelative="true" name="classedit" path="/weixin/teacher/class_edit.jsp"/>
+		<forward contextRelative="true" name="classpassword" path="/weixin/teacher/class_password.jsp"/>
+		<forward contextRelative="true" name="bookcontent" path="/weixin/teacher/book_content.jsp"/>
+		<forward contextRelative="true" name="question_list" path="/weixin/teacher/book_question_list.jsp"/>
+	    <forward contextRelative="true" name="errorlist" path="/weixin/teacher/book_content_errorlist.jsp"/>
+	    <forward contextRelative="true" name="viewlianximain" path="/weixin/teacher/view_lianxi_main.jsp"/>
+	    <forward contextRelative="true" name="viewlianxiM" path="/weixin/teacher/view_lianxiM.jsp"/>
+	    <forward contextRelative="true" name="viewlianxi" path="/weixin/teacher/view_lianxi.jsp"/>
+	    <forward contextRelative="true" name="viewlianxi_question" path="/weixin/teacher/view_lianxi_question.jsp"/>
+	    <forward contextRelative="true" name="viewlianxiM_question" path="/weixin/teacher/view_lianxiM_question.jsp"/>
+	    <forward contextRelative="true" name="book_error_question" path="/weixin/teacher/book_error_question.jsp"/>
+	    <forward contextRelative="true" name="allviewlianxiM_question" path="/weixin/teacher/allview_lianxiM_question.jsp"/>
+	    <forward contextRelative="true" name="allviewlianxi_question" path="/weixin/teacher/allview_lianxi_question.jsp"/>
+	    <forward contextRelative="true" name="beforeclassinfo" path="/weixin/teacher/before_classinfo.jsp"/>
+	    <forward contextRelative="true" name="beforeclassA" path="/weixin/teacher/before_classA.jsp"/>
+		<forward contextRelative="true" name="beforeclassB" path="/weixin/teacher/before_classB.jsp"/>
+		<forward contextRelative="true" name="beforeclassC" path="/weixin/teacher/before_classC.jsp"/>
+		<forward contextRelative="true" name="beforeclassE" path="/weixin/teacher/before_classE.jsp"/>
+		<forward contextRelative="true" name="beforeclassM" path="/weixin/teacher/before_classM.jsp"/>
+		 <forward contextRelative="true" name="beforeclassinfo2" path="/weixin/teacher/before_classinfo2.jsp"/>
+	    <forward contextRelative="true" name="beforeclassA2" path="/weixin/teacher/before_classA2.jsp"/>
+		<forward contextRelative="true" name="beforeclassB2" path="/weixin/teacher/before_classB2.jsp"/>
+		<forward contextRelative="true" name="beforeclassC2" path="/weixin/teacher/before_classC2.jsp"/>
+		<forward contextRelative="true" name="beforeclassE2" path="/weixin/teacher/before_classE2.jsp"/>
+		<forward contextRelative="true" name="beforeclassM2" path="/weixin/teacher/before_classM2.jsp"/>
+	    <forward contextRelative="true" name="lianxitips" path="/weixin/teacher/lianxi_tips.jsp" />
+	    <forward contextRelative="true" name="detail_viewlianxi" path="/weixin/teacher/detail_lianxi.jsp"/>	
+	    <forward contextRelative="true" name="detail_viewlianxiM" path="/weixin/teacher/detail_lianxiM.jsp"/>	
+	    <forward contextRelative="true" name="classuserlist" path="/weixin/teacher/classuser_list.jsp" />
+	    <forward contextRelative="true" name="classuserupload" path="/weixin/teacher/classuser_upload.jsp" />
+	    <forward contextRelative="true" name="uncommitstudent" path="/weixin/teacher/uncommit_student.jsp" />
+	</action>
+	<action path="/weixinStudent" parameter="method" scope="request" type="com.wkmk.weixin.web.action.WeixinStudentAction" validate="false">
+		<forward contextRelative="true" name="addbook" path="/weixin/student/add_book.jsp"/>
+		<forward contextRelative="true" name="selectbook" path="/weixin/student/select_book.jsp"/>
+		<forward contextRelative="true" name="addclass" path="/weixin/student/add_class.jsp"/>
+		<forward contextRelative="true" name="addclass1" path="/weixin/student/add_class1.jsp"/>
+		<forward contextRelative="true" name="bookcontent" path="/weixin/student/book_content.jsp"/>
+		<forward contextRelative="true" name="beforeclassinfo" path="/weixin/student/before_classinfo.jsp"/>
+		<forward contextRelative="true" name="beforeclassA" path="/weixin/student/before_classA.jsp"/>
+		<forward contextRelative="true" name="beforeclassB" path="/weixin/student/before_classB.jsp"/>
+		<forward contextRelative="true" name="beforeclassC" path="/weixin/student/before_classC.jsp"/>
+		<forward contextRelative="true" name="beforeclassE" path="/weixin/student/before_classE.jsp"/>
+		<forward contextRelative="true" name="beforeclassM" path="/weixin/student/before_classM.jsp"/>
+		<forward contextRelative="true" name="errorquestion" path="/weixin/student/error_question.jsp"/>
+		<forward contextRelative="true" name="questioninfo" path="/weixin/student/question_info.jsp"/>
+		<forward contextRelative="true" name="questioninfoM" path="/weixin/student/question_infoM.jsp"/>
+		<forward contextRelative="true" name="lianxitips" path="/weixin/student/lianxi_tips.jsp" />
+		<forward contextRelative="true" name="lianximain" path="/weixin/student/lianxi_main.jsp"/>
+		<forward contextRelative="true" name="lianxi" path="/weixin/student/lianxi.jsp"/>
+		<forward contextRelative="true" name="lianxiE" path="/weixin/student/lianxiE.jsp"/>
+		<forward contextRelative="true" name="lianxiM" path="/weixin/student/lianxiM.jsp"/>
+		<forward contextRelative="true" name="finishconfirm" path="/weixin/student/finish_confirm.jsp"/>
+		<forward contextRelative="true" name="viewlianximain" path="/weixin/student/view_lianxi_main.jsp"/>
+		<forward contextRelative="true" name="viewlianxi" path="/weixin/student/view_lianxi.jsp"/>
+		<forward contextRelative="true" name="viewlianxiE" path="/weixin/student/view_lianxiE.jsp"/>
+		<forward contextRelative="true" name="viewlianxiM" path="/weixin/student/view_lianxiM.jsp"/>
+		<forward contextRelative="true" name="answercard" path="/weixin/student/answer_card.jsp"/>
+		<forward contextRelative="true" name="viewsimilar" path="/weixin/student/view_similar.jsp"/>
+		<forward contextRelative="true" name="viewsimilarM" path="/weixin/student/view_similarM.jsp"/>
+	    <forward contextRelative="true" name="book_error_question" path="/weixin/student/book_error_question.jsp"/>
+	    <forward contextRelative="true" name="questioninfoM_all" path="/weixin/student/question_infoM_all.jsp"/>
+	    <forward contextRelative="true" name="questioninfo_all" path="/weixin/student/question_info_all.jsp"/>
+	    <forward contextRelative="true" name="videoplay" path="/weixin/student/video_play.jsp"/>
+	    <forward contextRelative="true" name="scanviewsimilar" path="/weixin/student/scanview_similar.jsp"/>
+		<forward contextRelative="true" name="scanviewsimilarM" path="/weixin/student/scanview_similarM.jsp"/>
+		<forward contextRelative="true" name="scanvideoplay" path="/weixin/student/scanvideo_play.jsp"/>
+		<forward contextRelative="true" name="scanaudioplay" path="/weixin/student/scanautio_play.jsp"/>
+		<forward contextRelative="true" name="classuploadimage" path="/weixin/student/class_uploadimage.jsp"/>
+		
+		<forward contextRelative="true" name="selectenglishbook" path="/weixin/student/select_english_book.jsp"/>
+		<forward contextRelative="true" name="bookcontentenglish" path="/weixin/student/book_content_english.jsp"/>
+	</action>
+	<action path="/twoCode" parameter="method" scope="request" type="com.wkmk.weixin.web.action.WeixinTwoCodeAction" validate="false">
+		<forward contextRelative="true" name="tips" path="/weixin/tip/tips.jsp"/>
+		<forward contextRelative="true" name="redirecttips" path="/weixin/tip/redirect_tips.jsp"/>
+	</action>
+	<action path="/weixinScanTwoCode" parameter="method" scope="request" type="com.wkmk.weixin.web.action.WeixinScanTwoCodeAction" validate="false">
+		<forward contextRelative="true" name="tips" path="/weixin/tip/tips.jsp"/>
+	</action>
+	<action path="/weixinVod" parameter="method" scope="request" type="com.wkmk.weixin.web.action.WeixinVodAction" validate="false">
+		<forward contextRelative="true" name="gookfilmbooklist" path="/weixin/vod/goodfilm_booklist.jsp"/>
+		<forward contextRelative="true" name="booklist" path="/weixin/vod/book_list.jsp"/>
+		<forward contextRelative="true" name="bookcontentfilmlist" path="/weixin/vod/bookcontentfilm_list.jsp"/>
+		<forward contextRelative="true" name="bookcontentgoodfilmlist" path="/weixin/vod/bookcontentgoodfilm_list.jsp"/>
+		<forward contextRelative="true" name="buy" path="/weixin/vod/buy.jsp"/>
+		<forward contextRelative="true" name="play" path="/weixin/vod/play.jsp"/>
+		<forward contextRelative="true" name="auditionlist" path="/weixin/vod/audition_list.jsp"/>
+		<forward contextRelative="true" name="bookcontentfilmplay" path="/weixin/vod/bookcontentfilm_play.jsp"/>
+		<forward contextRelative="true" name="play" path="/weixin/vod/play.jsp"/>
+		<forward contextRelative="true" name="insearchindex" path="/weixin/vod/search.jsp"/>
+		<forward contextRelative="true" name="searchbookcontentlist" path="/weixin/vod/search_bookcontent_list.jsp"/>
+	</action>
+	<action path="/wxpay/weixinPay" parameter="method" scope="request" type="com.wkmk.weixin.web.action.WeixinPayAction" validate="false">
+		<forward name="index" contextRelative="true" path="/weixin/wxpay/index.jsp" />
+		<forward name="money2account" contextRelative="true" path="/weixin/wxpay/money2account.jsp" />
+		<forward name="paysuccess" contextRelative="true" path="/weixin/wxpay/pay_success.jsp" />
+	</action>
+	<action parameter="method" path="/payWxpayNotifyAction" scope="request" type="com.wkmk.pay.tencent.action.PayWxpayNotifyAction" validate="false"/>
+	<action path="/weixinHelp" parameter="method" scope="request" type="com.wkmk.weixin.web.action.WeixinHelpAction" validate="false">
+		<forward name="index" contextRelative="true" path="/weixin/help/index.jsp" />
+		<forward name="info" contextRelative="true" path="/weixin/help/info.jsp" />
+		<forward name="info1" contextRelative="true" path="/weixin/help/info1.jsp" />
+		<forward name="info2" contextRelative="true" path="/weixin/help/info2.jsp" />
+		<forward name="info3" contextRelative="true" path="/weixin/help/info3.jsp" />
+		<forward name="answer" contextRelative="true" path="/weixin/help/answer.jsp" />
+		<forward name="answertips" contextRelative="true" path="/weixin/help/answer_tips.jsp" />
+		<forward name="answerfailure" contextRelative="true" path="/weixin/help/answer_failure.jsp" />
+		<forward name="answerovertime" contextRelative="true" path="/weixin/help/answer_overtime.jsp" />
+		<forward name="complaint" contextRelative="true" path="/weixin/help/complaint.jsp" />
+		<forward name="viewcomplaint" contextRelative="true" path="/weixin/help/complaint_view.jsp" />
+		<forward name="confirmorder" contextRelative="true" path="/weixin/help/confirm_order.jsp" />
+		<forward name="questionedit" contextRelative="true" path="/weixin/help/question_edit.jsp" />
+		<forward name="studentquestion" contextRelative="true" path="/weixin/help/student_question.jsp" />
+		<forward name="teacherquestion" contextRelative="true" path="/weixin/help/teacher_question.jsp" />
+		<forward name="questiondescript" contextRelative="true" path="/weixin/help/question_descript.jsp" />
+	</action>
+	<action path="/weixinPaper" parameter="method" scope="request" type="com.wkmk.weixin.web.action.WeixinPaperAction" validate="false">
+		<forward name="index" contextRelative="true" path="/weixin/paper/index.jsp" />
+		<forward name="detail" contextRelative="true" path="/weixin/paper/detail.jsp" />
+	</action>
+	<action path="/weixinLoginPc" parameter="method" scope="request" type="com.wkmk.weixin.web.action.WeixinLoginPcAction" validate="false">
+		<forward name="success" contextRelative="true" path="/weixin/loginpc/success.jsp" />
+	    <forward name="register" contextRelative="true" path="/weixin/loginpc/register.jsp" />
+	    <forward name="failure" contextRelative="true" path="/weixin/loginpc/failure.jsp" />
+	    <forward name="null" contextRelative="true" path="/weixin/loginpc/null.jsp" />
+	</action>
+	<action path="/weixinLoginPcConfirm" parameter="method" scope="request" type="com.wkmk.weixin.web.action.WeixinLoginPcConfirmAction" validate="false">
+		<forward name="ok" contextRelative="true" path="/weixin/loginpc/ok.jsp" />
+		<forward name="cancel" contextRelative="true" path="/weixin/loginpc/cancel.jsp" />
+	</action>
+	<action path="/weixinCourse" parameter="method" scope="request" type="com.wkmk.weixin.web.action.WeixinCourseAction" validate="false">
+		<forward name="index" contextRelative="true" path="/weixin/course/index.jsp" />
+		<forward contextRelative="true" name="mycourse" path="/weixin/course/my_course.jsp"/>
+		<forward contextRelative="true" name="coursefilmlist" path="/weixin/course/coursefilm_list.jsp"/>
+		<forward contextRelative="true" name="play" path="/weixin/course/play.jsp"/>
+		<forward contextRelative="true" name="buy" path="/weixin/course/buy.jsp"/>
+		<forward contextRelative="true" name="teacherindex" path="/weixin/course/teacher_index.jsp"/>
+		<forward contextRelative="true" name="studentindex" path="/weixin/course/student_index.jsp"/>
+		<forward contextRelative="true" name="courselist" path="/weixin/course/course_list.jsp"/>
+		<forward contextRelative="true" name="searchbookcontentlist" path="/weixin/course/search_bookcontent_list.jsp"/>
+	</action>
+	<action path="/weixinTextBook" parameter="method" scope="request" type="com.wkmk.weixin.web.action.WeixinTextBookAction" validate="false">
+		<forward name="index" contextRelative="true" path="/weixin/textbook/index.jsp" />
+		<forward name="detail" contextRelative="true" path="/weixin/textbook/detail.jsp" />
+		<forward contextRelative="true" name="buy" path="/weixin/textbook/buy.jsp"/>
+		<forward contextRelative="true" name="success" path="/weixin/textbook/success.jsp"/>
+		<forward contextRelative="true" name="mytextbookorder" path="/weixin/textbook/my_textbookorder.jsp"/>
+		<forward name="buydetail" contextRelative="true" path="/weixin/textbook/buy_detail.jsp" />
+	</action>
+ </action-mappings>
+</struts-config>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.sys.bo.SysUserLog" table="sys_user_log">
+<id name="logid" type="java.lang.Integer" column="logid">  <generator class="native" /> </id>
+<property  name="userip" type="java.lang.String" column="userip"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+<property  name="descript" type="java.lang.String" column="descript"/>
+<many-to-one name="sysUserInfo" class="com.wkmk.sys.bo.SysUserInfo" cascade="none" column="userid" not-null="true"/>
+<property  name="unitid" type="java.lang.Integer" column="unitid"/>
+<property  name="logtype" type="java.lang.String" column="logtype"/>
+</class>
+</hibernate-mapping>

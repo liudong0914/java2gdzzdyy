@@ -1,0 +1,11 @@
+.collect_tab{width:50px; height:22px; border:#a6d0e7 1px solid; text-align:center; line-height:22px; float:left; margin-right:3px;}
+.convert_tab{width:70px; height:22px; border:#a6d0e7 1px solid; text-align:center; line-height:22px; float:left; margin-right:3px;}
+
+.pannel_normal {color:#000; text-align:center; height:32px; line-height:21px; background:url("/libs/images/sk/normal.gif") no-repeat center; font-weight:normal; cursor:hand;}
+.pannel_active {color:#000; text-align:center; height:32px; line-height:21px; background:url("/libs/images/sk/active.gif") no-repeat center; font-weight:bold; }
+
+.folderitem { float:left; padding:0px; height: 140px; width: 130px; }
+.folderitem1 { padding:0px; height: 135px; width: 125px; border:1px solid white; overflow: hidden; background:white; }
+.folserchecked { border:1px solid #cccccc; }
+.foldername { line-height: 18px; }
+

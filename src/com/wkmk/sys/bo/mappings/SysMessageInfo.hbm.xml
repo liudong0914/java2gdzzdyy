@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.sys.bo.SysMessageInfo" table="sys_message_info" lazy="false">
+<id name="messageid" type="java.lang.Integer" column="messageid">  <generator class="native" /> </id>
+<property  name="title" type="java.lang.String" column="title"/>
+<property  name="content" type="java.lang.String" column="content"/>
+<property  name="type" type="java.lang.String" column="type"/>
+<property  name="userid" type="java.lang.Integer" column="userid"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+</class>
+</hibernate-mapping>

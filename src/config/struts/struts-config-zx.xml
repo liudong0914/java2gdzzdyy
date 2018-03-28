@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+    <form-beans>
+  		<form-bean name="zxHelpQuestionActionForm" type="com.wkmk.zx.web.form.ZxHelpQuestionActionForm" />
+  		<form-bean name="zxHelpOrderActionForm" type="com.wkmk.zx.web.form.ZxHelpOrderActionForm" />
+  		<form-bean name="zxHelpAnswerActionForm" type="com.wkmk.zx.web.form.ZxHelpAnswerActionForm" />
+  		<form-bean name="zxHelpFileActionForm" type="com.wkmk.zx.web.form.ZxHelpFileActionForm" />
+  		<form-bean name="zxHomeworkQuestionActionForm" type="com.wkmk.zx.web.form.ZxHomeworkQuestionActionForm" />
+  		<form-bean name="zxHomeworkOrderActionForm" type="com.wkmk.zx.web.form.ZxHomeworkOrderActionForm" />
+  		<form-bean name="zxHomeworkAnswerActionForm" type="com.wkmk.zx.web.form.ZxHomeworkAnswerActionForm" />
+  		<form-bean name="zxHomeworkFileActionForm" type="com.wkmk.zx.web.form.ZxHomeworkFileActionForm" />
+  		<form-bean name="zxHomeworkReportActionForm" type="com.wkmk.zx.web.form.ZxHomeworkReportActionForm" />
+  		<form-bean name="zxHomeworkReportQuestionActionForm" type="com.wkmk.zx.web.form.ZxHomeworkReportQuestionActionForm" />
+  		<form-bean name="zxHomeworkWrongReasonActionForm" type="com.wkmk.zx.web.form.ZxHomeworkWrongReasonActionForm" />
+  		<form-bean name="zxHelpQuestionCommentActionForm" type="com.wkmk.zx.web.form.ZxHelpQuestionCommentActionForm" />
+  		<form-bean name="zxHelpQuestionBuyActionForm" type="com.wkmk.zx.web.form.ZxHelpQuestionBuyActionForm" />
+  		<form-bean name="zxHelpQuestionComplaintActionForm" type="com.wkmk.zx.web.form.ZxHelpQuestionComplaintActionForm" />
+  	</form-beans>
+  	<global-forwards>
+  	</global-forwards>
+  	<action-mappings>
+  		<action name="zxHelpQuestionActionForm" parameter="method" path="/zxHelpQuestionAction" scope="request" type="com.wkmk.zx.web.action.ZxHelpQuestionAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="zxHelpOrderActionForm" parameter="method" path="/zxHelpOrderAction" scope="request" type="com.wkmk.zx.web.action.ZxHelpOrderAction" validate="false">
+			<forward contextRelative="true" name="list" path="/zx/order/order_list.jsp"/>
+			<forward contextRelative="true" name="view" path="/zx/order/order_view.jsp"/>
+			<forward contextRelative="true" name="edit" path="/zx/order/order_edit.jsp"/>
+			<forward contextRelative="true" name="videoAdd" path="/zx/order/order_videoadd.jsp"/>
+			<forward contextRelative="true" name="videoAddSave" path="/zx/order/order_videoadd_deal.jsp"/>
+			<forward contextRelative="true" name="pictureAdd" path="/zx/order/order_pictureadd.jsp"/>
+			<forward contextRelative="true" name="pictureAddSave" path="/zx/order/order_pictureadd_deal.jsp"/>
+			<forward contextRelative="true" name="videoList" path="/zx/order/video_list.jsp"/>
+			<forward contextRelative="true" name="preview" path="/zx/order/video_preview.jsp"/>
+			<forward contextRelative="true" name="viewAnswer" path="/zx/order/order_viewAnswer.jsp"/>
+		</action>
+		<action name="zxHelpAnswerActionForm" parameter="method" path="/zxHelpAnswerAction" scope="request" type="com.wkmk.zx.web.action.ZxHelpAnswerAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="zxHelpFileActionForm" parameter="method" path="/zxHelpFileAction" scope="request" type="com.wkmk.zx.web.action.ZxHelpFileAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="zxHomeworkQuestionActionForm" parameter="method" path="/zxHomeworkQuestionAction" scope="request" type="com.wkmk.zx.web.action.ZxHomeworkQuestionAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="zxHomeworkOrderActionForm" parameter="method" path="/zxHomeworkOrderAction" scope="request" type="com.wkmk.zx.web.action.ZxHomeworkOrderAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="zxHomeworkAnswerActionForm" parameter="method" path="/zxHomeworkAnswerAction" scope="request" type="com.wkmk.zx.web.action.ZxHomeworkAnswerAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="zxHomeworkFileActionForm" parameter="method" path="/zxHomeworkFileAction" scope="request" type="com.wkmk.zx.web.action.ZxHomeworkFileAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="zxHomeworkReportActionForm" parameter="method" path="/zxHomeworkReportAction" scope="request" type="com.wkmk.zx.web.action.ZxHomeworkReportAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="zxHomeworkReportQuestionActionForm" parameter="method" path="/zxHomeworkReportQuestionAction" scope="request" type="com.wkmk.zx.web.action.ZxHomeworkReportQuestionAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="zxHomeworkWrongReasonActionForm" parameter="method" path="/zxHomeworkWrongReasonAction" scope="request" type="com.wkmk.zx.web.action.ZxHomeworkWrongReasonAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="zxHelpQuestionCommentActionForm" parameter="method" path="/zxHelpQuestionCommentAction" scope="request" type="com.wkmk.zx.web.action.ZxHelpQuestionCommentAction" validate="false">
+			<forward contextRelative="true" name="list" path="/zx/questioncomment/comment_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/zx/questioncomment/comment_edit.jsp"/>
+		</action>
+		<action name="zxHelpQuestionBuyActionForm" parameter="method" path="/zxHelpQuestionBuyAction" scope="request" type="com.wkmk.zx.web.action.ZxHelpQuestionBuyAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="zxHelpQuestionComplaintActionForm" parameter="method" path="/zxHelpQuestionComplaintAction" scope="request" type="com.wkmk.zx.web.action.ZxHelpQuestionComplaintAction" validate="false">
+			<forward contextRelative="true" name="list" path="/zx/questioncomplain/zxhelpquestioncomplain_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/zx/questioncomplain/zxhelpquestioncomplain_edit.jsp"/>
+			<forward contextRelative="true" name="view" path="/zx/questioncomplain/zxhelpquestioncomplain_view.jsp"/>
+		</action>
+  	</action-mappings>
+</struts-config>

@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>个人信息</title>
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<script src="js/jquery-1.8.2.min.js"></script>
+<script>
+$(function(){
+	function select_simulated(select_style,bomb_con_style){
+		$(document).click(function(){
+			$(bomb_con_style).hide();
+			})
+		$(select_style).live('click',function(e){
+			var thisinput=$(this);
+			var local=$(this).position();
+			var bomb_con=$(bomb_con_style);
+				$(this).parents("li").siblings().find(bomb_con_style).hide();
+				$(this).parent().find(bomb_con_style).width($(this).width());//下拉框的宽度
+				$(this).parent().find(bomb_con_style).show();
+				e?e.stopPropagation():event.cancelBubble = true;
+				bomb_con.find("dd").click(function(e){
+				var bomb_text=$(this).text();
+				$(this).addClass("selected").siblings().removeClass("selected");
+				$(this).parents(bomb_con_style).hide();
+				$(this).parents("li").find(select_style).val(bomb_text);
+				e?e.stopPropagation():event.cancelBubble = true;
+				
+		});	
+		});
+		 return false;
+	}
+	select_simulated(".provin_select",".provin_con");
+	
+	  
+	$(".local").focus(function(){
+		$(this).addClass("local3");
+	});
+	$(".local").blur(function(){
+		$(this).removeClass("local3");
+	});
+	})
+</script>
+
+</head>
+
+<body style="background-color:#f9f9f9;">
+<!------头部-------->
+<div class="header">
+    <div class="top">
+        <img src="images/logo.png"  class="logo"/>
+        <div class="top_right">
+            <a href="#" class="top_right_a">登录</a>
+            <p class="top_right_p">客服电话：2015487445</p>
+        </div>
+    </div><!------头部结束-------->
+</div>
+<!------内容-------->
+<div class="personal">
+	<div class="information">
+     	<ul>
+        	<a href="#"><li class="information_line">
+            	<img src="images/icon01.png" />
+                <span>个人信息</span>
+            </li></a>
+            <a href="#"><li>
+            	<img src="images/icon02.png" />
+                <span>密码修改</span>
+            </li></a>
+            <a href="#"><li>
+            	<img src="images/icon03.png" />
+                <span>手机绑定</span>
+            </li></a>
+            <a href="#"><li>
+            	<img src="images/icon04.png" />
+                <span>教师认证</span>
+            </li></a>
+            <a href="#"><li>
+            	<img src="images/icon05.png" />
+                <span>我的答疑</span>
+            </li></a>
+            <a href="#"><li>
+            	<img src="images/icon06.png" />
+                <span>我的微课</span>
+            </li></a>
+        </ul>
+    </div><!----information-e---->
+    <div class="information_right">
+    	<div class="information_right_top">
+			<p>修改个人信息</p>
+        </div>
+        <div class="information_right_main">
+        	<div class="information_right_main_01">
+            	<p>个人头像：</p>
+                <img src="images/img.jpg" />
+                <a href="#">更换头像</a>
+            </div>
+            <div class="information_right_main_02">
+            	<p>真实姓名：</p>
+                <input type="text" />
+            </div>
+            <div class="information_right_main_03">
+            	<span>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</span>
+                <form action="" method="get">
+					<label><input name="choice" type="radio" value="" /><span>男</span></label>
+                    <label><input name="choice" type="radio" value="" class="radio1" /><span>女</span></label>
+                </form>
+            </div>
+            <div class="information_right_main_02">
+            	<p>出生日期：</p>
+                <div class="area">
+                    <ul class="clearfix">
+                        <li class="return_reques">
+                            <input type="text" placeholder="1990"  name="" class="local select_style provin_select" readonly>
+                            <div class="clearfix">
+                                <div class="bomb_con_style provin_con none">
+                                   <dl>
+                                      <dd>1991</dd>
+                                      <dd>1992</dd>
+                                      <dd>1992</dd>
+                                      <dd>1992</dd>
+                                      <dd>1992</dd>
+                                      <dd>1992</dd>
+                                   </dl>
+                                </div>
+                            </div>
+                        </li>   
+                    </ul>
+                </div><!----area-e---->
+                <div class="area">
+                    <ul class="clearfix">
+                        <li class="return_reques">
+                            <input type="text" placeholder="01"  name="" class="local select_style provin_select" readonly>
+                            <div class="clearfix">
+                                <div class="bomb_con_style provin_con none">
+                                   <dl>
+                                      <dd>1991</dd>
+                                      <dd>1992</dd>
+                                      <dd>1992</dd>
+                                      <dd>1992</dd>
+                                      <dd>1992</dd>
+                                      <dd>1992</dd>
+                                   </dl>
+                                </div>
+                            </div>
+                        </li>   
+                    </ul>
+                </div><!----area-e---->
+                <div class="area">
+                    <ul class="clearfix">
+                        <li class="return_reques">
+                            <input type="text" placeholder="23"  name="" class="local select_style provin_select" readonly>
+                            <div class="clearfix">
+                                <div class="bomb_con_style provin_con none">
+                                   <dl>
+                                      <dd>1991</dd>
+                                      <dd>1992</dd>
+                                      <dd>1992</dd>
+                                      <dd>1992</dd>
+                                      <dd>1992</dd>
+                                      <dd>1992</dd>
+                                   </dl>
+                                </div>
+                            </div>
+                        </li>   
+                    </ul>
+                </div><!----area-e---->
+            </div>
+            <div class="information_right_main_02">
+            	<p>所在地区：</p>
+                <div class="area area01">
+                    <ul class="clearfix">
+                        <li class="return_reques">
+                            <input type="text" placeholder="中国"  name="" class="local select_style provin_select" readonly>
+                            <div class="clearfix">
+                                <div class="bomb_con_style provin_con none">
+                                   <dl>
+                                      <dd>中国</dd>
+                                      <dd>中国</dd>
+                                      <dd>中国</dd>
+                                      <dd>中国</dd>
+                                      <dd>中国</dd>
+                                      <dd>中国</dd>
+                                      <dd>中国</dd>
+                                      <dd>中国</dd>
+                                      <dd>中国</dd>
+                                      <dd>中国</dd>
+                                   </dl>
+                                </div>
+                            </div>
+                        </li>   
+                    </ul>
+                </div><!----area-e---->
+                <div class="area area01">
+                    <ul class="clearfix">
+                        <li class="return_reques">
+                            <input type="text" placeholder="北京"  name="" class="local select_style provin_select" readonly>
+                            <div class="clearfix">
+                                <div class="bomb_con_style provin_con none">
+                                   <dl>
+                                      <dd>北京</dd>
+                                      <dd>北京</dd>
+                                      <dd>北京</dd>
+                                      <dd>北京</dd>
+                                      <dd>北京</dd>
+                                      <dd>北京</dd>
+                                   </dl>
+                                </div>
+                            </div>
+                        </li>   
+                    </ul>
+                </div><!----area-e---->
+                <div class="area area01">
+                    <ul class="clearfix">
+                        <li class="return_reques">
+                            <input type="text" placeholder="昌平区"  name="" class="local select_style provin_select" readonly>
+                            <div class="clearfix">
+                                <div class="bomb_con_style provin_con none">
+                                   <dl>
+                                      <dd>昌平区</dd>
+                                      <dd>昌平区</dd>
+                                      <dd>昌平区</dd>
+                                      <dd>昌平区</dd>
+                                      <dd>昌平区</dd>
+                                      <dd>昌平区</dd>
+                                   </dl>
+                                </div>
+                            </div>
+                        </li>   
+                    </ul>
+                </div><!----area-e---->
+            </div>
+            
+            <div class="information_right_main_02">
+            	<p>最高学历：</p>
+                <input type="text" />
+            </div>
+            <div class="information_right_main_02">
+            	<p>自我介绍：</p>
+                <textarea type="text" class="information_right_main_02_input"></textarea>
+            </div>
+            <div class="information_right_main_03">
+            	<p>兴趣领域：</p>
+                <div class="information_right_main_02_font">
+                	<div class="information_right_main_02_font_div">
+                    	<input type="checkbox" />
+                        <span>计算机</span>
+                    </div>
+                    <div class="information_right_main_02_font_div">
+                    	<input type="checkbox" />
+                        <span>计算机</span>
+                    </div>
+                    <div class="information_right_main_02_font_div">
+                    	<input type="checkbox" />
+                        <span>计算机</span>
+                    </div>
+                    <div class="information_right_main_02_font_div">
+                    	<input type="checkbox" />
+                        <span>计算机</span>
+                    </div>
+                    <div class="information_right_main_02_font_div">
+                    	<input type="checkbox" />
+                        <span>计算机</span>
+                    </div>
+                    <div class="information_right_main_02_font_div">
+                    	<input type="checkbox" />
+                        <span>计算机</span>
+                    </div>
+                    <div class="information_right_main_02_font_div">
+                    	<input type="checkbox" />
+                        <span>计算机</span>
+                    </div>
+                    <div class="information_right_main_02_font_div">
+                    	<input type="checkbox" />
+                        <span>计算机</span>
+                    </div>
+                    <div class="information_right_main_02_font_div">
+                    	<input type="checkbox" />
+                        <span>计算机</span>
+                    </div>
+                    <div class="information_right_main_02_font_div">
+                    	<input type="checkbox" />
+                        <span>计算机</span>
+                    </div>
+                    <div class="information_right_main_02_font_div">
+                    	<input type="checkbox" />
+                        <span>计算机</span>
+                    </div>
+                    <div class="information_right_main_02_font_div">
+                    	<input type="checkbox" />
+                        <span>计算机</span>
+                    </div>
+                    <div class="information_right_main_02_font_div">
+                    	<input type="checkbox" />
+                        <span>计算机</span>
+                    </div>
+                    <div class="information_right_main_02_font_div">
+                    	<input type="checkbox" />
+                        <span>计算机</span>
+                    </div>
+                    <div class="information_right_main_02_font_div">
+                    	<input type="checkbox" />
+                        <span>计算机</span>
+                    </div>
+                    <div class="information_right_main_02_font_div">
+                    	<input type="checkbox" />
+                        <span>计算机</span>
+                    </div>
+                    <div class="information_right_main_02_font_div">
+                    	<input type="checkbox" />
+                        <span>计算机</span>
+                    </div>
+                    <div class="information_right_main_02_font_div">
+                    	<input type="checkbox" />
+                        <span>计算机</span>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="information_right_main_a">确定</a>
+        </div><!----information_right_main-e---->
+    </div><!----information_right-e---->
+</div><!----personal-e---->
+
+
+
+<div class="footer">
+	<p>龙门作业宝版权所有</p>
+    <p>龙门作业宝版权所有</p>
+    <p>龙门作业宝版权所有</p>
+</div>
+
+
+</body>
+</html>

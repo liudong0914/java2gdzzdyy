@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN"
+                        "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+<taglib>
+ <tlibversion>1.2</tlibversion>
+ <jspversion>1.1</jspversion>
+ <shortname>pager taglib</shortname>
+ <uri>http://www.servletsuite.com/servlets/buttag</uri>
+ <info>Pager taglib</info>
+ <tag>
+  <name>option</name>
+  <tagclass>com.util.taglib.code.CodeOptionTagLib</tagclass>
+  <bodycontent>JSP</bodycontent>
+  <info>HTML pager</info>
+  <attribute>
+   <name>name</name>
+   <required>true</required>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <name>codetype</name>
+   <required>true</required>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <name>valuename</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <name>value</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <name>ckname</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <name>property</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <name>scope</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <name>readonly</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <name>onchange</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <name>selectall</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+ </tag>
+ <tag>
+  <name>value</name>
+  <tagclass>com.util.taglib.code.CodeValueTagLib</tagclass>
+  <bodycontent>JSP</bodycontent>
+  <info>HTML pager</info>
+  <attribute>
+   <name>codetype</name>
+   <required>true</required>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <name>valuename</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <name>value</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <name>color</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <name>colorvalue</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <name>property</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+  <attribute>
+   <name>scope</name>
+   <rtexprvalue>true</rtexprvalue>
+  </attribute>
+ </tag>
+</taglib>

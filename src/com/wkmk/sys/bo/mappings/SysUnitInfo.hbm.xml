@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.sys.bo.SysUnitInfo" table="sys_unit_info">
+<id name="unitid" type="java.lang.Integer" column="unitid">  <generator class="native" /> </id>
+<property  name="unitno" type="java.lang.String" column="unitno"/>
+<property  name="parentno" type="java.lang.String" column="parentno"/>
+<property  name="unitname" type="java.lang.String" column="unitname"/>
+<property  name="shortname" type="java.lang.String" column="shortname"/>
+<property  name="ename" type="java.lang.String" column="ename"/>
+<property  name="homepage" type="java.lang.String" column="homepage"/>
+<property  name="email" type="java.lang.String" column="email"/>
+<property  name="telephone" type="java.lang.String" column="telephone"/>
+<property  name="linkman" type="java.lang.String" column="linkman"/>
+<property  name="job" type="java.lang.String" column="job"/>
+<property  name="fax" type="java.lang.String" column="fax"/>
+<property  name="province" type="java.lang.String" column="province"/>
+<property  name="city" type="java.lang.String" column="city"/>
+<property  name="county" type="java.lang.String" column="county"/>
+<property  name="keywords" type="java.lang.String" column="keywords"/>
+<property  name="postcode" type="java.lang.String" column="postcode"/>
+<property  name="address" type="java.lang.String" column="address"/>
+<property  name="descript" type="java.lang.String" column="descript"/>
+<property  name="orderindex" type="java.lang.Integer" column="orderindex"/>
+<property  name="sketch" type="java.lang.String" column="sketch"/>
+<property  name="logo" type="java.lang.String" column="logo"/>
+<property  name="banner" type="java.lang.String" column="banner"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+<property  name="updatetime" type="java.lang.String" column="updatetime"/>
+<property  name="status" type="java.lang.String" column="status"/>
+<property  name="icp" type="java.lang.String" column="icp"/>
+<property  name="type" type="java.lang.String" column="type"/>
+<property  name="schooltype" type="java.lang.String" column="schooltype"/>
+<property  name="hits" type="java.lang.Integer" column="hits"/>
+<property  name="praise" type="java.lang.Integer" column="praise"/>
+<property  name="recommand" type="java.lang.String" column="recommand"/>
+<property  name="recommandno" type="java.lang.Integer" column="recommandno"/>
+<property  name="domain" type="java.lang.String" column="domain"/>
+</class>
+</hibernate-mapping>

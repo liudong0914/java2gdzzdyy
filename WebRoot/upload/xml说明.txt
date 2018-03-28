@@ -1,0 +1,5 @@
+﻿D:/龙门作业宝作业碎片化/九年级化学上HJ/Main.xml;D:/龙门作业宝作业碎片化/九年级化学上HJ/Image;D:/javadev/wkmk/zyb/WebRoot/upload/tk/question/12/;12
+
+文件中存放四个路径，已";"隔开，第一个路径为Main.xml路径，第二个为图片存放路径，第三个为目标转移路径(按作业本id存放)，目标转移路径必修为WebRoot下的upload下的文件夹，目标了转移路径结尾要多加一个"/"，第四个为作业本id
+
+访问地址：http://localhost:8080/newXml.do

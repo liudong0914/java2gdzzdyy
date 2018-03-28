@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.tk.bo.TkBookContentPower" table="tk_book_content_power">
+<id name="powerid" type="java.lang.Integer" column="powerid">  <generator class="native" /> </id>
+<many-to-one name="tkBookContent" class="com.wkmk.tk.bo.TkBookContent" cascade="none" column="bookcontentid" not-null="true"/>
+<property  name="subjectid" type="java.lang.Integer" column="subjectid"/>
+<property  name="userid" type="java.lang.Integer" column="userid"/>
+<property  name="type" type="java.lang.String" column="type"/>
+</class>
+</hibernate-mapping>

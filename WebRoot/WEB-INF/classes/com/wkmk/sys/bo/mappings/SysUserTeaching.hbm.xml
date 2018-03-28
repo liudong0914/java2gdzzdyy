@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.sys.bo.SysUserTeaching" table="sys_user_teaching">
+<id name="teachingid" type="java.lang.Integer" column="teachingid">  <generator class="native" /> </id>
+<property  name="subjectid" type="java.lang.Integer" column="subjectid"/>
+<property  name="gradeid" type="java.lang.Integer" column="gradeid"/>
+<property  name="userid" type="java.lang.Integer" column="userid"/>
+</class>
+</hibernate-mapping>

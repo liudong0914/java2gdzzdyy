@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.vwh.bo.VwhFilmKnopoint" table="vwh_film_knopoint">
+<id name="fid" type="java.lang.Integer" column="fid">  <generator class="native" /> </id>
+<property  name="filmid" type="java.lang.Integer" column="filmid"/>
+<property  name="knopointid" type="java.lang.Integer" column="knopointid"/>
+</class>
+</hibernate-mapping>

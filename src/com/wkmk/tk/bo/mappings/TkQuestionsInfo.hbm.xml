@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.tk.bo.TkQuestionsInfo" table="tk_questions_info">
+<id name="questionid" type="java.lang.Integer" column="questionid">  <generator class="native" /> </id>
+<property  name="parentid" type="java.lang.Integer" column="parentid"/>
+<property  name="questionno" type="java.lang.String" column="questionno"/>
+<property  name="title" type="java.lang.String" column="title"/>
+<property  name="titlecontent" type="java.lang.String" column="titlecontent"/>
+<property  name="filepath" type="java.lang.String" column="filepath"/>
+<property  name="optionnum" type="java.lang.Integer" column="optionnum"/>
+<property  name="option1" type="java.lang.String" column="option1"/>
+<property  name="option2" type="java.lang.String" column="option2"/>
+<property  name="option3" type="java.lang.String" column="option3"/>
+<property  name="option4" type="java.lang.String" column="option4"/>
+<property  name="option5" type="java.lang.String" column="option5"/>
+<property  name="option6" type="java.lang.String" column="option6"/>
+<property  name="option7" type="java.lang.String" column="option7"/>
+<property  name="option8" type="java.lang.String" column="option8"/>
+<property  name="option9" type="java.lang.String" column="option9"/>
+<property  name="option10" type="java.lang.String" column="option10"/>
+<property  name="questiontype" type="java.lang.String" column="questiontype"/>
+<property  name="doctype" type="java.lang.String" column="doctype"/>
+<property  name="rightans" type="java.lang.String" column="rightans"/>
+<property  name="isrightans" type="java.lang.String" column="isrightans"/>
+<property  name="difficult" type="java.lang.String" column="difficult"/>
+<property  name="score" type="java.lang.String" column="score"/>
+<property  name="cretatdate" type="java.lang.String" column="cretatdate"/>
+<property  name="updatetime" type="java.lang.String" column="updatetime"/>
+<property  name="descript" type="java.lang.String" column="descript"/>
+<property  name="descriptpath" type="java.lang.String" column="descriptpath"/>
+<property  name="status" type="java.lang.String" column="status"/>
+<property  name="area" type="java.lang.String" column="area"/>
+<property  name="theyear" type="java.lang.String" column="theyear"/>
+<property  name="authorname" type="java.lang.String" column="authorname"/>
+<property  name="authorid" type="java.lang.Integer" column="authorid"/>
+<many-to-one name="tkQuestionsType" class="com.wkmk.tk.bo.TkQuestionsType" cascade="none" column="typeid" not-null="true"/>
+<property  name="subjectid" type="java.lang.Integer" column="subjectid"/>
+<property  name="gradeid" type="java.lang.Integer" column="gradeid"/>
+<property  name="unitid" type="java.lang.Integer" column="unitid"/>
+<property  name="tag" type="java.lang.String" column="tag"/>
+<property  name="filmtwocodepath" type="java.lang.String" column="filmtwocodepath"/>
+<property  name="similartwocodepath" type="java.lang.String" column="similartwocodepath"/>
+</class>
+</hibernate-mapping>

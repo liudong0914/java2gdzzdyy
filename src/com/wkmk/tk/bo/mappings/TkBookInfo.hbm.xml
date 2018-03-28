@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.tk.bo.TkBookInfo" table="tk_book_info">
+<id name="bookid" type="java.lang.Integer" column="bookid">  <generator class="native" /> </id>
+<property  name="title" type="java.lang.String" column="title"/>
+<property  name="bookno" type="java.lang.String" column="bookno"/>
+<property  name="subjectid" type="java.lang.Integer" column="subjectid"/>
+<property  name="gradeid" type="java.lang.Integer" column="gradeid"/>
+<property  name="version" type="java.lang.String" column="version"/>
+<property  name="part" type="java.lang.String" column="part"/>
+<property  name="editor" type="java.lang.String" column="editor"/>
+<property  name="deputyeditor" type="java.lang.String" column="deputyeditor"/>
+<property  name="sketch" type="java.lang.String" column="sketch"/>
+<property  name="status" type="java.lang.String" column="status"/>
+<property  name="descript" type="java.lang.String" column="descript"/>
+<property  name="htmlcontent" type="java.lang.String" column="htmlcontent"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+<property  name="updatetime" type="java.lang.String" column="updatetime"/>
+<property  name="userid" type="java.lang.Integer" column="userid"/>
+<property  name="unitid" type="java.lang.Integer" column="unitid"/>
+<property  name="twocodepath" type="java.lang.String" column="twocodepath"/>
+<property  name="theyear" type="java.lang.String" column="theyear"/>
+<property  name="vodstate" type="java.lang.String" column="vodstate"/>
+</class>
+</hibernate-mapping>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.sys.bo.SysUserInfoDetail" table="sys_user_info_detail">
+<id name="userid" type="java.lang.Integer" column="userid">  <generator class="assigned" /> </id>
+<property  name="qq" type="java.lang.String" column="qq"/>
+<property  name="msn" type="java.lang.String" column="msn"/>
+<property  name="birthday" type="java.lang.String" column="birthday"/>
+<property  name="telephone" type="java.lang.String" column="telephone"/>
+<property  name="cardtype" type="java.lang.String" column="cardtype"/>
+<property  name="cardno" type="java.lang.String" column="cardno"/>
+<property  name="nation" type="java.lang.String" column="nation"/>
+<property  name="province" type="java.lang.String" column="province"/>
+<property  name="city" type="java.lang.String" column="city"/>
+<property  name="county" type="java.lang.String" column="county"/>
+<property  name="postcode" type="java.lang.String" column="postcode"/>
+<property  name="address" type="java.lang.String" column="address"/>
+<property  name="mood" type="java.lang.String" column="mood"/>
+<property  name="descript" type="java.lang.String" column="descript"/>
+<property  name="flag" type="java.lang.String" column="flag"/>
+<property  name="pwdquestion" type="java.lang.String" column="pwdquestion"/>
+<property  name="pwdanswer" type="java.lang.String" column="pwdanswer"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+<property  name="lastlogin" type="java.lang.String" column="lastlogin"/>
+<property  name="logintimes" type="java.lang.Integer" column="logintimes"/>
+<property  name="updatetime" type="java.lang.String" column="updatetime"/>
+<property  name="education" type="java.lang.String" column="education"/>
+<property  name="jobtitle" type="java.lang.String" column="jobtitle"/>
+<property  name="canaddcourse" type="java.lang.String" column="canaddcourse"/>
+<property  name="thetitle" type="java.lang.String" column="thetitle"/>
+<property  name="major" type="java.lang.String" column="major"/>
+</class>
+</hibernate-mapping>

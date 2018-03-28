@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.tk.bo.TkPaperContent" table="tk_paper_content">
+<id name="contentid" type="java.lang.Integer" column="contentid">  <generator class="native" /> </id>
+<property  name="paperid" type="java.lang.Integer" column="paperid"/>
+<property  name="questionid" type="java.lang.Integer" column="questionid"/>
+<property  name="orderindex" type="java.lang.Integer" column="orderindex"/>
+<property  name="score" type="java.lang.Float" column="score"/>
+</class>
+</hibernate-mapping>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.vwh.bo.VwhFilmPix" table="vwh_film_pix" lazy="false">
+<id name="pixid" type="java.lang.Integer" column="pixid">  <generator class="native" /> </id>
+<property  name="name" type="java.lang.String" column="name"/>
+<property  name="srcpath" type="java.lang.String" column="srcpath"/>
+<property  name="flvpath" type="java.lang.String" column="flvpath"/>
+<property  name="imgpath" type="java.lang.String" column="imgpath"/>
+<property  name="imgwidth" type="java.lang.Integer" column="imgwidth"/>
+<property  name="imgheight" type="java.lang.Integer" column="imgheight"/>
+<property  name="second" type="java.lang.String" column="second"/>
+<property  name="filesize" type="java.lang.Long" column="filesize"/>
+<property  name="fileext" type="java.lang.String" column="fileext"/>
+<property  name="timelength" type="java.lang.String" column="timelength"/>
+<property  name="resolution" type="java.lang.String" column="resolution"/>
+<property  name="convertstatus" type="java.lang.String" column="convertstatus"/>
+<property  name="notifystatus" type="java.lang.String" column="notifystatus"/>
+<property  name="orderindex" type="java.lang.Integer" column="orderindex"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+<property  name="md5code" type="java.lang.String" column="md5code"/>
+<property  name="filmid" type="java.lang.Integer" column="filmid"/>
+<property  name="unitid" type="java.lang.Integer" column="unitid"/>
+<property  name="updateflag" type="java.lang.String" column="updateflag"/>
+<property  name="updatetime" type="java.lang.String" column="updatetime"/>
+</class>
+</hibernate-mapping>

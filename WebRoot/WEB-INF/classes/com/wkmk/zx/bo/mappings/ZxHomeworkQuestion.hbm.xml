@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.zx.bo.ZxHomeworkQuestion" table="zx_homework_question">
+<id name="questionid" type="java.lang.Integer" column="questionid">  <generator class="native" /> </id>
+<property  name="title" type="java.lang.String" column="title"/>
+<property  name="descript" type="java.lang.String" column="descript"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+<property  name="enddate" type="java.lang.String" column="enddate"/>
+<property  name="money" type="java.lang.Float" column="money"/>
+<property  name="userip" type="java.lang.String" column="userip"/>
+<many-to-one name="sysUserInfo" class="com.wkmk.sys.bo.SysUserInfo" cascade="none" column="userid" not-null="true"/>
+<property  name="subjectid" type="java.lang.Integer" column="subjectid"/>
+<property  name="gradeid" type="java.lang.Integer" column="gradeid"/>
+<property  name="bookcontentid" type="java.lang.Integer" column="bookcontentid"/>
+<property  name="bookid" type="java.lang.Integer" column="bookid"/>
+<property  name="status" type="java.lang.String" column="status"/>
+</class>
+</hibernate-mapping>

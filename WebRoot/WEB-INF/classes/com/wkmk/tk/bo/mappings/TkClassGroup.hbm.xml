@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.tk.bo.TkClassGroup" table="tk_class_group">
+<id name="groupid" type="java.lang.Integer" column="groupid">  <generator class="native" /> </id>
+<property  name="groupno" type="java.lang.String" column="groupno"/>
+<property  name="groupname" type="java.lang.String" column="groupname"/>
+<property  name="classid" type="java.lang.Integer" column="classid"/>
+</class>
+</hibernate-mapping>

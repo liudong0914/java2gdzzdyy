@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.sys.bo.SysUserInfo" table="sys_user_info" lazy="false">
+<id name="userid" type="java.lang.Integer" column="userid">  <generator class="native" /> </id>
+<property  name="loginname" type="java.lang.String" column="loginname"/>
+<property  name="username" type="java.lang.String" column="username"/>
+<property  name="nickname" type="java.lang.String" column="nickname"/>
+<property  name="usertype" type="java.lang.String" column="usertype"/>
+<property  name="password" type="java.lang.String" column="password"/>
+<property  name="sex" type="java.lang.String" column="sex"/>
+<property  name="email" type="java.lang.String" column="email"/>
+<property  name="mobile" type="java.lang.String" column="mobile"/>
+<property  name="photo" type="java.lang.String" column="photo"/>
+<property  name="status" type="java.lang.String" column="status"/>
+<property  name="studentno" type="java.lang.String" column="studentno"/>
+<property  name="stno" type="java.lang.String" column="stno"/>
+<property  name="temppass" type="java.lang.String" column="temppass"/>
+<property  name="uuid" type="java.lang.String" column="uuid"/>
+<property  name="unitid" type="java.lang.Integer" column="unitid"/>
+<property  name="xueduan" type="java.lang.String" column="xueduan"/>
+<property  name="money" type="java.lang.Float" column="money"/>
+<property  name="authentication" type="java.lang.String" column="authentication"/>
+<property  name="paypassword" type="java.lang.String" column="paypassword"/>
+<property  name="vipmark" type="java.lang.String" column="vipmark"/>
+</class>
+</hibernate-mapping>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.tk.bo.TkBookContentFilmAudition" table="tk_book_content_film_audition">
+<id name="auditionid" type="java.lang.Integer" column="auditionid">  <generator class="native" /> </id>
+<property  name="contentfilmid" type="java.lang.Integer" column="contentfilmid"/>
+<property  name="orderindex" type="java.lang.Integer" column="orderindex"/>
+<property  name="status" type="java.lang.String" column="status"/>
+<property  name="hits" type="java.lang.Integer" column="hits"/>
+</class>
+</hibernate-mapping>

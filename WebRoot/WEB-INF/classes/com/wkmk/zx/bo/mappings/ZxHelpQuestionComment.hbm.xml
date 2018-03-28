@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.zx.bo.ZxHelpQuestionComment" table="zx_help_question_comment">
+<id name="commentid" type="java.lang.Integer" column="commentid">  <generator class="native" /> </id>
+<property  name="questionid" type="java.lang.Integer" column="questionid"/>
+<property  name="content" type="java.lang.String" column="content"/>
+<property  name="score" type="java.lang.Integer" column="score"/>
+<many-to-one name="sysUserInfo" class="com.wkmk.sys.bo.SysUserInfo" cascade="none" column="userid" not-null="true"/>
+<property  name="userip" type="java.lang.String" column="userip"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+<property  name="anonymous" type="java.lang.String" column="anonymous"/>
+<property  name="status" type="java.lang.String" column="status"/>
+<property  name="replyuserid" type="java.lang.Integer" column="replyuserid"/>
+<property  name="replycontent" type="java.lang.String" column="replycontent"/>
+<property  name="replyuserip" type="java.lang.String" column="replyuserip"/>
+<property  name="replycreatedate" type="java.lang.String" column="replycreatedate"/>
+</class>
+</hibernate-mapping>

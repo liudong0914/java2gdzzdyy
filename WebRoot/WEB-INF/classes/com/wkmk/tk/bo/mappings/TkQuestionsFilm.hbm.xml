@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.tk.bo.TkQuestionsFilm" table="tk_questions_film">
+<id name="tid" type="java.lang.Integer" column="tid">  <generator class="native" /> </id>
+<property  name="questionid" type="java.lang.Integer" column="questionid"/>
+<property  name="filmid" type="java.lang.Integer" column="filmid"/>
+</class>
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.tk.bo.TkBookContentTask" table="tk_book_content_task">
+<id name="taskid" type="java.lang.Integer" column="taskid">  <generator class="native" /> </id>
+<property  name="parentid" type="java.lang.Integer" column="parentid"/>
+<property  name="userid" type="java.lang.Integer" column="userid"/>
+<property  name="bookcontentid" type="java.lang.Integer" column="bookcontentid"/>
+<property  name="type" type="java.lang.String" column="type"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+<property  name="classid" type="java.lang.Integer" column="classid"/>
+<property  name="iscommit" type="java.lang.String" column="iscommit"/>
+</class>
+</hibernate-mapping>

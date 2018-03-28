@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ page contentType="text/html; charset=utf-8" %>
+<%@ include file="/libs/jsp/taglibs.jsp"%>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+<!--框架必需start-->
+<script type="text/javascript" src="../../libs/js/jquery.js"></script>
+<script type="text/javascript" src="../../libs/js/framework.js"></script>
+<link href="../../libs/css/import_basic.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" id="skin" prePath="../../"/>
+<link rel="stylesheet" type="text/css" id="customSkin"/>
+<!--框架必需end-->
+<script type="text/javascript">
+function addprice(bookcontentid){
+    this.location.href='tkBookContentPriceAction.do?method=addList&bookcontentid='+bookcontentid;
+}
+</script>
+</head>
+<body>
+<div id="scrollContent">
+	<div class="box1" panelWidth="450" position="center">
+		<div class="msg_icon4"><span>操作提示</span></div>
+		<div class="padding_left50 padding_right15 padding_top20 minHeight_100 font_14 font_bold ali02" style="color:red;font-size:16px;">
+		<bean:write name="promptinfo"/><br/><br/>
+		<a href="javascript:addprice(<bean:write name="bookcontentid"/>)" style="color:green;font-size:12px;">[点这里进行添加] </a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

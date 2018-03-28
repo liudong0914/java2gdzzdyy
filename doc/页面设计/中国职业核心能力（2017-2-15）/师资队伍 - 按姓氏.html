@@ -1,0 +1,350 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>北京师范大学总中心-----师资队伍</title>
+
+<link rel="stylesheet" href="css/css_01.css" />
+<script type="text/javascript">
+window.onresize=function(){ location=location };
+//改变页面窗口的时候，自动刷新页面
+</script>
+
+<script type="text/javascript" src="js/base.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+$(document).ready(function() {
+			/*	2nd example	*/
+			
+			$("#menu2 li .menu_a").wrapInner( '<span class="out"></span>' );
+			
+			$("#menu2 li .menu_a").each(function() {
+				$( '<span class="over">' +  $(this).text() + '</span>' ).appendTo( this );
+			});
+
+			$("#menu2 li .menu_a").hover(function() {
+				$(".out",	this).stop().animate({'top':	'54px'},	200); // move down - hide
+				$(".over",	this).stop().animate({'top':	'0px'},		200); // move down - show
+
+			}, function() {
+				$(".out",	this).stop().animate({'top':	'0px'},		200); // move up - show
+				$(".over",	this).stop().animate({'top':	'-54px'},	200); // move up - hide
+			});
+		}); 
+
+
+</script>
+
+
+<script>
+$(document).ready(function() {
+			/*	2nd example	*/
+			
+			$("#menu2_01 li .menu_a_01").wrapInner( '<span class="out"></span>' );
+			
+			$("#menu2_01 li .menu_a_01").each(function() {
+				$( '<span class="over">' +  $(this).text() + '</span>' ).appendTo( this );
+			});
+
+			$("#menu2_01 li .menu_a_01").hover(function() {
+				$(".out",	this).stop().animate({'top':	'54px'},	200); // move down - hide
+				$(".over",	this).stop().animate({'top':	'0px'},		200); // move down - show
+
+			}, function() {
+				$(".out",	this).stop().animate({'top':	'0px'},		200); // move up - show
+				$(".over",	this).stop().animate({'top':	'-54px'},	200); // move up - hide
+			});
+		}); 
+
+
+</script>
+
+
+
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.event.drag-1.5.min.js"></script>
+<script type="text/javascript" src="js/jquery.touchSlider.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$(".main_visual").hover(function(){
+		$("#btn_prev,#btn_next").fadeIn()
+	},function(){
+		$("#btn_prev,#btn_next").fadeOut()
+	});
+	
+	$dragBln = false;
+	
+	$(".main_image").touchSlider({
+		flexible : true,
+		speed : 200,
+		btn_prev : $("#btn_prev"),
+		btn_next : $("#btn_next"),
+		paging : $(".flicking_con a"),
+		counter : function (e){
+			$(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
+		}
+	});
+	
+	$(".main_image").bind("mousedown", function() {
+		$dragBln = false;
+	});
+	
+	$(".main_image").bind("dragstart", function() {
+		$dragBln = true;
+	});
+	
+	$(".main_image a").click(function(){
+		if($dragBln) {
+			return false;
+		}
+	});
+	
+	timer = setInterval(function(){
+		$("#btn_next").click();
+	}, 5000);
+	
+	$(".main_visual").hover(function(){
+		clearInterval(timer);
+	},function(){
+		timer = setInterval(function(){
+			$("#btn_next").click();
+		},5000);
+	});
+	
+	$(".main_image").bind("touchstart",function(){
+		clearInterval(timer);
+	}).bind("touchend", function(){
+		timer = setInterval(function(){
+			$("#btn_next").click();
+		}, 5000);
+	});
+	
+});
+</script>
+
+</head>
+
+<body>
+
+<div id="header">
+	<img src="images/logo.gif" />
+</div> 
+<!-- 大图片滚动 e-->
+
+<!--菜单 开始-->
+<div class="header_nav">
+    	<div id="menu2" class="menu" >
+	     <ul>
+	     <li><a class="menu_a" href="#">首页</a>
+         </li>
+         <li class="menu_li"><a class="menu_a" href="#"> 项目简介                                                                         </a>
+         	<div class="menu_li_subnav">
+     			<a class="menu_li_subnav_a" href="#">中心简介</a>
+      			<a class="menu_li_subnav_a" href="#">理事会</a>
+      			<a class="menu_li_subnav_a" href="#">中心领导</a>
+                <a class="menu_li_subnav_a" href="#">组织机构</a>
+                <a class="menu_li_subnav_a" href="#">协同单位</a>
+                <a class="menu_li_subnav_a" href="#">中心大事记</a>
+    		</div>
+         </li>
+	     <li class="menu_li"><a class="menu_a" href="#">专家团队</a>
+         	<div class="menu_li_subnav">
+     			<a class="menu_li_subnav_a" href="#">监测工具</a>
+      			<a class="menu_li_subnav_a" href="#">数据采集</a>
+      			<a class="menu_li_subnav_a" href="#">数据库</a>
+                <a class="menu_li_subnav_a" href="#">监测报告</a>
+                <a class="menu_li_subnav_a" href="#">政策咨询</a>
+    		</div>
+         </li>
+         <li class="menu_li"><a class="menu_a" href="#">教练师资</a>
+         </li>
+	     <li class="menu_li"><a class="menu_a" href="#">应用院校</a>
+         	<div class="menu_li_subnav">
+     			<a class="menu_li_subnav_a" href="#">团队首席专家</a>
+      			<a class="menu_li_subnav_a" href="#">任务首席专家</a>
+      			<a class="menu_li_subnav_a" href="#">骨干研究员</a>
+    		</div>
+         </li>
+         <li class="menu_li"><a class="menu_a" href="#">合作县区 </a>
+         	<div class="menu_li_subnav">
+     			<a class="menu_li_subnav_a" href="#">人才培养动态</a>
+      			<a class="menu_li_subnav_a" href="#">人才培养成果</a>
+    		</div>
+         </li>
+	     <li class="menu_li"><a class="menu_a" href="#"> 合作机构</a>
+         	<div class="menu_li_subnav">
+     			<a class="menu_li_subnav_a" href="#">科研项目</a>
+      			<a class="menu_li_subnav_a" href="#">科研成果</a>
+    		</div>
+         </li>
+         <li class="menu_li"><a class="menu_a" href="#"> 联系我们</a>
+         </li>
+         
+         </ul>
+       </div>
+    </div>
+<!--菜单结束-->
+
+
+<!--主要内容 开始-->
+<div class="second_content_01">
+<div class="content">
+<div class="content_site">
+当前位置：<a href="#">首页</a> - <a href="#">师资队伍</a></div>
+<!--当前位置 结束-->
+
+<div class="content_left">
+<h3>师资队伍</h3>
+<ul>
+<li><a href="#">全职教师</a></li>
+<li><a href="#">特聘教师</a></li>
+</ul>
+<span class="one"><img src="images/e12.png" /></span>
+</div>
+<!--content_left 结束-->
+
+
+<div class="teacher_right_01">
+<h3><span>教学科研岗教师</span></h3>
+
+<dl>
+<dt>B</dt>
+<dd><span><a href="#">边玉芳</a></span></dd>
+</dl>
+
+<dl>
+<dt>C</dt>
+<dd><span><a href="#">陈平</a></span><span><a href="#">陈福美</a></span></dd>
+</dl>
+
+<dl>
+<dt>D</dt>
+<dd><span><a href="#">丁天翠</a></span><span><a href="#">窦飞</a></span></dd>
+</dl>
+
+<dl>
+<dt>G</dt>
+<dd><span><a href="#">郭筱琳</a></span></dd>
+</dl>
+
+<dl>
+<dt>H</dt>
+<dd><span><a href="#">何海澜</a></span></dd>
+</dl>
+
+<dl>
+<dt>L</dt>
+<dd>
+<span><a href="#">刘文利</a></span>
+<span><a href="#">刘坚</a></span>
+<span><a href="#">李佑发</a></span>
+<span><a href="#">李燕芳</a></span>
+<span><a href="#" http://114.255.220.35/cms/14-ti-3-34.htm>罗良</a></span>
+<span><a href="#">梁威</a></span>
+<span><a href="#">李凌艳</a></span>
+<span><a href="#">刘春晖</a></span>
+<span><a href="#">李勉</a></span>
+<span><a href="#">林静</a></span>
+</dd>
+</dl>
+
+<dl>
+<dt>R</dt>
+<dd><span><a href="#">任萍</a></span></dd>
+</dl>
+
+
+<dl>
+<dt>T</dt>
+<dd><span><a href="http://114.255.220.35/cms/14-ti-3-35.htm" target="new">檀慧玲</a></span><span><a href="#">田伟</a></span></dd>
+</dl>
+
+<dl>
+<dt>W</dt>
+<dd><span><a href="#">韦小满</a></span><span><a href="#">温红博</a></span><span><a href="#">王烨晖</a></span></dd>
+</dl>
+
+<dl>
+<dt>X</dt>
+<dd><span><a href="#">辛涛</a></span></dd>
+</dl>
+
+<dl>
+<dt>Y</dt>
+<dd><span><a href="#">杨涛</a></span></dd>
+</dl>
+
+<dl>
+<dt>Z</dt>
+<dd>
+<span><a href="#">张云运</a></span>
+<span><a href="#">张丹慧</a></span>
+<span><a href="#">张生</a></span>
+<span><a href="#">张彩</a></span>
+<span><a href="#">张伟</a></span>
+<span><a href="#">周平艳</a></span>
+<span><a href="#">赵茜 </a></span>
+</dd>
+</dl>
+
+<h3><span>行政管理岗教师</span></h3>
+<dl>
+<dt>D</dt>
+<dd>
+<span><a href="#">丁天翠</a></span>
+<span><a href="#">窦飞</a></span>
+</dd>
+</dl>
+
+<dl>
+<dt>L</dt>
+<dd>
+<span><a href="#">李亚玲</a></span>
+<span><a href="#">李添</a></span>
+<span><a href="#">柳明新</a></span>
+</dd>
+</dl>
+
+</div>
+<!--teacher_right_01 结束-->
+
+
+
+</div>
+
+</div>
+<!--主要内容 结束-->
+
+
+
+
+<div id="foot">
+<div class="foot_nr">
+<span class="foot_nr_one"><img src="images/z19.png" /></a></span>
+<span class="foot_nr_two">
+全国职业核心能力测评培训网 2007-2011 版权所有 | 京ICP备13009817号<br /> 
+技术支持：北京师科阳光信息技术有限公司
+</span>
+
+
+
+<div class="menu_footer">
+<img src="images/z25.jpg">
+<p>微信公众号</p>
+</div>
+<!-- menu_footer E -->
+
+</div><!--版权内容 结束-->
+
+</div><!--版权 结束-->
+
+
+
+
+
+</body>
+</html>

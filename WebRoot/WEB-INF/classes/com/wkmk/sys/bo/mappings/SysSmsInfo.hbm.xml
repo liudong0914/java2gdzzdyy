@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.sys.bo.SysSmsInfo" table="sys_sms_info">
+<id name="smsid" type="java.lang.Integer" column="smsid">  <generator class="native" /> </id>
+<property  name="content" type="java.lang.String" column="content"/>
+<property  name="mobile" type="java.lang.String" column="mobile"/>
+<property  name="userid" type="java.lang.Integer" column="userid"/>
+<property  name="state" type="java.lang.String" column="state"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+<property  name="type" type="java.lang.String" column="type"/>
+<property  name="code" type="java.lang.String" column="code"/>
+<property  name="codevalidtime" type="java.lang.String" column="codevalidtime"/>
+<property  name="messageid" type="java.lang.Integer" column="messageid"/>
+</class>
+</hibernate-mapping>

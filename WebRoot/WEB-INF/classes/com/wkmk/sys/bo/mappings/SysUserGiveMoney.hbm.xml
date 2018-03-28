@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.sys.bo.SysUserGiveMoney" table="sys_user_give_money">
+<id name="moneyid" type="java.lang.Integer" column="moneyid">  <generator class="native" /> </id>
+<property  name="userid" type="java.lang.Integer" column="userid"/>
+<property  name="userip" type="java.lang.String" column="userip"/>
+<property  name="money" type="java.lang.Float" column="money"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+<property  name="type" type="java.lang.String" column="type"/>
+</class>
+</hibernate-mapping>

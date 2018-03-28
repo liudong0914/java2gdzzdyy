@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.tk.bo.TkBookContentPrice" table="tk_book_content_price">
+<id name="priceid" type="java.lang.Integer" column="priceid">  <generator class="native" /> </id>
+<property  name="bookcontentid" type="java.lang.Integer" column="bookcontentid"/>
+<property  name="bookid" type="java.lang.Integer" column="bookid"/>
+<property  name="price" type="java.lang.Float" column="price"/>
+<property  name="discount" type="java.lang.Float" column="discount"/>
+<property  name="sellprice" type="java.lang.Float" column="sellprice"/>
+<property  name="sellcount" type="java.lang.Integer" column="sellcount"/>
+<property  name="userid" type="java.lang.Integer" column="userid"/>
+<property  name="type" type="java.lang.String" column="type"/>
+</class>
+</hibernate-mapping>

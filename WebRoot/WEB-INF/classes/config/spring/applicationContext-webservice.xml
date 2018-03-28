@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+<bean id="iFileConvertClientServiceBean" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.util.service.impl.IFileConvertClientServiceImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+
+<import resource="classpath:org/codehaus/xfire/spring/xfire.xml"/>
+</beans>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.tk.bo.TkPaperAnswer" table="tk_paper_answer">
+<id name="answerid" type="java.lang.Integer" column="answerid">  <generator class="native" /> </id>
+<property  name="contentid" type="java.lang.Integer" column="contentid"/>
+<property  name="childid" type="java.lang.Integer" column="childid"/>
+<property  name="type" type="java.lang.String" column="type"/>
+<property  name="bookcontentid" type="java.lang.Integer" column="bookcontentid"/>
+<property  name="taskid" type="java.lang.Integer" column="taskid"/>
+<property  name="tasktype" type="java.lang.String" column="tasktype"/>
+<property  name="userid" type="java.lang.Integer" column="userid"/>
+<property  name="classid" type="java.lang.Integer" column="classid"/>
+<property  name="answer" type="java.lang.String" column="answer"/>
+<property  name="score" type="java.lang.Float" column="score"/>
+<property  name="isright" type="java.lang.String" column="isright"/>
+</class>
+</hibernate-mapping>

@@ -1,0 +1,364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>课程</title>
+<link href="css/sytle.css" rel="stylesheet" type="text/css">
+<style>
+	body{ min-width:1200px;}
+</style>
+<script>
+<!--
+/*第一种形式 第二种形式 更换显示样式*/
+function setTab(name,cursel,n){
+for(i=1;i<=n;i++){
+var menu=document.getElementById(name+i);
+var con=document.getElementById("con_"+name+"_"+i);
+menu.className=i==cursel?"hover":"";
+con.style.display=i==cursel?"block":"none";
+}
+}
+//-->
+</script>
+</head>
+
+<body>
+<div class="header">
+	<div class="header_main">
+    	<a href="#"><img src="images/logo.png" class="logo" /></a>
+        <div class="nav">
+        	<a href="#">首页</a>
+            <a href="#">项目</a>
+            <a href="#" class="nav_a">课程</a>
+            <a href="#">老师</a>
+            <a href="#">认证</a>
+        </div>
+        <div class="search">
+        	<input type="search" class="search_input" value="输入关键词搜索" onFocus="if(value==defaultValue){value='';this.style.color='#000'}" onBlur="if(!value){value=defaultValue; this.style.color='#c9caca'}"/>
+            <a href="#"></a>
+        </div>
+        <div class="login">
+        	<div class="login01">
+            	<img src="images/a03.png" />
+                <a href="#">登录</a>
+            </div>
+            <div class="login01 login02">
+            	<img src="images/a04.gif" />
+                <a href="#">注册</a>
+            </div>
+        </div>
+    </div><!------header_main-e------>
+</div><!------header-e------>
+<!------头部结束------->
+
+<div class="content">
+	<div class="content_class">
+    	<img src="images/a08.png" class="content_class_img" />
+        <div class="content_class_font">
+        	<p class="content_class_font_p">实战PPT：提升工作效率的无敌小技巧</p>
+            <div class="content_class_font_fx">
+            	<p>共11课时</p>
+                <p class="content_class_font_fx_p">2345人学习</p>
+                <div class="content_class_font_fx_a">
+                	<a href="#" class="content_class_font_fx_a01">分享</a>
+                    <div class="content_class_font_fx_div"></div>
+                	<a href="#" class="content_class_font_fx_a02">收藏</a>
+                </div>
+            </div>
+            <p class="content_class_font_p02">讲师：张小明</p>
+            <div class="content_class_font_fx content_class_font_fx01">
+            	<div class="content_class_font_fx_star">
+                	<img src="images/a05.png" />
+                    <img src="images/a05.png" />
+                    <img src="images/a05.png" />
+                    <img src="images/a09.png" />
+                    <img src="images/a10.png" />
+                </div>
+            	<p>345人评</p>
+            </div>
+            <a href="#" class="content_class_font_a">开始学习</a>
+        </div><!------content_class_font-e------>
+    </div><!------content_class-e------>
+    <div class="content_main">
+    	<div class="content_main_left">
+        	<div id="Tab5">
+                <div class="content_main_left_ul">
+                    <ul>
+                    <li id="five1" onmouseover="setTab('five',1,4)" >课程介绍</li>
+                    <li id="five2" onmouseover="setTab('five',2,4)">课程目录</li>
+                    <li id="five3" onmouseover="setTab('five',3,4)" class="hover">课程评价78</li>
+                    </ul>
+                </div>
+                <div class="content_main_left_font">
+                    <div id="con_five_1"  style="display:none">
+                    	<div class="content_main_left_font_js">
+                    		<p>老师授课幽默风趣，同时又发人深省，他就是要教会在你工作中如何建立你的核心的办公执行力和效率，协助你找到工作的意义和满足感他就是要教会在你工作中如何建立你的核心的办公执行力和效率他就是要教会在你工作中如何建立你的核心的办公执行力和效率他就是要教会在你工作中如何建立你的核心的办公执行力和效率他就是要教会在你工作中如何建立你的核心的办公执行力和效率他就是要教会在你工作中如何建立你的核心的办公执行力和效率</p>
+                            <p>老师授课幽默风趣，同时又发人深省，他就是要教会在你工作中如何建立你的核心的办公执行力和效率，协助你找到工作的意义和满足感</p>
+                            <p>老师授课幽默风趣，同时又发人深省，他就是要教会在你工作中如何建立你的核心的办公执行力和效率，协助你找到工作的意义和他就是要教会在你工作中如何建立你的核心的办公执行力和效率他就是要教会在你工作中如何建立你的核心的办公执行力和效率感</p>
+                        </div>
+                    </div>
+                    <div id="con_five_2"  style="display:none">
+                        <p class="content_main_left_font_title">第一章&nbsp;&nbsp;直播课程</p>
+                    	<div class="content_main_left_font_list">
+                        	<a href="#"><p class="content_main_left_font_list_p">01</p></a>
+                            <a href="#"><p class="content_main_left_font_list_p01">认识PPT的基本工具都有哪些</p></a>
+                            <a href="#"><p class="content_main_left_font_list_p02">16分钟</p></a>
+                            <a href="#" class="content_main_left_font_list_a">开始学习</a>
+                        </div>
+                        <div class="content_main_left_font_list01">
+                        	<a href="#"><p class="content_main_left_font_list_p00">02</p></a>
+                            <a href="#"><p class="content_main_left_font_list_p01">各种工具组合使用无敌提升工作效率的诀窍</p></a>
+                            <a href="#"><p class="content_main_left_font_list_p02">16分钟</p></a>
+                            <a href="#" class="content_main_left_font_list_a">开始学习</a>
+                        </div>
+                        <div class="content_main_left_font_list">
+                        	<a href="#"><p class="content_main_left_font_list_p">03</p></a>
+                            <a href="#"><p class="content_main_left_font_list_p01">认识PPT的基本工具都有哪些</p></a>
+                            <a href="#"><p class="content_main_left_font_list_p02">16分钟</p></a>
+                            <a href="#" class="content_main_left_font_list_a">开始学习</a>
+                        </div>
+                        <div class="content_main_left_font_list01">
+                        	<a href="#"><p class="content_main_left_font_list_p00">04</p></a>
+                            <a href="#"><p class="content_main_left_font_list_p01">各种工具组合使用无敌提升工作效率的诀窍</p></a>
+                            <a href="#"><p class="content_main_left_font_list_p02">16分钟</p></a>
+                            <a href="#" class="content_main_left_font_list_a">开始学习</a>
+                        </div>
+                        <div class="content_main_left_font_list">
+                        	<a href="#"><p class="content_main_left_font_list_p">05</p></a>
+                            <a href="#"><p class="content_main_left_font_list_p01">认识PPT的基本工具都有哪些</p></a>
+                            <a href="#"><p class="content_main_left_font_list_p02">16分钟</p></a>
+                            <a href="#" class="content_main_left_font_list_a">开始学习</a>
+                        </div>
+                        <div class="content_main_left_font_list01">
+                        	<a href="#"><p class="content_main_left_font_list_p00">06</p></a>
+                            <a href="#"><p class="content_main_left_font_list_p01">各种工具组合使用无敌提升工作效率的诀窍</p></a>
+                            <a href="#"><p class="content_main_left_font_list_p02">16分钟</p></a>
+                            <a href="#" class="content_main_left_font_list_a">开始学习</a>
+                        </div>
+                        <div class="content_main_left_font_list">
+                        	<a href="#"><p class="content_main_left_font_list_p">07</p></a>
+                            <a href="#"><p class="content_main_left_font_list_p01">认识PPT的基本工具都有哪些</p></a>
+                            <a href="#"><p class="content_main_left_font_list_p02">16分钟</p></a>
+                            <a href="#" class="content_main_left_font_list_a">开始学习</a>
+                        </div>
+                        <p class="content_main_left_font_title">第二章&nbsp;&nbsp;语文课程</p>
+                    	<div class="content_main_left_font_list">
+                        	<a href="#"><p class="content_main_left_font_list_p">01</p></a>
+                            <a href="#"><p class="content_main_left_font_list_p01">认识PPT的基本工具都有哪些</p></a>
+                            <a href="#"><p class="content_main_left_font_list_p02">16分钟</p></a>
+                            <a href="#" class="content_main_left_font_list_a">开始学习</a>
+                        </div>
+                        <div class="content_main_left_font_list01">
+                        	<a href="#"><p class="content_main_left_font_list_p00">02</p></a>
+                            <a href="#"><p class="content_main_left_font_list_p01">各种工具组合使用无敌提升工作效率的诀窍</p></a>
+                            <a href="#"><p class="content_main_left_font_list_p02">16分钟</p></a>
+                            <a href="#" class="content_main_left_font_list_a">开始学习</a>
+                        </div>
+                        <div class="content_main_left_font_list">
+                        	<a href="#"><p class="content_main_left_font_list_p">03</p></a>
+                            <a href="#"><p class="content_main_left_font_list_p01">认识PPT的基本工具都有哪些</p></a>
+                            <a href="#"><p class="content_main_left_font_list_p02">16分钟</p></a>
+                            <a href="#" class="content_main_left_font_list_a">开始学习</a>
+                        </div>
+                        <div class="content_main_left_font_list01">
+                        	<a href="#"><p class="content_main_left_font_list_p00">04</p></a>
+                            <a href="#"><p class="content_main_left_font_list_p01">各种工具组合使用无敌提升工作效率的诀窍</p></a>
+                            <a href="#"><p class="content_main_left_font_list_p02">16分钟</p></a>
+                            <a href="#" class="content_main_left_font_list_a">开始学习</a>
+                        </div>
+                        <div class="content_main_left_font_list">
+                        	<a href="#"><p class="content_main_left_font_list_p">05</p></a>
+                            <a href="#"><p class="content_main_left_font_list_p01">认识PPT的基本工具都有哪些</p></a>
+                            <a href="#"><p class="content_main_left_font_list_p02">16分钟</p></a>
+                            <a href="#" class="content_main_left_font_list_a">开始学习</a>
+                        </div>
+                        <div class="content_main_left_font_list01">
+                        	<a href="#"><p class="content_main_left_font_list_p00">06</p></a>
+                            <a href="#"><p class="content_main_left_font_list_p01">各种工具组合使用无敌提升工作效率的诀窍</p></a>
+                            <a href="#"><p class="content_main_left_font_list_p02">16分钟</p></a>
+                            <a href="#" class="content_main_left_font_list_a">开始学习</a>
+                        </div>
+                        <div class="content_main_left_font_list">
+                        	<a href="#"><p class="content_main_left_font_list_p">07</p></a>
+                            <a href="#"><p class="content_main_left_font_list_p01">认识PPT的基本工具都有哪些</p></a>
+                            <a href="#"><p class="content_main_left_font_list_p02">16分钟</p></a>
+                            <a href="#" class="content_main_left_font_list_a">开始学习</a>
+                        </div>
+
+                    </div>
+                    <div id="con_five_3" class="hover">
+                    	<div class="content_main_left_evaluate">
+                        	<p class="content_main_left_evaluate_p"><a>98%</a>好评率</p>
+                            <form action="" method="get" class="content_main_left_evaluate_form"> 
+                                 <label><input name="Fruit" type="radio" checked="checked" value="" /><p>全部评价（5521）</p></label> 
+                                 <label><input name="Fruit" type="radio" value="" /><p>好评（584）</p></label> 
+                                 <label><input name="Fruit" type="radio" value="" /><p>中评（554）</p></label> 
+                                 <label><input name="Fruit" type="radio" value="" /><p>差评（52）</p></label> 
+                            </form> 
+                        </div>
+                        <div class="content_main_left_evaluate_main">
+                        	<div class="content_main_left_evaluate_main_module">
+                            	<img src="images/a11.png" class="content_main_left_evaluate_main_module_img" />
+                                <div class="content_main_left_evaluate_main_module_main">
+                                    <div class="content_main_left_evaluate_main_module_font">
+                                        <div class="content_main_left_evaluate_main_module_font_p">
+                                            <p class="content_main_left_evaluate_main_module_font_p01">用户1</p>
+                                            <div class="content_class_font_fx_star">
+                                                <img src="images/a05.png" />
+                                                <img src="images/a05.png" />
+                                                <img src="images/a05.png" />
+                                                <img src="images/a09.png" />
+                                                <img src="images/a10.png" />
+                                            </div>
+                                            <p class="content_main_left_evaluate_main_module_font_p02">2017-01-17&nbsp;08:21:15</p>
+                                        </div>
+                                        <p class="content_main_left_evaluate_main_module_font_p03">老师讲的老师讲的很好老师讲的师讲的很好很好</p>
+                                    </div>
+                                    <div class="content_main_left_evaluate_main_module_font content_main_left_evaluate_main_module_font01">
+                                        <div class="content_main_left_evaluate_main_module_font_p">
+                                            <p class="content_main_left_evaluate_main_module_font_p01">追加评价：</p>
+                                            <p class="content_main_left_evaluate_main_module_font_p02">2017-01-17&nbsp;08:21:15</p>
+                                        </div>
+                                        <p class="content_main_left_evaluate_main_module_font_p03">老师讲的老师讲的很好老师讲的师讲的很好很好</p>
+                                    </div>
+                                </div>
+                            </div><!------content_main_left_evaluate_main_module-e------>
+                            
+                            <div class="content_main_left_evaluate_main_module">
+                            	<img src="images/a11.png" class="content_main_left_evaluate_main_module_img" />
+                                <div class="content_main_left_evaluate_main_module_main">
+                                    <div class="content_main_left_evaluate_main_module_font">
+                                        <div class="content_main_left_evaluate_main_module_font_p">
+                                            <p class="content_main_left_evaluate_main_module_font_p01">用户1</p>
+                                            <div class="content_class_font_fx_star">
+                                                <img src="images/a05.png" />
+                                                <img src="images/a05.png" />
+                                                <img src="images/a05.png" />
+                                                <img src="images/a09.png" />
+                                                <img src="images/a10.png" />
+                                            </div>
+                                            <p class="content_main_left_evaluate_main_module_font_p02">2017-01-17&nbsp;08:21:15</p>
+                                        </div>
+                                        <p class="content_main_left_evaluate_main_module_font_p03">老师讲的老师讲的很好老师讲的师讲的很好很好</p>
+                                    </div>
+                                    <div class="content_main_left_evaluate_main_module_font content_main_left_evaluate_main_module_font01">
+                                        <div class="content_main_left_evaluate_main_module_font_p">
+                                            <p class="content_main_left_evaluate_main_module_font_p01">追加评价：</p>
+                                            <p class="content_main_left_evaluate_main_module_font_p02">2017-01-17&nbsp;08:21:15</p>
+                                        </div>
+                                        <p class="content_main_left_evaluate_main_module_font_p03">老师讲的老师讲的很好老师讲的师讲的很好很好</p>
+                                    </div>
+                                </div>
+                            </div><!------content_main_left_evaluate_main_module-e------>
+                            <div class="content_main_left_evaluate_main_module">
+                            	<img src="images/a11.png" class="content_main_left_evaluate_main_module_img" />
+                                <div class="content_main_left_evaluate_main_module_main">
+                                    <div class="content_main_left_evaluate_main_module_font">
+                                        <div class="content_main_left_evaluate_main_module_font_p">
+                                            <p class="content_main_left_evaluate_main_module_font_p01">用户1</p>
+                                            <div class="content_class_font_fx_star">
+                                                <img src="images/a05.png" />
+                                                <img src="images/a05.png" />
+                                                <img src="images/a05.png" />
+                                                <img src="images/a09.png" />
+                                                <img src="images/a10.png" />
+                                            </div>
+                                            <p class="content_main_left_evaluate_main_module_font_p02">2017-01-17&nbsp;08:21:15</p>
+                                        </div>
+                                        <p class="content_main_left_evaluate_main_module_font_p03">老师讲的老师讲的很好老师讲的师讲的很好很好</p>
+                                    </div>
+                                </div>
+                            </div><!------content_main_left_evaluate_main_module-e------>
+                            <div class="content_main_left_evaluate_main_module">
+                            	<img src="images/a11.png" class="content_main_left_evaluate_main_module_img" />
+                                <div class="content_main_left_evaluate_main_module_main">
+                                    <div class="content_main_left_evaluate_main_module_font">
+                                        <div class="content_main_left_evaluate_main_module_font_p">
+                                            <p class="content_main_left_evaluate_main_module_font_p01">用户1</p>
+                                            <div class="content_class_font_fx_star">
+                                                <img src="images/a05.png" />
+                                                <img src="images/a05.png" />
+                                                <img src="images/a05.png" />
+                                                <img src="images/a09.png" />
+                                                <img src="images/a10.png" />
+                                            </div>
+                                            <p class="content_main_left_evaluate_main_module_font_p02">2017-01-17&nbsp;08:21:15</p>
+                                        </div>
+                                        <p class="content_main_left_evaluate_main_module_font_p03">老师讲的老师讲的很好老师讲的师讲的很好很好</p>
+                                    </div>
+                                    <div class="content_main_left_evaluate_main_module_font content_main_left_evaluate_main_module_font01">
+                                        <div class="content_main_left_evaluate_main_module_font_p">
+                                            <p class="content_main_left_evaluate_main_module_font_p01">追加评价：</p>
+                                            <p class="content_main_left_evaluate_main_module_font_p02">2017-01-17&nbsp;08:21:15</p>
+                                        </div>
+                                        <p class="content_main_left_evaluate_main_module_font_p03">老师讲的老师讲的很好老师讲的师讲的很好很好</p>
+                                    </div>
+                                </div>
+                            </div><!------content_main_left_evaluate_main_module-e------>
+                        </div><!------content_main_left_evaluate_main-e------>
+                        <div class="page">
+                            <a href="#" class="page_a">&lt;</a>
+                            <a href="#">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">7</a>
+                            <a href="#">8</a>
+                            <a href="#">...</a>
+                            <a href="#">89</a>
+                            <a href="#" class="page_a">&gt;</a>
+                         </div> 
+                    </div>
+                </div><!------content_main_left_font-e------>
+            </div><!------Tab5-e------>
+        </div><!------content_main_left-e------>
+        <div class="content_main_right">
+        	<p class="content_main_right_title">讲师介绍</p>
+            <div class="content_main_right_main">
+                <a href="#"><img src="images/a11.png" class="content_main_right_main_img" /></a>
+                <a href="#" class="content_main_right_main_name">张晓明</a>
+                <p class="content_main_right_main_p">老师专业从事计算机培训工作十年，擅长Office系列与System系列的相关培训。有着多达上百场以上的演讲授课实践经验，已帮助数千人提升自己，突破自己，走向成功。在业界拥有极好的口碑及声誉。</p>
+                <p class="content_main_right_main_p">老师专业从事计算机培训工作十年，擅长Office系列与System系列的相关培训。有着多达上百场以上的演讲授课实践经验，已帮助数千人提升自己，突破自己，走向成功。在业界拥有极好的口碑及声誉。</p>
+                <a href="#" class="content_main_right_main_more" ><img src="images/a14.png" /></a>
+            </div>
+        </div><!------content_main_right-e------>
+    </div><!------content_main-e------>
+</div><!------content-e------>
+<!------中间内容结束------->
+
+<div class="footer">
+	<div class="footer_main">
+    	<div class="footer_main_top">
+              <a href="#" target="_blank">项目</a>
+              <span>|</span>
+              <a href="#" target="_blank">课程</a>
+              <span>|</span>
+              <a href="#" target="_blank">老师</a>
+              <span>|</span>
+              <a href="#" target="_blank">认证</a>
+              <span>|</span>
+              <a href="#" target="_blank">关于我们</a>
+              <span>|</span>
+              <a href="#" target="_blank">联系我们</a>
+         </div><!------footer_main_top-e------>
+         <div class="footer_firend_link">
+             <p>友情链接：</p>
+             <div class="footer_firend_link_a">
+                  <a href="#">北京师科阳光信息技术有限公司</a>
+                  <a href="#">北京师科阳光信息技术有限公司</a>
+                  <a href="#">北京师科阳光信息技术有限公司</a>
+                  <a href="#">北京师科阳光信息技术有限公司</a>
+                  <a href="#">北京师科阳光信息技术有限公司</a>
+                  <a href="#">北京师科阳光信息技术有限公司</a>
+                  <a href="#">北京师科阳光信息技术有限公司</a>
+                  <a href="#">北京师科阳光信息技术有限公司</a>
+             </div>
+         </div>
+         <p class="footer_main_p">©深圳科技公司&nbsp;&nbsp;备案号粤890789990908</p>
+    </div><!------footer_main-e------>
+</div><!------footer-e------>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.tk.bo.TkQuestionsSimilar" table="tk_questions_similar">
+<id name="tid" type="java.lang.Integer" column="tid">  <generator class="native" /> </id>
+<property  name="questionid" type="java.lang.Integer" column="questionid"/>
+<property  name="similarquestionid" type="java.lang.Integer" column="similarquestionid"/>
+</class>
+</hibernate-mapping>

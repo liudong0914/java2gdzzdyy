@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.sys.bo.SysRoleModule" table="sys_role_module">
+<id name="rolemoduleid" type="java.lang.Integer" column="rolemoduleid">  <generator class="native" /> </id>
+<property  name="addoperation" type="java.lang.String" column="addoperation"/>
+<property  name="modifyoperation" type="java.lang.String" column="modifyoperation"/>
+<property  name="deleteoperation" type="java.lang.String" column="deleteoperation"/>
+<property  name="viewoperation" type="java.lang.String" column="viewoperation"/>
+<property  name="roleid" type="java.lang.Integer" column="roleid"/>
+<many-to-one name="sysModuleInfo" class="com.wkmk.sys.bo.SysModuleInfo" cascade="none" column="moduleid" not-null="true"/>
+</class>
+</hibernate-mapping>

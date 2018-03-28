@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+    <form-beans>
+  		<form-bean name="cmsNewsColumnActionForm" type="com.wkmk.cms.web.form.CmsNewsColumnActionForm" />
+  		<form-bean name="cmsNewsInfoActionForm" type="com.wkmk.cms.web.form.CmsNewsInfoActionForm" />
+  		<form-bean name="cmsImageInfoActionForm" type="com.wkmk.cms.web.form.CmsImageInfoActionForm" />
+  	</form-beans>
+  	<global-forwards>
+  	</global-forwards>
+  	<action-mappings>
+    	<action name="cmsNewsColumnActionForm" parameter="method" path="/cmsNewsColumnAction" scope="request" type="com.wkmk.cms.web.action.CmsNewsColumnAction" validate="false">
+			<forward contextRelative="true" name="list" path="/cms/column/column_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/cms/column/column_edit.jsp"/>
+			<forward contextRelative="true" name="main" path="/cms/column/column_main.jsp"/>
+			<forward contextRelative="true" name="tree" path="/cms/column/column_tree.jsp"/>
+		</action>
+		<action name="cmsNewsInfoActionForm" parameter="method" path="/cmsNewsInfoAction" scope="request" type="com.wkmk.cms.web.action.CmsNewsInfoAction" validate="false">
+			<forward contextRelative="true" name="list" path="/cms/news/news_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/cms/news/news_edit.jsp"/>
+			<forward contextRelative="true" name="main" path="/cms/news/news_main.jsp"/>
+			<forward contextRelative="true" name="tree" path="/cms/news/news_tree.jsp"/>
+		</action>
+		<action name="cmsNewsInfoActionForm" parameter="method" path="/cmsMyNewsInfoAction" scope="request" type="com.wkmk.cms.web.action.CmsMyNewsInfoAction" validate="false">
+			<forward contextRelative="true" name="list" path="/cms/mynews/mynews_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/cms/mynews/mynews_edit.jsp"/>
+			<forward contextRelative="true" name="main" path="/cms/mynews/mynews_main.jsp"/>
+			<forward contextRelative="true" name="tree" path="/cms/mynews/mynews_tree.jsp"/>
+			<forward contextRelative="true" name="detail" path="/cms/mynews/mynews_detial.jsp"/>
+		</action>                                                     
+		<action name="cmsNewsInfoActionForm" parameter="method" path="/cmsNewsPressAction" scope="request" type="com.wkmk.cms.web.action.CmsNewsPressAction" validate="false">
+			<forward contextRelative="true" name="edit" path="/cms/newspress/newspress_edit.jsp"/>
+			<forward contextRelative="true" name="success" path="/cms/newspress/newspress_success.jsp"/>
+		</action>
+		<action name="cmsNewsInfoActionForm" parameter="method" path="/cmsNewsCheckAction" scope="request" type="com.wkmk.cms.web.action.CmsNewsCheckAction" validate="false">
+			<forward contextRelative="true" name="list" path="/cms/newscheck/newscheck_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/cms/newscheck/newscheck_edit.jsp"/>
+			<forward contextRelative="true" name="main" path="/cms/newscheck/newscheck_main.jsp"/>
+			<forward contextRelative="true" name="tree" path="/cms/newscheck/newscheck_tree.jsp"/>
+		</action>
+		<action name="cmsImageInfoActionForm" parameter="method" path="/cmsImageInfoAction" scope="request" type="com.wkmk.cms.web.action.CmsImageInfoAction" validate="false">
+			<forward contextRelative="true" name="list" path="/cms/image/image_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/cms/image/image_edit.jsp"/>
+		</action>
+  	</action-mappings>
+</struts-config>

@@ -1,0 +1,66 @@
+
+*{padding:0; margin:0;}
+body{ font-family:"Microsoft YaHei UI Light", "微软雅黑";  min-width:1200px; font-size:14px;  }
+img {border:0px; }
+ul,li,dt,dd,dl{list-style:none;}
+/*li,dt,dt,span{display:block;}*/
+a{color:#231815; text-decoration:none;}
+a:hover{ color:#47d6aa; text-decoration:none;}
+
+/**************顶部样式*************/
+.top{ width:1200px; margin:0 auto; height:72px;}
+.logo{ float:left; margin-top:5px;}
+.top_right{ float:right; height:72px; width:400px;}
+.top_right_a{ width:110px; height:36px; border-radius:3px; margin-top:20px; background-color:#47d6aa; display:block; text-align:center; line-height:36px; color:#fff !important; float:left;}
+.top_right_a:hover{background-color:#40e0b1;}
+.top_right_p{ float:left; font-size:12px; color:#000; margin-top:30px; margin-left:22px;}
+
+/**************banner*************/
+.focus{height:568px;overflow:hidden;position:relative;}
+/* focus_s */
+.focus_s{position:absolute;left:50%;bottom:3%;height:13px;overflow:hidden;width:110px;z-index:9;margin:0 0 0 -20px;}
+.focus_s li{float:left;cursor:pointer;height:13px;width:12px;overflow:hidden;margin-right:10px;background:url(../images/dian.png) no-repeat;}
+.focus_s li.active{background-position:-12px 0;}
+/* focus_m */
+.focus_m ul{opacity:1;filter:alpha(opacity=100);}
+.focus_m li{width:100%;height:568px;position:absolute;top:0;left:0;}
+/* focus_l focus_r */
+.focus_l,.focus_r{position:absolute;display:block;width:50px;height:75px;overflow:hidden;z-index:2;top:250px;}
+.focus_l{left:20px;}
+.focus_r{right:20px;}
+.focus_l b,.focus_r b{position:absolute;z-index:1;display:block;width:50px;height:75px;overflow:hidden;background:#000;opacity:0.3;filter:alpha(opacity=30);cursor:pointer;}
+.focus_l span,.focus_r span{display:inline-block;position:relative;z-index:2;width:22px;height:33px;top:21px;cursor:pointer; margin-right:28px;}
+.focus_l span{left:12px;background-image:url(../images/l.png);_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/l.png');}
+.focus_r span{left:16px;background:url(../images/r.png) 0 0 no-repeat;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/r.png');}
+.focus_l:hover b,.focus_r:hover b{opacity:0.5;filter:alpha(opacity=50);}
+
+/**************试听专享*************/
+.listen{ width:1200px; margin:0 auto; overflow:hidden; padding-top:22px;}
+.listen_title{ overflow:hidden;}
+.listen_p{ color:#47d6aa; font-size:32px; width:275px; float:left;  letter-spacing:4px; text-align:center;}
+.listen_line{ float:left; width:460px; height:1px; background-color:#e7e8e8; margin-top:23px;}
+.listen_line02{ float:right;width:460px; height:1px; background-color:#e7e8e8; margin-top:23px;}
+.listen_main{ overflow:hidden; padding-bottom:25px;}
+
+.listen_main_module{border: 1px solid transparent;height: 195px;padding: 10px 11px 8px;transition: all 0.3s ease 0s;width: 240px; float:left; margin-top:22px;}
+.listen_main_module:hover{ border:1px solid #ddd; background:#fff; border-radius:1px; box-shadow:0px 1px 1px #ececec; color:#47d6aa; }
+.listen_main_module:hover p{ color:#47d6aa; }
+.listen_main_module img{ width:240px; height:150px;}
+.listen_main_module p{ color:#231815; font-size:16px; display:block; overflow:hidden;text-overflow: ellipsis;white-space: nowrap; padding-top:12px;}
+.listen_main_module01{ margin-left:47px;}
+
+/**************视频播放页面*************/
+.video{ width:100%; overflow:hidden; padding:30px 0px; background-color:#000;}
+.video_main{ width:1200px; overflow:hidden; margin:0 auto;}
+.video_main_left{ width:900px; height:540px; float:left; position:relative; overflow:hidden;}
+.video_main_left img{ width:900px; height:540px;}
+.video_main_left_P{ width:880px; position: absolute; z-index:999999999;background: url(../images/video_title.png) repeat; font-size:18px; top:0px; padding:6px 10px; color:#fff;}
+.video_main_menu{ width:280px; height:540px; background-color:#1b1b1b; float:right; overflow: auto;}
+
+.video_main_menu_title{ border-bottom:1px solid #555; height:44px; line-height:44px; width:240px; margin:0 auto;}
+.video_main_menu_title_p{ color:#47d6aa; border-bottom:2px solid #47d6aa; padding:0px 20px; float:left; font-size:18px;}
+.video_main_menu_font{ width:240px; margin:0 auto; overflow:hidden; padding-top:10px;}
+.video_main_menu_font a{ font-size:14px; display:block; color:#ccc; line-height:22px; padding:5px 0px;}
+.video_main_menu_font a:hover{ color:#47d6aa;}
+/**************底部*************/
+.footer{ width:100%; background-color:#f7f8f8; padding:13px 0px; overflow:hidden;line-height:22px; text-align:center; font-size:14px; color:#000;}

@@ -1,0 +1,1 @@
+alter table edu_course_film add COLUMN skiptitles TINYINT default 0 COMMENT '是否跳过片头 0-否 1-是',add COLUMN skipposition tinyint default 0 COMMENT '跳过片头的位置(秒)';

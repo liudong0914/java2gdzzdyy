@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.tk.bo.TkBookContentQuestion" table="tk_book_content_question">
+<id name="tid" type="java.lang.Integer" column="tid">  <generator class="native" /> </id>
+<property  name="bookcontentid" type="java.lang.Integer" column="bookcontentid"/>
+<property  name="questionid" type="java.lang.Integer" column="questionid"/>
+<property  name="type" type="java.lang.String" column="type"/>
+</class>
+</hibernate-mapping>

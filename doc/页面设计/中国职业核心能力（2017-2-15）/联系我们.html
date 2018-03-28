@@ -1,0 +1,301 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>北京师范大学总中心-----联系我们</title>
+
+<link rel="stylesheet" href="css/css_01.css" />
+
+<script src="js/respond.js"></script>
+
+<script type="text/javascript">
+window.onresize=function(){ location=location };
+//改变页面窗口的时候，自动刷新页面
+</script>
+
+<script type="text/javascript" src="js/base.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+$(document).ready(function() {
+			/*	2nd example	*/
+			
+			$("#menu2 li .menu_a").wrapInner( '<span class="out"></span>' );
+			
+			$("#menu2 li .menu_a").each(function() {
+				$( '<span class="over">' +  $(this).text() + '</span>' ).appendTo( this );
+			});
+
+			$("#menu2 li .menu_a").hover(function() {
+				$(".out",	this).stop().animate({'top':	'54px'},	200); // move down - hide
+				$(".over",	this).stop().animate({'top':	'0px'},		200); // move down - show
+
+			}, function() {
+				$(".out",	this).stop().animate({'top':	'0px'},		200); // move up - show
+				$(".over",	this).stop().animate({'top':	'-54px'},	200); // move up - hide
+			});
+		}); 
+
+
+</script>
+
+
+<script>
+$(document).ready(function() {
+			/*	2nd example	*/
+			
+			$("#menu2_01 li .menu_a_01").wrapInner( '<span class="out"></span>' );
+			
+			$("#menu2_01 li .menu_a_01").each(function() {
+				$( '<span class="over">' +  $(this).text() + '</span>' ).appendTo( this );
+			});
+
+			$("#menu2_01 li .menu_a_01").hover(function() {
+				$(".out",	this).stop().animate({'top':	'54px'},	200); // move down - hide
+				$(".over",	this).stop().animate({'top':	'0px'},		200); // move down - show
+
+			}, function() {
+				$(".out",	this).stop().animate({'top':	'0px'},		200); // move up - show
+				$(".over",	this).stop().animate({'top':	'-54px'},	200); // move up - hide
+			});
+		}); 
+
+
+</script>
+
+
+
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.event.drag-1.5.min.js"></script>
+<script type="text/javascript" src="js/jquery.touchSlider.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$(".main_visual").hover(function(){
+		$("#btn_prev,#btn_next").fadeIn()
+	},function(){
+		$("#btn_prev,#btn_next").fadeOut()
+	});
+	
+	$dragBln = false;
+	
+	$(".main_image").touchSlider({
+		flexible : true,
+		speed : 200,
+		btn_prev : $("#btn_prev"),
+		btn_next : $("#btn_next"),
+		paging : $(".flicking_con a"),
+		counter : function (e){
+			$(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
+		}
+	});
+	
+	$(".main_image").bind("mousedown", function() {
+		$dragBln = false;
+	});
+	
+	$(".main_image").bind("dragstart", function() {
+		$dragBln = true;
+	});
+	
+	$(".main_image a").click(function(){
+		if($dragBln) {
+			return false;
+		}
+	});
+	
+	timer = setInterval(function(){
+		$("#btn_next").click();
+	}, 5000);
+	
+	$(".main_visual").hover(function(){
+		clearInterval(timer);
+	},function(){
+		timer = setInterval(function(){
+			$("#btn_next").click();
+		},5000);
+	});
+	
+	$(".main_image").bind("touchstart",function(){
+		clearInterval(timer);
+	}).bind("touchend", function(){
+		timer = setInterval(function(){
+			$("#btn_next").click();
+		}, 5000);
+	});
+	
+});
+</script>
+
+</head>
+
+<body>
+
+<div id="header">
+	<img src="images/logo.gif" />
+</div> 
+<!-- 大图片滚动 e-->
+
+<!--菜单 开始-->
+<div class="header_nav">
+    	<div id="menu2" class="menu" >
+	     <ul>
+	     <li><a class="menu_a" href="#">首页</a>
+         </li>
+         <li class="menu_li"><a class="menu_a" href="#"> 项目简介                                                                         </a>
+         	<div class="menu_li_subnav">
+     			<a class="menu_li_subnav_a" href="#">中心简介</a>
+      			<a class="menu_li_subnav_a" href="#">理事会</a>
+      			<a class="menu_li_subnav_a" href="#">中心领导</a>
+                <a class="menu_li_subnav_a" href="#">组织机构</a>
+                <a class="menu_li_subnav_a" href="#">协同单位</a>
+                <a class="menu_li_subnav_a" href="#">中心大事记</a>
+    		</div>
+         </li>
+	     <li class="menu_li"><a class="menu_a" href="#">专家团队</a>
+         	<div class="menu_li_subnav">
+     			<a class="menu_li_subnav_a" href="#">监测工具</a>
+      			<a class="menu_li_subnav_a" href="#">数据采集</a>
+      			<a class="menu_li_subnav_a" href="#">数据库</a>
+                <a class="menu_li_subnav_a" href="#">监测报告</a>
+                <a class="menu_li_subnav_a" href="#">政策咨询</a>
+    		</div>
+         </li>
+         <li class="menu_li"><a class="menu_a" href="#">教练师资</a>
+         </li>
+	     <li class="menu_li"><a class="menu_a" href="#">应用院校</a>
+         	<div class="menu_li_subnav">
+     			<a class="menu_li_subnav_a" href="#">团队首席专家</a>
+      			<a class="menu_li_subnav_a" href="#">任务首席专家</a>
+      			<a class="menu_li_subnav_a" href="#">骨干研究员</a>
+    		</div>
+         </li>
+         <li class="menu_li"><a class="menu_a" href="#">合作县区 </a>
+         	<div class="menu_li_subnav">
+     			<a class="menu_li_subnav_a" href="#">人才培养动态</a>
+      			<a class="menu_li_subnav_a" href="#">人才培养成果</a>
+    		</div>
+         </li>
+	     <li class="menu_li"><a class="menu_a" href="#"> 合作机构</a>
+         	<div class="menu_li_subnav">
+     			<a class="menu_li_subnav_a" href="#">科研项目</a>
+      			<a class="menu_li_subnav_a" href="#">科研成果</a>
+    		</div>
+         </li>
+         <li class="menu_li"><a class="menu_a" href="#"> 联系我们</a>
+         </li>
+         
+         </ul>
+       </div>
+    </div>
+<!--菜单结束-->
+
+
+<!--主要内容 开始-->
+<div class="second_content_01">
+<div class="content">
+<div class="content_site">
+当前位置：<a href="#">首页</a> - <a href="#">联系我们</a></div>
+<!--当前位置 结束-->
+
+<div class="content_left">
+<h3>联系我们</h3>
+<ul>
+<li><a href="#">联系我们</a></li>
+<li><a href="#">联系我们</a></li>
+<li><a href="#">联系我们</a></li>
+<li><a href="#">联系我们</a></li>
+<li><a href="#">联系我们</a></li>
+<li><a href="#">联系我们</a></li>
+<li><a href="#">联系我们</a></li>
+</ul>
+<span class="one"><img src="images/e12.png" /></span>
+</div>
+<!--content_left 结束-->
+
+
+<div class="link_right">
+<h3><span>联系我们</span></h3>
+
+<dl>
+<dt>综合管理办公室</dt>
+<dd>联系人：郑伟</dd>
+<dd>电话：010-58800067</dd>
+<dd>办公地址：京师学堂322 </dd>
+</dl>
+
+<dl>
+<dt>人事管理办公室</dt>
+<dd>联系人：黄雪</dd>
+<dd>电话：010-58808939</dd>
+<dd>办公地址：京师学堂302 </dd>
+</dl>
+
+<dl>
+<dt>人才培养办公室</dt>
+<dd>联系人：张晓霞</dd>
+<dd>电话：010-58800591</dd>
+<dd>办公地址：京师学堂320</dd>
+</dl>
+
+<dl>
+<dt>国际交流办公室</dt>
+<dd>联系人：刘雨甲</dd>
+<dd>电话：010-58800591</dd>
+<dd>办公地址：京师学堂320 </dd>
+</dl>
+
+<dl>
+<dt>科研管理办公室</dt>
+<dd>联系人：王旭冉</dd>
+<dd>电话：010-58800590</dd>
+<dd>办公地址：京师学堂318</dd>
+</dl>
+
+
+<dl>
+<dd style="line-height:26px;">地址：北京市海淀区新街口外大街19号京师学堂三层　 邮编：100875　传真：010-58800158</dd>
+
+</dl>
+
+</div>
+<!--link_right 结束-->
+
+
+
+</div>
+
+</div>
+<!--主要内容 结束-->
+
+
+
+
+<div id="foot">
+<div class="foot_nr">
+<span class="foot_nr_one"><img src="images/z19.png" /></a></span>
+<span class="foot_nr_two">
+全国职业核心能力测评培训网 2007-2011 版权所有 | 京ICP备13009817号<br /> 
+技术支持：北京师科阳光信息技术有限公司
+</span>
+
+
+
+<div class="menu_footer">
+<img src="images/z25.jpg">
+<p>微信公众号</p>
+</div>
+<!-- menu_footer E -->
+
+</div><!--版权内容 结束-->
+
+</div><!--版权 结束-->
+
+
+
+
+
+</body>
+</html>

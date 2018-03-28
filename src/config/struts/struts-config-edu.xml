@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+    <form-beans>
+  		<form-bean name="eduXueduanInfoActionForm" type="com.wkmk.edu.web.form.EduXueduanInfoActionForm" />
+  		<form-bean name="eduSubjectInfoActionForm" type="com.wkmk.edu.web.form.EduSubjectInfoActionForm" />
+  		<form-bean name="eduGradeInfoActionForm" type="com.wkmk.edu.web.form.EduGradeInfoActionForm" />
+  		<form-bean name="eduKnopointInfoActionForm" type="com.wkmk.edu.web.form.EduKnopointInfoActionForm" />
+  		<form-bean name="eduCourseInfoActionForm" type="com.wkmk.edu.web.form.EduCourseInfoActionForm" />
+  		<form-bean name="eduCourseColumnActionForm" type="com.wkmk.edu.web.form.EduCourseColumnActionForm" />
+  		<form-bean name="eduCourseBuyActionForm" type="com.wkmk.edu.web.form.EduCourseBuyActionForm" />
+  		<form-bean name="eduCourseCollectActionForm" type="com.wkmk.edu.web.form.EduCourseCollectActionForm" />
+  		<form-bean name="eduCourseFileActionForm" type="com.wkmk.edu.web.form.EduCourseFileActionForm" />
+  		<form-bean name="eduCourseFilmActionForm" type="com.wkmk.edu.web.form.EduCourseFilmActionForm" />
+  		<form-bean name="eduCourseStudyActionForm" type="com.wkmk.edu.web.form.EduCourseStudyActionForm" />
+  		<form-bean name="eduCourseUserActionForm" type="com.wkmk.edu.web.form.EduCourseUserActionForm" />
+  		<form-bean name="eduCourseFileDownloadActionForm" type="com.wkmk.edu.web.form.EduCourseFileDownloadActionForm" />
+  		<form-bean name="eduCourseCommentActionForm" type="com.wkmk.edu.web.form.EduCourseCommentActionForm" />
+  		<form-bean name="eduCourseClassActionForm" type="com.wkmk.edu.web.form.EduCourseClassActionForm" />
+  		<form-bean name="eduCourseUserModuleActionForm" type="com.wkmk.edu.web.form.EduCourseUserModuleActionForm" />
+  		<form-bean name="eduCourseAnswerQuestionActionForm" type="com.wkmk.edu.web.form.EduCourseAnswerQuestionActionForm" />
+  		<form-bean name="eduBookInfoActionForm" type="com.wkmk.edu.web.form.EduBookInfoActionForm" />
+  		<form-bean name="eduCourseFileColumnActionForm" type="com.wkmk.edu.web.form.EduCourseFileColumnActionForm" />
+  	</form-beans>
+  	<global-forwards>
+  	</global-forwards>
+  	<action-mappings>
+    	<action name="eduXueduanInfoActionForm" parameter="method" path="/eduXueduanInfoAction" scope="request" type="com.wkmk.edu.web.action.EduXueduanInfoAction" validate="false">
+			<forward contextRelative="true" name="main" path="/edu/xueduan/xueduan_main.jsp"/>
+			<forward contextRelative="true" name="tree" path="/edu/xueduan/xueduan_tree.jsp"/>
+			<forward contextRelative="true" name="list" path="/edu/xueduan/xueduan_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/edu/xueduan/xueduan_edit.jsp"/>
+		</action>
+		<action name="eduSubjectInfoActionForm" parameter="method" path="/eduSubjectInfoAction" scope="request" type="com.wkmk.edu.web.action.EduSubjectInfoAction" validate="false">
+			<forward contextRelative="true" name="list" path="/edu/subject/subject_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/edu/subject/subject_edit.jsp"/>
+		</action>
+		<action name="eduGradeInfoActionForm" parameter="method" path="/eduGradeInfoAction" scope="request" type="com.wkmk.edu.web.action.EduGradeInfoAction" validate="false">
+			<forward contextRelative="true" name="main" path="/edu/grade/grade_main.jsp"/>
+			<forward contextRelative="true" name="tree" path="/edu/grade/grade_tree.jsp"/>
+			<forward contextRelative="true" name="list" path="/edu/grade/grade_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/edu/grade/grade_edit.jsp"/>
+		</action>
+		<action parameter="method" path="/eduSelectAction" scope="request" type="com.wkmk.edu.web.action.EduSelectAction" validate="false">
+			<forward contextRelative="true" name="selectsubject" path="/edu/select/select_subject.jsp"/>
+			<forward contextRelative="true" name="selectgrade" path="/edu/select/select_grade.jsp"/>
+			<forward contextRelative="true" name="selectknopoint" path="/edu/select/select_knopoint.jsp"/>
+			<forward contextRelative="true" name="deal" path="/edu/select/select_deal.jsp"/>
+		</action>
+		<action name="eduKnopointInfoActionForm" parameter="method" path="/eduKnopointInfoAction" scope="request" type="com.wkmk.edu.web.action.EduKnopointInfoAction" validate="false">
+			<forward contextRelative="true" name="main" path="/edu/knopoint/knopoint_main.jsp"/>
+			<forward contextRelative="true" name="tree" path="/edu/knopoint/knopoint_tree.jsp"/>
+			<forward contextRelative="true" name="list" path="/edu/knopoint/knopoint_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/edu/knopoint/knopoint_edit.jsp"/>
+		</action>
+		<action name="eduCourseInfoActionForm" parameter="method" path="/eduCourseInfoAction" scope="request" type="com.wkmk.edu.web.action.EduCourseInfoAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path="/edu/course/info/info_edit.jsp"/>
+			<forward contextRelative="true" name="index" path="/edu/course/info/info_index.jsp"/>
+			<forward contextRelative="true" name="checklist" path="/edu/course/check/coursecheck_list.jsp"/>
+			<forward contextRelative="true" name="beforeEditCheck" path="/edu/course/check/coursecheck_edit.jsp"/>
+			<forward contextRelative="true" name="view" path="/edu/course/check/coursecheck_view.jsp"/>
+			<forward contextRelative="true" name="viewfilemain" path="/edu/course/check/viewfile_main.jsp"/>
+			<forward contextRelative="true" name="viewfiletree" path="/edu/course/check/viewfile_tree.jsp"/>
+			<forward contextRelative="true" name="viewfilelist" path="/edu/course/check/viewfile_list.jsp"/>
+			<forward contextRelative="true" name="viewcolumn" path="/edu/course/check/viewcolumn_list.jsp"/>
+			<forward contextRelative="true" name="viewclass" path="/edu/course/check/viewclass_list.jsp"/>
+			<forward contextRelative="true" name="viewusermain" path="/edu/course/check/viewuser_main.jsp"/>
+			<forward contextRelative="true" name="viewusertree" path="/edu/course/check/viewuser_tree.jsp"/>
+			<forward contextRelative="true" name="viewuserlist" path="/edu/course/check/viewuser_list.jsp"/>
+			<forward contextRelative="true" name="viewfilmmain" path="/edu/course/check/viewfilm_main.jsp"/>
+			<forward contextRelative="true" name="viewfilmtree" path="/edu/course/check/viewfilm_tree.jsp"/>
+			<forward contextRelative="true" name="viewfilmlist" path="/edu/course/check/viewfilm_list.jsp"/>
+		</action>
+		<action name="eduCourseColumnActionForm" parameter="method" path="/eduCourseColumnAction" scope="request" type="com.wkmk.edu.web.action.EduCourseColumnAction" validate="false">
+			<forward contextRelative="true" name="list" path="/edu/course/column/column_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/edu/course/column/column_edit.jsp"/>
+			<forward contextRelative="true" name="main" path="/edu/course/column/column_main.jsp"/>
+			<forward contextRelative="true" name="tree" path="/edu/course/column/column_tree.jsp"/>
+		</action>
+		<action name="eduCourseBuyActionForm" parameter="method" path="/eduCourseBuyAction" scope="request" type="com.wkmk.edu.web.action.EduCourseBuyAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="eduCourseCollectActionForm" parameter="method" path="/eduCourseCollectAction" scope="request" type="com.wkmk.edu.web.action.EduCourseCollectAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="eduCourseFileActionForm" parameter="method" path="/eduCourseFileAction" scope="request" type="com.wkmk.edu.web.action.EduCourseFileAction" validate="false">
+			<forward contextRelative="true" name="list" path="/edu/course/file/file_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/edu/course/file/file_edit.jsp"/>
+			<forward contextRelative="true" name="main" path="/edu/course/file/file_main.jsp"/>
+			<forward contextRelative="true" name="tree" path="/edu/course/file/file_tree.jsp"/>
+			<forward contextRelative="true" name="adminlist" path="/edu/course/file/adminfile_list.jsp"/>
+			<forward contextRelative="true" name="adminedit" path="/edu/course/file/adminfile_edit.jsp"/>
+			<forward contextRelative="true" name="adminmain" path="/edu/course/file/adminfile_main.jsp"/>
+			<forward contextRelative="true" name="admintree" path="/edu/course/file/adminfile_tree.jsp"/>
+			<forward contextRelative="true" name="preview" path="/edu/course/file/fileinfo_preview.jsp"/>
+		</action>
+		<action name="eduCourseFilmActionForm" parameter="method" path="/eduCourseFilmAction" scope="request" type="com.wkmk.edu.web.action.EduCourseFilmAction" validate="false">
+			<forward contextRelative="true" name="list" path="/edu/course/film/film_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/edu/course/film/film_edit.jsp"/>
+			<forward contextRelative="true" name="updateedit" path="/edu/course/film/film_updateedit.jsp"/>
+			<forward contextRelative="true" name="main" path="/edu/course/film/film_main.jsp"/>
+			<forward contextRelative="true" name="tree" path="/edu/course/film/film_tree.jsp"/>
+			<forward contextRelative="true" name="filmmain" path="/skin/course/coursemanager/film_main.jsp"/>
+	 		<forward contextRelative="true" name="filmtree" path="/skin/course/coursemanager/film_tree.jsp"/>
+	 		<forward contextRelative="true" name="filmlist" path="/skin/course/coursemanager/film_list.jsp"/>
+	 		<forward contextRelative="true" name="filmedit" path="/skin/course/coursemanager/film_edit.jsp"/>
+	 		<forward contextRelative="true" name="filmupdateedit" path="/skin/course/coursemanager/filmupdate_edit.jsp"/>
+	 		<forward contextRelative="true" name="videolist" path="/skin/course/coursemanager/video_list.jsp"/>
+	 		<forward contextRelative="true" name="addvideo" path="/skin/course/coursemanager/video_add.jsp"/>
+			<forward contextRelative="true" name="editvideo" path="/skin/course/coursemanager/video_edit.jsp"/>
+			<forward contextRelative="true" name="preview" path="/skin/course/coursemanager/video_preview.jsp"/>
+			<forward contextRelative="true" name="statisticalmain" path="/edu/course/film/statistics_main.jsp"/>
+			<forward contextRelative="true" name="statisticaltree" path="/edu/course/film/statistics_tree.jsp"/>
+			<forward contextRelative="true" name="statisticallist" path="/edu/course/film/statistics_list.jsp"/>
+		</action>
+		<action name="eduCourseStudyActionForm" parameter="method" path="/eduCourseStudyAction" scope="request" type="com.wkmk.edu.web.action.EduCourseStudyAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="eduCourseUserActionForm" parameter="method" path="/eduCourseUserAction" scope="request" type="com.wkmk.edu.web.action.EduCourseUserAction" validate="false">
+			<forward contextRelative="true" name="list" path="/edu/course/user/user_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/edu/course/user/user_edit.jsp"/>
+			<forward contextRelative="true" name="view" path="/edu/course/user/user_view.jsp"/>
+			<forward contextRelative="true" name="studentlist" path="/skin/course/coursemanager/student_list.jsp"/>
+			<forward contextRelative="true" name="editstudent" path="/skin/course/coursemanager/student_edit.jsp"/>
+			<forward contextRelative="true" name="main" path="/edu/course/user/user_main.jsp"/>
+			<forward contextRelative="true" name="tree" path="/edu/course/user/user_tree.jsp"/>
+			<forward contextRelative="true" name="selectuser" path="/skin/course/coursemanager/select_user.jsp"/>
+			<forward contextRelative="true" name="deal" path="/skin/course/coursemanager/select_deal.jsp"/>
+			<forward contextRelative="true" name="viewstudent" path="/skin/course/coursemanager/student_view.jsp"/>
+			<forward contextRelative="true" name="importuser" path="/edu/course/user/import_user.jsp"/>
+			<forward contextRelative="true" name="teacherlist" path="/skin/course/coursemanager/teacher_list.jsp"/>
+			<forward contextRelative="true" name="editteacher" path="/skin/course/coursemanager/teacher_edit.jsp"/>
+			<forward contextRelative="true" name="updateteacher" path="/skin/course/coursemanager/teacher_update.jsp"/>
+			<forward contextRelative="true" name="setvipone" path="/edu/course/user/setvipone_edit.jsp"/>
+			<forward contextRelative="true" name="setviponesuccess" path="/edu/course/user/setvipone_success.jsp"/>
+			<forward contextRelative="true" name="userlist" path="/edu/course/vip/user_list.jsp"/>
+			<forward contextRelative="true" name="beforesetvip" path="/edu/course/vip/class_list.jsp"/>
+			<forward contextRelative="true" name="setvipsuccess" path="/edu/course/vip/setvip_success.jsp"/>
+		</action>
+		<action name="eduCourseFileDownloadActionForm" parameter="method" path="/eduCourseFileDownloadAction" scope="request" type="com.wkmk.edu.web.action.EduCourseFileDownloadAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="eduCourseCommentActionForm" parameter="method" path="/eduCourseCommentAction" scope="request" type="com.wkmk.edu.web.action.EduCourseCommentAction" validate="false">
+			<forward contextRelative="true" name="list" path="/skin/course/coursemanager/comment_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/skin/course/coursemanager/comment_edit.jsp"/>
+			<forward contextRelative="true" name="view" path="/skin/course/coursemanager/comment_view.jsp"/>
+		</action>
+		<action name="eduCourseClassActionForm" parameter="method" path="/eduCourseClassAction" scope="request" type="com.wkmk.edu.web.action.EduCourseClassAction" validate="false">
+			<forward contextRelative="true" name="list" path="/edu/course/class/class_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/edu/course/class/class_edit.jsp"/>
+			<forward contextRelative="true" name="main" path="/edu/course/class/class_main.jsp"/>
+			<forward contextRelative="true" name="tree" path="/edu/course/class/class_tree.jsp"/>
+		</action>
+		<action name="eduCourseUserModuleActionForm" parameter="method" path="/eduCourseUserModuleAction" scope="request" type="com.wkmk.edu.web.action.EduCourseUserModuleAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="eduCourseAnswerQuestionActionForm" parameter="method" path="/eduCourseAnswerQuestionAction" scope="request" type="com.wkmk.edu.web.action.EduCourseAnswerQuestionAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="eduBookInfoActionForm" parameter="method" path="/eduBookInfoAction" scope="request" type="com.wkmk.edu.web.action.EduBookInfoAction" validate="false">
+			<forward contextRelative="true" name="list" path="/edu/book/book_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/edu/book/book_edit.jsp"/>
+		</action>
+		<action name="eduCourseFileColumnActionForm" parameter="method" path="/eduCourseFileColumnAction" scope="request" type="com.wkmk.edu.web.action.EduCourseFileColumnAction" validate="false">
+			<forward contextRelative="true" name="list" path="/edu/course/filecolumn/filecolumn_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/edu/course/filecolumn/filecolumn_edit.jsp"/>
+		</action>
+  	</action-mappings>
+</struts-config>

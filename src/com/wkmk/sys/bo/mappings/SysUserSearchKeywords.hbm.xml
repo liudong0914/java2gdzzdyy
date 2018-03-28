@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.sys.bo.SysUserSearchKeywords" table="sys_user_search_keywords">
+<id name="searchid" type="java.lang.Integer" column="searchid">  <generator class="native" /> </id>
+<property  name="keywords" type="java.lang.String" column="keywords"/>
+<property  name="searchtype" type="java.lang.String" column="searchtype"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+<property  name="userid" type="java.lang.Integer" column="userid"/>
+<property  name="userip" type="java.lang.String" column="userip"/>
+</class>
+</hibernate-mapping>

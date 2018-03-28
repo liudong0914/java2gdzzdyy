@@ -1,0 +1,114 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0;padding:0;}
+body{color:#929292;font-family: "Microsoft YaHei",Tahoma,Arial,sans-serif;}
+ul,li{list-style:none}
+img{border:0;}
+a:link, a:visited {color:#929292;text-decoration:none;}
+a:hover, a:active {text-decoration:none;}
+a:focus{ -moz-outline-style: none; /* FF */ } 
+a{ cursor:pointer;}
+
+.box{
+	width:100%;
+	height:100%;
+	background-image:url(../images/bg.png);
+	background-position:top center;
+	background-repeat:no-repeat;
+	}
+	
+/*********************内容样式代码********************/
+.content{
+	width:1000px;
+	height:520px;
+	margin:0 auto;
+	text-align:center;
+	margin-top:80px;
+	position:relative;
+	}
+.content_ts{
+	color:#e42904;
+	margin-top:40px;
+	font-size:15px;
+	text-align:left;
+	margin-left:345px;
+	}
+.content_input{
+	width:315px;
+	height:50px;
+	border:1px solid #d4d4d4;
+	background-color:#fff;
+	border-radius:5px;
+	margin:0 auto;
+	margin-top:10px;
+	}
+.content_input img{
+	float:left;
+	margin-left:12px;
+	margin-top:14px;
+	}
+.search_input{
+	float:left;
+	width:260px;
+	height:50px;
+	border:0px;
+	outline:none;
+	margin-left:10px;
+	line-height:50px;
+	font-size:15px;
+	}
+.search_input1{
+	border:1px solid #d4d4d4;
+	background-color:#fff;
+	border-radius:5px;
+	float:left;
+	width:160px;
+	height:50px;
+	padding-left:10px;
+	outline:none;
+	line-height:50px;
+	font-size:15px;
+	}
+.content_yzm{
+	width:315px;
+	height:50px;
+	margin:0 auto;
+	margin-top:28px;
+	}
+.content_button{
+	width:280px;
+	height:42px;
+	background-color:#f39700;
+	margin:0 auto;
+	border-radius:5px;
+	font-size:18px;
+	letter-spacing:25px;
+	padding-left:30px;
+	color:#fff;
+	line-height:42px;
+	margin-top:28px;
+	}
+.content_button:hover{
+	background-color:#e79103;
+	}
+.content_img{
+	width:267px;
+	height:280px;
+	position:absolute;
+	margin-top:-260px;
+	left:720px;
+	}
+.content_img p{
+	font-size:13px;
+	color:#222;
+	margin-top:4px;}
+/***********************底部****************************/
+.footer{
+	width:1000px;
+	height:50px;
+	margin:0 auto;
+	text-align:center;
+	font-size:14px;
+	margin-top:0px;
+	line-height:20px;
+	}

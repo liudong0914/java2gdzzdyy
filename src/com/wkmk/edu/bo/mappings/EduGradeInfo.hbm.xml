@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.edu.bo.EduGradeInfo" table="edu_grade_info" lazy="false">
+<id name="gradeid" type="java.lang.Integer" column="gradeid">  <generator class="native" /> </id>
+<property  name="gradename" type="java.lang.String" column="gradename"/>
+<property  name="orderindex" type="java.lang.Integer" column="orderindex"/>
+<property  name="status" type="java.lang.String" column="status"/>
+<property  name="subjectid" type="java.lang.Integer" column="subjectid"/>
+<property  name="xueduanid" type="java.lang.Integer" column="xueduanid"/>
+<property  name="cxueduanid" type="java.lang.Integer" column="cxueduanid"/>
+<property  name="updatetime" type="java.lang.String" column="updatetime"/>
+</class>
+</hibernate-mapping>

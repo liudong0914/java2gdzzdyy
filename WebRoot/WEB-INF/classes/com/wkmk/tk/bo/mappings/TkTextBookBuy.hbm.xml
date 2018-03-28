@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.tk.bo.TkTextBookBuy" table="tk_textbook_buy">
+<id name="textbookbuyid" type="java.lang.Integer" column="textbookbuyid">  <generator class="native" /> </id>
+<property  name="textbookid" type="java.lang.Integer" column="textbookid"/>
+<property  name="price" type="java.lang.Float" column="price"/>
+<property  name="discount" type="java.lang.Float" column="discount"/>
+<property  name="sellprice" type="java.lang.Float" column="sellprice"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+<property  name="totalnum" type="java.lang.Integer" column="totalnum"/>
+<property  name="totalprice" type="java.lang.Float" column="totalprice"/>
+<property  name="buyuserid" type="java.lang.Integer" column="buyuserid"/>
+<property  name="recipientname" type="java.lang.String" column="recipientname"/>
+<property  name="recipientphone" type="java.lang.String" column="recipientphone"/>
+<property  name="recipientaddress" type="java.lang.String" column="recipientaddress"/>
+<property  name="isdelivery" type="java.lang.String" column="isdelivery"/>
+<property  name="status" type="java.lang.String" column="status"/>
+</class>
+</hibernate-mapping>

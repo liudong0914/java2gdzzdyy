@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.tk.bo.TkClassInfo" table="tk_class_info">
+<id name="classid" type="java.lang.Integer" column="classid">  <generator class="native" /> </id>
+<property  name="classname" type="java.lang.String" column="classname"/>
+<property  name="classno" type="java.lang.String" column="classno"/>
+<property  name="students" type="java.lang.Integer" column="students"/>
+<property  name="pwd" type="java.lang.String" column="pwd"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+<property  name="twocodepath" type="java.lang.String" column="twocodepath"/>
+<property  name="bookid" type="java.lang.Integer" column="bookid"/>
+<property  name="userid" type="java.lang.Integer" column="userid"/>
+<property  name="unitid" type="java.lang.Integer" column="unitid"/>
+<property  name="uploadimg" type="java.lang.String" column="uploadimg"/>
+</class>
+</hibernate-mapping>

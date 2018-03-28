@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.vwh.bo.VwhFilmWatch" table="vwh_film_watch">
+<id name="watchid" type="java.lang.Integer" column="watchid">  <generator class="native" /> </id>
+<property  name="userid" type="java.lang.Integer" column="userid"/>
+<property  name="filmid" type="java.lang.Integer" column="filmid"/>
+<property  name="pixid" type="java.lang.Integer" column="pixid"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+<property  name="userip" type="java.lang.String" column="userip"/>
+</class>
+</hibernate-mapping>

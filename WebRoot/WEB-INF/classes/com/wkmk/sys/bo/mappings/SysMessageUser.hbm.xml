@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.sys.bo.SysMessageUser" table="sys_message_user">
+<id name="messageuserid" type="java.lang.Integer" column="messageuserid">  <generator class="native" /> </id>
+<many-to-one name="sysMessageInfo" class="com.wkmk.sys.bo.SysMessageInfo" cascade="none" column="messageid" not-null="true"/>
+<property  name="userid" type="java.lang.Integer" column="userid"/>
+<property  name="isread" type="java.lang.String" column="isread"/>
+<property  name="readtime" type="java.lang.String" column="readtime"/>
+</class>
+</hibernate-mapping>

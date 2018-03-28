@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.tk.bo.TkClassUser" table="tk_class_user">
+<id name="classuserid" type="java.lang.Integer" column="classuserid">  <generator class="native" /> </id>
+<property  name="status" type="java.lang.String" column="status"/>
+<property  name="userid" type="java.lang.Integer" column="userid"/>
+<property  name="bookid" type="java.lang.Integer" column="bookid"/>
+<property  name="classid" type="java.lang.Integer" column="classid"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+</class>
+</hibernate-mapping>

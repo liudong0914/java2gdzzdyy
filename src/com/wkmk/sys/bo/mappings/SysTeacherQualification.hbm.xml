@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.sys.bo.SysTeacherQualification" table="sys_teacher_qualification">
+<id name="teacherid" type="java.lang.Integer" column="teacherid">  <generator class="native" /> </id>
+<property  name="userid" type="java.lang.Integer" column="userid"/>
+<property  name="username" type="java.lang.String" column="username"/>
+<property  name="sex" type="java.lang.String" column="sex"/>
+<property  name="mobile" type="java.lang.String" column="mobile"/>
+<property  name="identitycardno" type="java.lang.String" column="identitycardno"/>
+<property  name="photo" type="java.lang.String" column="photo"/>
+<property  name="idphto" type="java.lang.String" column="idphto"/>
+<property  name="imgpath" type="java.lang.String" column="imgpath"/>
+<property  name="filepath" type="java.lang.String" column="filepath"/>
+<property  name="status" type="java.lang.String" column="status"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+<property  name="returndescript" type="java.lang.String" column="returndescript"/>
+</class>
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.tk.bo.TkPaperInfo" table="tk_paper_info">
+<id name="paperid" type="java.lang.Integer" column="paperid">  <generator class="native" /> </id>
+<property  name="title" type="java.lang.String" column="title"/>
+<property  name="papertype" type="java.lang.String" column="papertype"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+<property  name="descript" type="java.lang.String" column="descript"/>
+<property  name="status" type="java.lang.String" column="status"/>
+<property  name="userid" type="java.lang.Integer" column="userid"/>
+<property  name="gradeid" type="java.lang.Integer" column="gradeid"/>
+<property  name="subjectid" type="java.lang.Integer" column="subjectid"/>
+<property  name="unitid" type="java.lang.Integer" column="unitid"/>
+<property  name="filepath" type="java.lang.String" column="filepath"/>
+<property  name="htmlfilepath" type="java.lang.String" column="htmlfilepath"/>
+</class>
+</hibernate-mapping>

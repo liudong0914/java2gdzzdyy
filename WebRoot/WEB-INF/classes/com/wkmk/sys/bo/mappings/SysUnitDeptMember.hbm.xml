@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.sys.bo.SysUnitDeptMember" table="sys_unit_dept_member">
+<id name="memberid" type="java.lang.Integer" column="memberid">  <generator class="native" /> </id>
+<many-to-one name="sysUserInfo" class="com.wkmk.sys.bo.SysUserInfo" cascade="none" column="userid" not-null="true"/>
+<property  name="deptid" type="java.lang.Integer" column="deptid"/>
+</class>
+</hibernate-mapping>

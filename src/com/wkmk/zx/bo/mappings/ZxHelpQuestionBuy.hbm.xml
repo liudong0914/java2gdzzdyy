@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.zx.bo.ZxHelpQuestionBuy" table="zx_help_question_buy">
+<id name="buyid" type="java.lang.Integer" column="buyid">  <generator class="native" /> </id>
+<property  name="questionid" type="java.lang.Integer" column="questionid"/>
+<property  name="userid" type="java.lang.Integer" column="userid"/>
+<property  name="price" type="java.lang.Float" column="price"/>
+<property  name="discount" type="java.lang.Float" column="discount"/>
+<property  name="sellprice" type="java.lang.Float" column="sellprice"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+<property  name="enddate" type="java.lang.String" column="enddate"/>
+</class>
+</hibernate-mapping>

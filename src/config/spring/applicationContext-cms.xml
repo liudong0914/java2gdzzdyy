@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+<bean id="cmsNewsColumnManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.cms.service.impl.CmsNewsColumnManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="cmsNewsInfoManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.cms.service.impl.CmsNewsInfoManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="cmsImageInfoManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.cms.service.impl.CmsImageInfoManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+</beans>

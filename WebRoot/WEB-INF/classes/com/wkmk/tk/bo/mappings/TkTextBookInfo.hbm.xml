@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.tk.bo.TkTextBookInfo" table="tk_textbook_info">
+<id name="textbookid" type="java.lang.Integer" column="textbookid">  <generator class="native" /> </id>
+<property  name="orderindex" type="java.lang.Integer" column="orderindex"/>
+<property  name="textbookname" type="java.lang.String" column="textbookname"/>
+<property  name="textbookno" type="java.lang.String" column="textbookno"/>
+<property  name="author" type="java.lang.String" column="author"/>
+<property  name="sketch" type="java.lang.String" column="sketch"/>
+<property  name="press" type="java.lang.String" column="press"/>
+<property  name="unitid" type="java.lang.Integer" column="unitid"/>
+<property  name="status" type="java.lang.String" column="status"/>
+<property  name="price" type="java.lang.Float" column="price"/>
+<property  name="discount" type="java.lang.Float" column="discount"/>
+<property  name="sellprice" type="java.lang.Float" column="sellprice"/>
+<property  name="sellcount" type="java.lang.Integer" column="sellcount"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+<property  name="phone" type="java.lang.String" column="phone"/>
+<property  name="type" type="java.lang.String" column="type"/>
+</class>
+</hibernate-mapping>

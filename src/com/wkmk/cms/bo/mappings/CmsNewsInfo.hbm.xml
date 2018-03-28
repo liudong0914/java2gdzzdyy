@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.cms.bo.CmsNewsInfo" table="cms_news_info">
+<id name="newsid" type="java.lang.Integer" column="newsid">  <generator class="native" /> </id>
+<property  name="title" type="java.lang.String" column="title"/>
+<property  name="linkurl" type="java.lang.String" column="linkurl"/>
+<property  name="keywords" type="java.lang.String" column="keywords"/>
+<property  name="sketch" type="java.lang.String" column="sketch"/>
+<property  name="author" type="java.lang.String" column="author"/>
+<property  name="htmlcontent" type="java.lang.String" column="htmlcontent"/>
+<property  name="status" type="java.lang.String" column="status"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+<property  name="happendate" type="java.lang.String" column="happendate"/>
+<property  name="hits" type="java.lang.Integer" column="hits"/>
+<property  name="recommand" type="java.lang.String" column="recommand"/>
+<many-to-one name="cmsNewsColumn" class="com.wkmk.cms.bo.CmsNewsColumn" cascade="none" column="columnid" not-null="true"/>
+<property  name="userid" type="java.lang.Integer" column="userid"/>
+<property  name="unitid" type="java.lang.Integer" column="unitid"/>
+</class>
+</hibernate-mapping>

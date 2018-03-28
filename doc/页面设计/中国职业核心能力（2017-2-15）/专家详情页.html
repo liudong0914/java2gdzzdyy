@@ -1,0 +1,281 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>北京师范大学总中心-----专家详情页</title>
+
+<link rel="stylesheet" href="css/css_01.css" />
+<script type="text/javascript">
+window.onresize=function(){ location=location };
+//改变页面窗口的时候，自动刷新页面
+</script>
+
+<script type="text/javascript" src="js/base.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+$(document).ready(function() {
+			/*	2nd example	*/
+			
+			$("#menu2 li .menu_a").wrapInner( '<span class="out"></span>' );
+			
+			$("#menu2 li .menu_a").each(function() {
+				$( '<span class="over">' +  $(this).text() + '</span>' ).appendTo( this );
+			});
+
+			$("#menu2 li .menu_a").hover(function() {
+				$(".out",	this).stop().animate({'top':	'54px'},	200); // move down - hide
+				$(".over",	this).stop().animate({'top':	'0px'},		200); // move down - show
+
+			}, function() {
+				$(".out",	this).stop().animate({'top':	'0px'},		200); // move up - show
+				$(".over",	this).stop().animate({'top':	'-54px'},	200); // move up - hide
+			});
+		}); 
+
+
+</script>
+
+
+<script>
+$(document).ready(function() {
+			/*	2nd example	*/
+			
+			$("#menu2_01 li .menu_a_01").wrapInner( '<span class="out"></span>' );
+			
+			$("#menu2_01 li .menu_a_01").each(function() {
+				$( '<span class="over">' +  $(this).text() + '</span>' ).appendTo( this );
+			});
+
+			$("#menu2_01 li .menu_a_01").hover(function() {
+				$(".out",	this).stop().animate({'top':	'54px'},	200); // move down - hide
+				$(".over",	this).stop().animate({'top':	'0px'},		200); // move down - show
+
+			}, function() {
+				$(".out",	this).stop().animate({'top':	'0px'},		200); // move up - show
+				$(".over",	this).stop().animate({'top':	'-54px'},	200); // move up - hide
+			});
+		}); 
+
+
+</script>
+
+
+
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.event.drag-1.5.min.js"></script>
+<script type="text/javascript" src="js/jquery.touchSlider.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$(".main_visual").hover(function(){
+		$("#btn_prev,#btn_next").fadeIn()
+	},function(){
+		$("#btn_prev,#btn_next").fadeOut()
+	});
+	
+	$dragBln = false;
+	
+	$(".main_image").touchSlider({
+		flexible : true,
+		speed : 200,
+		btn_prev : $("#btn_prev"),
+		btn_next : $("#btn_next"),
+		paging : $(".flicking_con a"),
+		counter : function (e){
+			$(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
+		}
+	});
+	
+	$(".main_image").bind("mousedown", function() {
+		$dragBln = false;
+	});
+	
+	$(".main_image").bind("dragstart", function() {
+		$dragBln = true;
+	});
+	
+	$(".main_image a").click(function(){
+		if($dragBln) {
+			return false;
+		}
+	});
+	
+	timer = setInterval(function(){
+		$("#btn_next").click();
+	}, 5000);
+	
+	$(".main_visual").hover(function(){
+		clearInterval(timer);
+	},function(){
+		timer = setInterval(function(){
+			$("#btn_next").click();
+		},5000);
+	});
+	
+	$(".main_image").bind("touchstart",function(){
+		clearInterval(timer);
+	}).bind("touchend", function(){
+		timer = setInterval(function(){
+			$("#btn_next").click();
+		}, 5000);
+	});
+	
+});
+</script>
+
+</head>
+
+<body>
+
+<div id="header">
+	<img src="images/logo.gif" />
+</div> 
+<!-- 大图片滚动 e-->
+
+<!--菜单 开始-->
+<div class="header_nav">
+    	<div id="menu2" class="menu" >
+	     <ul>
+	     <li><a class="menu_a" href="#">首页</a>
+         </li>
+         <li class="menu_li"><a class="menu_a" href="#"> 项目简介                                                                         </a>
+         	<div class="menu_li_subnav">
+     			<a class="menu_li_subnav_a" href="#">中心简介</a>
+      			<a class="menu_li_subnav_a" href="#">理事会</a>
+      			<a class="menu_li_subnav_a" href="#">中心领导</a>
+                <a class="menu_li_subnav_a" href="#">组织机构</a>
+                <a class="menu_li_subnav_a" href="#">协同单位</a>
+                <a class="menu_li_subnav_a" href="#">中心大事记</a>
+    		</div>
+         </li>
+	     <li class="menu_li"><a class="menu_a" href="#">专家团队</a>
+         	<div class="menu_li_subnav">
+     			<a class="menu_li_subnav_a" href="#">监测工具</a>
+      			<a class="menu_li_subnav_a" href="#">数据采集</a>
+      			<a class="menu_li_subnav_a" href="#">数据库</a>
+                <a class="menu_li_subnav_a" href="#">监测报告</a>
+                <a class="menu_li_subnav_a" href="#">政策咨询</a>
+    		</div>
+         </li>
+         <li class="menu_li"><a class="menu_a" href="#">教练师资</a>
+         </li>
+	     <li class="menu_li"><a class="menu_a" href="#">应用院校</a>
+         	<div class="menu_li_subnav">
+     			<a class="menu_li_subnav_a" href="#">团队首席专家</a>
+      			<a class="menu_li_subnav_a" href="#">任务首席专家</a>
+      			<a class="menu_li_subnav_a" href="#">骨干研究员</a>
+    		</div>
+         </li>
+         <li class="menu_li"><a class="menu_a" href="#">合作县区 </a>
+         	<div class="menu_li_subnav">
+     			<a class="menu_li_subnav_a" href="#">人才培养动态</a>
+      			<a class="menu_li_subnav_a" href="#">人才培养成果</a>
+    		</div>
+         </li>
+	     <li class="menu_li"><a class="menu_a" href="#"> 合作机构</a>
+         	<div class="menu_li_subnav">
+     			<a class="menu_li_subnav_a" href="#">科研项目</a>
+      			<a class="menu_li_subnav_a" href="#">科研成果</a>
+    		</div>
+         </li>
+         <li class="menu_li"><a class="menu_a" href="#"> 联系我们</a>
+         </li>
+         
+         </ul>
+       </div>
+    </div>
+<!--菜单结束-->
+
+
+<!--主要内容 开始-->
+<div class="second_content_01">
+<div class="content">
+<div class="content_site">
+当前位置：<a href="#">首页</a> - <a href="#">专家团队</a> - <a href="#">团队首席专家</a></div>
+<!--当前位置 结束-->
+
+
+
+
+<div class="teacher_list">
+
+<div class="content_main_top">
+    	<div class="content_submain_left">
+        	<img src="images/content_nr_img.png" />
+        </div>
+        <div class="content_submain_right">
+        <h3>毕彦超</h3>
+          <ul>
+          <li><span>职称：</span>教授、博士生导师</li>
+          <li><span>研究领域：</span></li>
+          <li><span>电话：</span>（8610）58802911</li>
+          <li><span>通讯地址：</span>北京师范大学京师大厦9418室</li>
+          <li><span>邮编：</span>100875</li>
+          <li><span>电子邮件：</span>ybi@bnu.edu.cn</li>
+          <li><span>课题组网址：</span>http://brain.bnu.edu/home/yanchaobi/</li>
+          </ul>      
+        </div>
+        <!--简介 e-->
+      </div>
+      <!--content_main_top E-->
+      
+<div class="content_main_center">
+2004年6月进入北师大心理学博士后流动站，出站后到北师大教育学院职业技术教育学科工作 曾在教育部职成司借调筹备05全国职业教育工作会议文件 2008年1月开始在河北省教育厅支持下到国家级重点中专石家庄铁路运输学校、鹿泉职教中心挂职校长助理和副校长。<br>
+1.2005年“联校教育及社会科学应用研究论文奖计划”十周年优秀成果奖。<br> 
+ 
+2.当选《职业技术教育》杂志评出的十大2007职业教育年度入围人物。<br> 
+ 
+3.荣获2009年第十一届全国职业教育优秀论文评选一等奖。<br> 
+ 
+4.获得过中国博士后科学基金和香港联校教育社会科学应用研究论文奖等多项奖励。
+
+</div>
+<!--个人介绍 结束-->
+
+<div class="content_main_footer">
+<p>（1）个人详细简介PDF文件，可下载。</p>
+<p>（2）个人主页网址，可连接跳转。</p>
+</div>
+<!--个人详细介绍下载 结束-->
+
+</div>
+<!--teacher_list 结束-->
+
+
+
+</div>
+
+</div>
+<!--主要内容 结束-->
+
+
+
+
+<div id="foot">
+<div class="foot_nr">
+<span class="foot_nr_one"><img src="images/z19.png" /></a></span>
+<span class="foot_nr_two">
+全国职业核心能力测评培训网 2007-2011 版权所有 | 京ICP备13009817号<br /> 
+技术支持：北京师科阳光信息技术有限公司
+</span>
+
+
+
+<div class="menu_footer">
+<img src="images/z25.jpg">
+<p>微信公众号</p>
+</div>
+<!-- menu_footer E -->
+
+</div><!--版权内容 结束-->
+
+</div><!--版权 结束--
+
+
+
+
+</body>
+</html>

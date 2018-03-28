@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="sysUserInfoActionForm" type="com.wkmk.sys.web.form.SysUserInfoActionForm" />
+		<form-bean name="eduCourseInfoActionForm" type="com.wkmk.edu.web.form.EduCourseInfoActionForm" />
+	</form-beans>
+	 <action-mappings>
+	 	<action path="/zyb" parameter="method" scope="request" type="com.wkmk.skin.action.Zyb01Action" validate="false"/>
+	 	<action path="/course" parameter="method" scope="request" type="com.wkmk.skin.action.Course01Action" validate="false"/>
+	 	<action path="/plogin" parameter="method" scope="request" type="com.wkmk.skin.action.SkinUserLoginAction" validate="false"/>
+	 	<action name="sysUserInfoActionForm" path="/pcenter" parameter="method" scope="request" type="com.wkmk.skin.action.PersonalCenterAction" validate="false">
+	 		<forward contextRelative="true" name="editself" path="/skin/pcenter/jsp/userinfo_edit.jsp"/>
+	 		<forward contextRelative="true" name="modifypassword" path="/skin/pcenter/jsp/password_modify.jsp"/>
+	 		<forward contextRelative="true" name="edit" path="/skin/pcenter/jsp/teacherqualific_edit.jsp"/>
+	 		<forward contextRelative="true" name="beforeUpdateTwo" path="/skin/pcenter/jsp/teacherqualifictwo_edit.jsp"/>
+	 		<forward contextRelative="true" name="view" path="/skin/pcenter/jsp/teacherqualific_view.jsp"/>
+	 		<forward contextRelative="true" name="orderList" path="/skin/pcenter/jsp/order_list.jsp"/>
+	 		<forward contextRelative="true" name="viewQuestion" path="/skin/pcenter/jsp/order_viewquestion.jsp"/>
+	 		<forward contextRelative="true" name="viewAnswer" path="/skin/pcenter/jsp/order_viewanswer.jsp"/>
+	 		<forward contextRelative="true" name="doOrder" path="/skin/pcenter/jsp/order_doorder.jsp"/>
+	 		<forward contextRelative="true" name="mycontentfilmlist" path="/skin/pcenter/jsp/contentfilm_mylist.jsp"/>
+	 		<forward contextRelative="true" name="play" path="/skin/pcenter/jsp/contentfilm_play.jsp"/>
+	 		<forward contextRelative="true" name="showUserInfo" path="/skin/pcenter/jsp/userinfo_list.jsp"/>
+	 		<forward contextRelative="true" name="paperlist" path="/skin/pcenter/jsp/paper_list.jsp"/>
+	 	</action>
+	 	<action name="eduCourseInfoActionForm" path="/courseCenter" parameter="method" scope="request" type="com.wkmk.skin.action.CoursePersonalCenterAction" validate="false">
+	 		<forward contextRelative="true" name="createcourse" path="/skin/course/jsp/course_add.jsp"/>
+	 		<forward contextRelative="true" name="courselist" path="/skin/course/jsp/course_list.jsp"/>
+	 		<forward contextRelative="true" name="addcourseclass" path="/skin/course/jsp/add_courseclass.jsp"/>
+	 		<forward contextRelative="true" name="courseedit" path="/skin/course/coursemanager/course_edit.jsp"/>
+	 		<forward contextRelative="true" name="coursestudy" path="/skin/course/jsp/course_study.jsp"/>
+	 		<forward contextRelative="true" name="coursefile" path="/skin/course/jsp/course_file.jsp"/>
+	 		<forward contextRelative="true" name="coursefilemain" path="/skin/course/jsp/coursefile_main.jsp"/>
+	 		<forward contextRelative="true" name="coursefiletree" path="/skin/course/jsp/coursefile_tree.jsp"/>
+	 		<forward contextRelative="true" name="coursefilelist" path="/skin/course/jsp/coursefile_list.jsp"/>
+	 		<forward contextRelative="true" name="coursefileview" path="/skin/course/jsp/coursefile_view.jsp"/>
+	 		<forward contextRelative="true" name="coursecollect" path="/skin/course/jsp/course_collect.jsp"/>
+	 		<forward contextRelative="true" name="editself" path="/skin/course/jsp/user_editself.jsp"/>
+	 		<forward contextRelative="true" name="modifypassword" path="/skin/course/jsp/user_modifypassword.jsp"/>
+	 		<forward contextRelative="true" name="mymessage" path="/skin/course/jsp/my_message.jsp"/>
+	 		<forward contextRelative="true" name="viewmessage" path="/skin/course/jsp/view_message.jsp"/>
+	 		<forward contextRelative="true" name="addcoursecomment" path="/skin/course/jsp/add_coursecomment.jsp"/>
+	 		<forward contextRelative="true" name="addcoursecommentsuccess" path="/skin/course/jsp/add_coursecomment_success.jsp"/>
+	 		<forward contextRelative="true" name="mytradelist" path="/skin/course/jsp/mytrade_list.jsp"/>
+	 		<forward contextRelative="true" name="mymoney" path="/skin/course/jsp/mymoney_list.jsp"/>
+	 	</action>
+	 	<action name="eduCourseColumnActionForm" path="/courseManager" parameter="method" scope="request" type="com.wkmk.skin.action.CourseManagerAction" validate="false">
+	 		<forward contextRelative="true" name="columnmain" path="/skin/course/coursemanager/column_main.jsp"/>
+	 		<forward contextRelative="true" name="columntree" path="/skin/course/coursemanager/column_tree.jsp"/>
+	 		<forward contextRelative="true" name="columnlist" path="/skin/course/coursemanager/column_list.jsp"/>
+	 		<forward contextRelative="true" name="columnedit" path="/skin/course/coursemanager/column_edit.jsp"/>
+	 		<forward contextRelative="true" name="courseinfo" path="/skin/course/coursemanager/course_info.jsp"/>
+	 	</action>
+	 </action-mappings>
+</struts-config>

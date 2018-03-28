@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+    <form-beans>
+  		<form-bean name="vwhComputerInfoActionForm" type="com.wkmk.vwh.web.form.VwhComputerInfoActionForm" />
+  		<form-bean name="vwhFilmInfoActionForm" type="com.wkmk.vwh.web.form.VwhFilmInfoActionForm" />
+  		<form-bean name="vwhFilmPixActionForm" type="com.wkmk.vwh.web.form.VwhFilmPixActionForm" />
+  		<form-bean name="vwhFilmKnopointActionForm" type="com.wkmk.vwh.web.form.VwhFilmKnopointActionForm" />
+  		<form-bean name="vwhFilmWatchActionForm" type="com.wkmk.wvh.web.form.VwhFilmWatchActionForm" />
+  	</form-beans>
+  	<global-forwards>
+  	</global-forwards>
+  	<action-mappings>
+    	<action name="vwhComputerInfoActionForm" parameter="method" path="/vwhComputerInfoAction" scope="request" type="com.wkmk.vwh.web.action.VwhComputerInfoAction" validate="false">
+			<forward contextRelative="true" name="list" path="/vwh/computer/computer_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/vwh/computer/computer_edit.jsp"/>
+		</action>
+		<action name="vwhFilmInfoActionForm" parameter="method" path="/vwhFilmInfoAction" scope="request" type="com.wkmk.vwh.web.action.VwhFilmInfoAction" validate="false">
+			<forward contextRelative="true" name="main" path="/vwh/film/film_main.jsp"/>
+			<forward contextRelative="true" name="tree" path="/vwh/film/film_tree.jsp"/>
+			<forward contextRelative="true" name="list" path="/vwh/film/film_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/vwh/film/film_edit.jsp"/>
+		</action>
+		<action name="vwhFilmInfoActionForm" parameter="method" path="/vwhUploadFilmInfoAction" scope="request" type="com.wkmk.vwh.web.action.VwhUploadFilmInfoAction" validate="false">
+			<forward contextRelative="true" name="upload" path="/vwh/film/film_upload.jsp"/>
+		</action>
+		<action name="vwhFilmInfoActionForm" parameter="method" path="/vwhMyFilmInfoAction" scope="request" type="com.wkmk.vwh.web.action.VwhMyFilmInfoAction" validate="false">
+			<forward contextRelative="true" name="list" path="/vwh/myfilm/film_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/vwh/myfilm/film_edit.jsp"/>
+		</action>
+		<action name="vwhFilmInfoActionForm" parameter="method" path="/vwhFilmInfoCheckAction" scope="request" type="com.wkmk.vwh.web.action.VwhFilmInfoCheckAction" validate="false">
+			<forward contextRelative="true" name="list" path="/vwh/check/film_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/vwh/check/film_edit.jsp"/>
+		</action>
+		<action name="vwhFilmInfoActionForm" parameter="method" path="/vwhFilmInfoRecyclebinAction" scope="request" type="com.wkmk.vwh.web.action.VwhFilmInfoRecyclebinAction" validate="false">
+			<forward contextRelative="true" name="list" path="/vwh/recyclebin/film_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/vwh/recyclebin/film_edit.jsp"/>
+		</action>
+		<action name="vwhFilmPixActionForm" parameter="method" path="/vwhFilmPixAction" scope="request" type="com.wkmk.vwh.web.action.VwhFilmPixAction" validate="false">
+			<forward contextRelative="true" name="list" path="/vwh/pix/pix_list.jsp"/>
+			<forward contextRelative="true" name="add" path="/vwh/pix/pix_add.jsp"/>
+			<forward contextRelative="true" name="edit" path="/vwh/pix/pix_edit.jsp"/>
+			<forward contextRelative="true" name="preview" path="/vwh/pix/pix_preview.jsp"/>
+		</action>
+		<action name="vwhFilmPixActionForm" parameter="method" path="/vwhFilmPixConvertAction" scope="request" type="com.wkmk.vwh.web.action.VwhFilmPixConvertAction" validate="false">
+			<forward contextRelative="true" name="list" path="/vwh/convert/pix_list.jsp"/>
+		</action>
+		<action name="vwhFilmKnopointActionForm" parameter="method" path="/vwhFilmKnopointAction" scope="request" type="com.wkmk.vwh.web.action.VwhFilmKnopointAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="vwhFilmWatchActionForm" parameter="method" path="/vwhFilmWatchAction" scope="request" type="com.wkmk.wvh.web.action.VwhFilmWatchAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+  	</action-mappings>
+</struts-config>

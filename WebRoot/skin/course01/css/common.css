@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+/******************头部*******************/
+.header{ width:100%; height:82px; background-position:0px 74px; background-image:url(../images/a13.png); background-color:#fff; background-repeat:repeat-x;}
+.header_main{ width:1200px; height:74px; background-color:#fff; margin:0 auto;}
+.logo{ display:block; float:left; margin-top:18px;}
+.nav{ overflow:hidden; float:left; margin-left:40px;}
+.nav_a{ background-image:url(../images/a01.png); background-repeat:no-repeat; color:#236fe8;}
+.nav a{ display:block; float:left; height:74px; line-height:74px; padding:0px 3px; margin:0px 12px; font-size:18px;}
+.nav a:hover{ background-image:url(../images/a01.png); background-repeat:no-repeat; color:#236fe8;}
+.search{ width:305px; overflow:hidden; float:left; padding-top:23px; padding-left:40px;}
+.search_input{ width:260px; height:30px; border-left:1px solid #e7e8e8; color:#c9caca; border-bottom:1px solid #e7e8e8; border-right:0px;float:left; padding-left:5px; outline:none; line-height:30px;border-top:1px solid #e7e8e8;}
+.search a{ width:34px; height:30px; background-image:url(../images/a02.png); background-repeat:no-repeat; display:block; float:left;}
+.search a:hover{background-image:url(../images/a002.png);}
+.login{ float:right; overflow:hidden; margin-top:27px;}
+.login01{ float:left;}
+.login01 img{ float:left;}
+.login01 a{ color:#236fe8; margin-left:5px;}
+.login01 a:hover{ color:#034dc2;}
+.login02{ margin-left:20px;}
+
+/******************底部*******************/
+.footer{ width:100%; background-color:#efefef; padding:20px 0px;}
+.footer_main{ width:1200px; margin:0 auto;}
+.footer_main_top{width:100%;line-height:24px;color:#3a3a3a; padding:3px 0px; overflow:hidden;}
+.footer_main_top a{float:left;color:#000; font-size:12px;}
+.footer_main_top a:hover{ color:#236fe8;}
+.footer_main_top span{float:left;padding:0 10px;}
+.footer_firend_link{ width:850px; overflow:hidden; padding:10px 0px 5px 0px;}
+.footer_firend_link p{ float:left; font-size:12px; display:block; height:100%;}
+.footer_firend_link a{color:#727171; font-size:12px; margin:0px 8px; display:block; float:left}
+.footer_firend_link a:hover{ color:#236fe8}
+.footer_firend_link_a{ overflow:hidden; font-size:12px;}
+.footer_main_p{ font-size:12px;color:#727171; }
+
+/******************注册弹出样式*******************/
+.tanchu{width:608px;height:320px;position:absolute;left:50%; background-color:#fff;margin-left:-305px;top:50%;margin-top:-165px;}
+.tanchu a{display:inline-block;height:18px;width:18px;background-image:url(../images/fade.png);position:absolute;right:10px;top:10px;}
+.tanchu_img{ display:block; float:left; margin-top:50px; margin-left:50px;}
+.tanchu_p{ display:block; float:left; margin-left:35px; font-size:16px; color:#000; letter-spacing:1px; line-height:28px; width:240px; margin-top:110px;}
+.fade{height:100%;width:100%;position:fixed;background-image:url(../images/bjtc.png);z-index:9999;display:none;}

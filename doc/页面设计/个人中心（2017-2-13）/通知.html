@@ -1,0 +1,392 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- 强制转换内核↓ -->
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
+<title>消息中心</title>
+<!-- style.css为各客户端和后期新增零散样式 -->
+<link href="css/style.css" rel="stylesheet"/>
+</head>
+<!-- 一般在body上区分客户端，如管理员端、教师端等，id和class皆可↓ -->
+<body>
+
+<div class="container clearfix">
+    <div class="leftCon">
+<div class="sideHead clearfix">
+	<div class="head-ico">
+		<b class="head-circle">
+			<!-- 这是头像那个灰色的圈，不要放东西。头像是下面的img↓ -->
+		</b> <a href="#"><img
+			src="images/header.png"
+			alt="我的头像" /></a>
+	</div>
+	<div class="head-links">
+		<h3 class="head-name ellipsis" style="display:inline-block;width:80px;" title="赵崇平">赵崇平</h3>
+		<p class="links">
+			<a href="#">设置</a><b>|</b><a href="#">充值</a>
+		</p>
+	</div>
+	<a class="level-ico" title="等级">LV1</a>
+	<div class="level-bar">
+		<p style="width:0%;" title="进度0%">
+			<!-- 进度是多少，style里面的百分比就改为多少 -->
+		</p>
+	</div>
+</div>
+<div class="homeLink">
+	<a href="#">个人中心</a>
+</div>
+<div class="sideMenu">
+	<dl>
+		<dt>
+			<span>教授课程</span>
+		</dt>
+		<dd >
+			<a href="#"><b class="ico ico-01"></b>创建课程</a>
+		</dd>
+		<dd >
+			<a href="#"><b class="ico ico-02"></b>点播课程</a>
+		</dd>
+	</dl>
+	<dl>
+		<dt></dt>
+		<dd >
+			<a href="#"><b class="ico ico-03"></b>学习课程</a>
+		</dd>
+	</dl>
+	<dl>
+		<dt>
+			<span>答疑中心</span>
+		</dt>
+		<dd >
+			<a href="#"><b class="ico ico-04"></b>答疑日历</a>
+		</dd>
+		<dd >
+			<a href="#"><b class="ico ico-05"></b>求助问题</a>
+		</dd>
+		<dd >
+			<a href="#"><b class="ico ico-06"></b>我的关注</a>
+		</dd>
+	</dl>
+	<dl>
+		<dt>
+			<span>收藏中心</span>
+		</dt>
+		<dd >
+			<a href="#"><b class="ico ico-07"></b>课程收藏</a>
+		</dd>
+		<dd >
+			<a href="#"><b class="ico ico-08"></b>职位收藏</a>
+		</dd>
+		<dd >
+			<a href="#"><b class="ico ico-09"></b>认证收藏</a>
+		</dd>
+	</dl>
+	<dl>
+		<dt></dt>
+		<dd >
+			<a href="#"><b class="ico ico-13"></b>设置中心</a>
+		</dd>
+	</dl>
+	<dl>
+		<dt>
+			<span>订单中心</span>
+		</dt>
+		<dd >
+			<a href="#"><b class="ico ico-10"></b>我的订单</a>
+		</dd>
+		<dd >
+			<a href="#"><b class="ico ico-11"></b>课程订单</a>
+		</dd>
+	</dl>
+	<dl>
+		<dt></dt>
+		<dd >
+			<a href="#"><b class="ico ico-12"></b>我的账户</a>
+		</dd>
+	</dl>
+	<dl>
+		<dt></dt>
+		<dd >
+			<a href="#"><b class="ico ico-14"></b>通知</a>
+		</dd>
+	</dl>
+</div>
+ </div>
+    <div class="rightCon">
+
+<div class="main">
+<div class="mainBox">
+<div class="mainTit">
+<h3 class="title">消息中心</h3>
+</div>
+<div class="mainCon mainCon01">
+	<div class="tab">
+<div class="acts">
+<input id="lookUpSelectedBtn" class="btn btn-pop ml20" value="已阅所选" onclick="toLookCheckedNews();" style="display: inline-block;" type="button">
+<input id="deleteSelectedBtn" class="btn btn-pop ml20" value="删除所选" onclick="toDeleteSelectedNews();" type="button">
+</div>
+<ul id="quickNav" style="">
+<li class="borlnone current" data-lookuptype="0">
+<a class="jobInfo" href="#">
+全部（23）
+</a>
+</li>
+<li class="" data-lookuptype="2">
+<a class="jobInfo" href="#">
+已查阅（6）
+</a>
+</li>
+<li class="" data-lookuptype="1">
+<a class="course" href="#">
+未查阅（17）
+</a>
+</li>
+</ul>
+</div>
+
+<table width="100%" class="table">
+<thead>
+<tr>
+<th width="45">
+<input id="selectAll" type="checkbox">
+</th>
+<th width="160">发件人</th>
+<th width="390">发件主题</th>
+<th>发件时间</th>
+<th width="100">操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="5">
+<div class="tableBox box02">
+<table width="100%">
+<thead>
+<tr data-newsid="7924">
+<th width="45">
+<input class="checkShow msgCheck" type="checkbox">
+</th>
+<th width="160">
+系统通知
+</th>
+<th width="390">
+<span class="elips email-title" title="" onclick="toShowNewsContentDetails(7924,$(this));"> 课程发布审核通过 </span>
+</th>
+<th>2017-01-17 17:00:35</th>
+<th width="100">
+<a class="alink" href="javascript:void(0)" onclick="toDeleteCurrNews(7924);">删除</a>
+</th>
+</tr>
+</thead>
+<tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="5">
+<div class="tableBox box02">
+<table width="100%">
+<thead>
+<tr data-newsid="7924">
+<th width="45">
+<input class="checkShow msgCheck" type="checkbox">
+</th>
+<th width="160">
+系统通知
+</th>
+<th width="390">
+<span class="elips email-title" title="" onclick="toShowNewsContentDetails(7924,$(this));"> 课程发布审核通过 </span>
+</th>
+<th>2017-01-17 17:00:35</th>
+<th width="100">
+<a class="alink" href="javascript:void(0)" onclick="toDeleteCurrNews(7924);">删除</a>
+</th>
+</tr>
+</thead>
+<tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="5">
+<div class="tableBox box02">
+<table width="100%">
+<thead>
+<tr data-newsid="7924">
+<th width="45">
+<input class="checkShow msgCheck" type="checkbox">
+</th>
+<th width="160">
+
+系统通知
+</th>
+<th width="390">
+<span class="elips email-title" title="" onclick="toShowNewsContentDetails(7924,$(this));"> 课程发布审核通过 </span>
+</th>
+<th>2017-01-17 17:00:35</th>
+<th width="100">
+<a class="alink" href="javascript:void(0)" onclick="toDeleteCurrNews(7924);">删除</a>
+</th>
+</tr>
+</thead>
+<tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="5">
+<div class="tableBox box02">
+<table width="100%">
+<thead>
+<tr data-newsid="7924">
+<th width="45">
+<input class="checkShow msgCheck" type="checkbox">
+</th>
+<th width="160">
+
+系统通知
+</th>
+<th width="390">
+<span class="elips email-title" title="" onclick="toShowNewsContentDetails(7924,$(this));"> 课程发布审核通过 </span>
+</th>
+<th>2017-01-17 17:00:35</th>
+<th width="100">
+<a class="alink" href="javascript:void(0)" onclick="toDeleteCurrNews(7924);">删除</a>
+</th>
+</tr>
+</thead>
+<tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="5">
+<div class="tableBox box02">
+<table width="100%">
+<thead>
+<tr data-newsid="7924">
+<th width="45">
+<input class="checkShow msgCheck" type="checkbox">
+</th>
+<th width="160">
+
+系统通知
+</th>
+<th width="390">
+<span class="elips email-title" title="" onclick="toShowNewsContentDetails(7924,$(this));"> 课程发布审核通过 </span>
+</th>
+<th>2017-01-17 17:00:35</th>
+<th width="100">
+<a class="alink" href="javascript:void(0)" onclick="toDeleteCurrNews(7924);">删除</a>
+</th>
+</tr>
+</thead>
+<tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="5">
+<div class="tableBox box02">
+<table width="100%">
+<thead>
+<tr data-newsid="7924">
+<th width="45">
+<input class="checkShow msgCheck" type="checkbox">
+</th>
+<th width="160">
+系统通知
+</th>
+<th width="390">
+<span class="elips email-title" title="" onclick="toShowNewsContentDetails(7924,$(this));"> 课程发布审核通过 </span>
+</th>
+<th>2017-01-17 17:00:35</th>
+<th width="100">
+<a class="alink" href="javascript:void(0)" onclick="toDeleteCurrNews(7924);">删除</a>
+</th>
+</tr>
+</thead>
+<tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="5">
+<div class="tableBox box02">
+<table width="100%">
+<thead>
+<tr data-newsid="7924">
+<th width="45">
+<input class="checkShow msgCheck" type="checkbox">
+</th>
+<th width="160">
+系统通知
+</th>
+<th width="390">
+<span class="elips email-title" title="" onclick="toShowNewsContentDetails(7924,$(this));"> 课程发布审核通过 </span>
+</th>
+<th>2017-01-17 17:00:35</th>
+<th width="100">
+<a class="alink" href="javascript:void(0)" onclick="toDeleteCurrNews(7924);">删除</a>
+</th>
+</tr>
+</thead>
+<tbody>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="5">
+<div class="tableBox box02">
+<table width="100%">
+<thead>
+<tr data-newsid="7924">
+<th width="45">
+<input class="checkShow msgCheck" type="checkbox">
+</th>
+<th width="160">
+系统通知
+</th>
+<th width="390">
+<span class="elips email-title" title="" onclick="toShowNewsContentDetails(7924,$(this));"> 课程发布审核通过 </span>
+</th>
+<th>2017-01-17 17:00:35</th>
+<th width="100">
+<a class="alink" href="javascript:void(0)" onclick="toDeleteCurrNews(7924);">删除</a>
+</th>
+</tr>
+</thead>
+<tbody>
+</table>
+</div>
+</td>
+</tr>
+	</tbody>
+</table>
+<div class="pager turn-page">
+<div>
+<a class="prev disabled" href="#"><</a>
+<a class="show hover" href="#">1</a>
+<a class="show " href="#">2</a>
+<a class="show " href="#">3</a>
+<a class="next " href="#">></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+  </div>
+</body>
+<script src="/js/personalcenter/teacenter.js"></script>
+</html>

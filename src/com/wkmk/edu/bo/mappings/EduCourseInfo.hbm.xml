@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.edu.bo.EduCourseInfo" table="edu_course_info">
+<id name="courseid" type="java.lang.Integer" column="courseid">  <generator class="native" /> </id>
+<property  name="title" type="java.lang.String" column="title"/>
+<property  name="courseno" type="java.lang.String" column="courseno"/>
+<property  name="coursetypeid" type="java.lang.String" column="coursetypeid"/>
+<property  name="sketch" type="java.lang.String" column="sketch"/>
+<property  name="status" type="java.lang.String" column="status"/>
+<property  name="price" type="java.lang.Float" column="price"/>
+<property  name="classhour" type="java.lang.String" column="classhour"/>
+<property  name="hits" type="java.lang.Integer" column="hits"/>
+<property  name="collects" type="java.lang.Integer" column="collects"/>
+<property  name="studys" type="java.lang.Integer" column="studys"/>
+<property  name="score" type="java.lang.Float" column="score"/>
+<property  name="scoreusers" type="java.lang.Integer" column="scoreusers"/>
+<property  name="objectives" type="java.lang.String" column="objectives"/>
+<property  name="htmlcontent" type="java.lang.String" column="htmlcontent"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+<property  name="startdate" type="java.lang.String" column="startdate"/>
+<property  name="enddate" type="java.lang.String" column="enddate"/>
+<many-to-one name="sysUserInfo" class="com.wkmk.sys.bo.SysUserInfo" cascade="none" column="userid" not-null="true"/>
+<property  name="unitid" type="java.lang.Integer" column="unitid"/>
+<property  name="note" type="java.lang.String" column="note"/>
+</class>
+</hibernate-mapping>

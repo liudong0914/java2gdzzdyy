@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+<bean id="zxHelpQuestionManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.zx.service.impl.ZxHelpQuestionManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="zxHelpOrderManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.zx.service.impl.ZxHelpOrderManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="zxHelpAnswerManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.zx.service.impl.ZxHelpAnswerManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="zxHelpFileManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.zx.service.impl.ZxHelpFileManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="zxHomeworkQuestionManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.zx.service.impl.ZxHomeworkQuestionManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="zxHomeworkOrderManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.zx.service.impl.ZxHomeworkOrderManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="zxHomeworkAnswerManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.zx.service.impl.ZxHomeworkAnswerManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="zxHomeworkFileManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.zx.service.impl.ZxHomeworkFileManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="zxHomeworkReportManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.zx.service.impl.ZxHomeworkReportManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="zxHomeworkReportQuestionManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.zx.service.impl.ZxHomeworkReportQuestionManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="zxHomeworkWrongReasonManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.zx.service.impl.ZxHomeworkWrongReasonManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="zxHelpQuestionCommentManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.zx.service.impl.ZxHelpQuestionCommentManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="zxHelpQuestionBuyManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.zx.service.impl.ZxHelpQuestionBuyManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+<bean id="zxHelpQuestionComplaintManager" parent="txProxyTemplate">
+	<property name="target">
+		<bean class="com.wkmk.zx.service.impl.ZxHelpQuestionComplaintManagerImpl">
+			<property name="baseDAO" ref="baseDAO"/>
+		</bean>
+	</property>
+</bean>
+</beans>

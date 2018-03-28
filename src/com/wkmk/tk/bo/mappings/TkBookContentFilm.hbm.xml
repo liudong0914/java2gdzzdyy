@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.tk.bo.TkBookContentFilm" table="tk_book_content_film">
+<id name="fid" type="java.lang.Integer" column="fid">  <generator class="native" /> </id>
+<property  name="title" type="java.lang.String" column="title"/>
+<property  name="orderindex" type="java.lang.Integer" column="orderindex"/>
+<property  name="type" type="java.lang.String" column="type"/>
+<property  name="status" type="java.lang.String" column="status"/>
+<property  name="bookcontentid" type="java.lang.Integer" column="bookcontentid"/>
+<property  name="bookid" type="java.lang.Integer" column="bookid"/>
+<property  name="filmid" type="java.lang.Integer" column="filmid"/>
+<property  name="filmtwocode" type="java.lang.String" column="filmtwocode"/>
+<many-to-one name="sysUserInfo" class="com.wkmk.sys.bo.SysUserInfo" cascade="none" column="userid" not-null="true"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+<property  name="hits" type="java.lang.Integer" column="hits"/>
+</class>
+</hibernate-mapping>

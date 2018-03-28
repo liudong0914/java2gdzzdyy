@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.tk.bo.TkQuestionsType" table="tk_questions_type" lazy="false">
+<id name="typeid" type="java.lang.Integer" column="typeid">  <generator class="native" /> </id>
+<property  name="typeno" type="java.lang.String" column="typeno"/>
+<property  name="typename" type="java.lang.String" column="typename"/>
+<property  name="type" type="java.lang.String" column="type"/>
+<property  name="subjectid" type="java.lang.Integer" column="subjectid"/>
+<property  name="unitid" type="java.lang.Integer" column="unitid"/>
+</class>
+</hibernate-mapping>

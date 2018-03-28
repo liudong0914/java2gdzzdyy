@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.edu.bo.EduCourseStudy" table="edu_course_study">
+<id name="studyid" type="java.lang.Integer" column="studyid">  <generator class="native" /> </id>
+<property  name="courseid" type="java.lang.Integer" column="courseid"/>
+<property  name="coursefilmid" type="java.lang.Integer" column="coursefilmid"/>
+<property  name="userid" type="java.lang.Integer" column="userid"/>
+<property  name="userip" type="java.lang.String" column="userip"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+</class>
+</hibernate-mapping>

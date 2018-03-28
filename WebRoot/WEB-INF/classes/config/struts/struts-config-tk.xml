@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+    <form-beans>
+  		<form-bean name="tkPaperInfoActionForm" type="com.wkmk.tk.web.form.TkPaperInfoActionForm" />
+  		<form-bean name="tkPaperContentActionForm" type="com.wkmk.tk.web.form.TkPaperContentActionForm" />
+  		<form-bean name="tkPaperAnswerActionForm" type="com.wkmk.tk.web.form.TkPaperAnswerActionForm" />
+  		<form-bean name="tkQuestionsKnopointActionForm" type="com.wkmk.tk.web.form.TkQuestionsKnopointActionForm" />
+  		<form-bean name="tkPaperStyleActionForm" type="com.wkmk.tk.web.form.TkPaperStyleActionForm" />
+  		<form-bean name="tkPaperCartActionForm" type="com.wkmk.tk.web.form.TkPaperCartActionForm" />
+  		<form-bean name="tkQuestionsInfoActionForm" type="com.wkmk.tk.web.form.TkQuestionsInfoActionForm" />
+  		<form-bean name="tkQuestionsTypeActionForm" type="com.wkmk.tk.web.form.TkQuestionsTypeActionForm" />
+  		<form-bean name="tkQuestionsFilmActionForm" type="com.wkmk.tk.web.form.TkQuestionsFilmActionForm" />
+  		<form-bean name="tkQuestionsSimilarActionForm" type="com.wkmk.tk.web.form.TkQuestionsSimilarActionForm" />
+  		<form-bean name="tkBookInfoActionForm" type="com.wkmk.tk.web.form.TkBookInfoActionForm" />
+  		<form-bean name="tkBookContentActionForm" type="com.wkmk.tk.web.form.TkBookContentActionForm" />
+  		<form-bean name="tkBookContentQuestionActionForm" type="com.wkmk.tk.web.form.TkBookContentQuestionActionForm" />
+  		<form-bean name="tkClassInfoActionForm" type="com.wkmk.tk.web.form.TkClassInfoActionForm" />
+  		<form-bean name="tkClassUserActionForm" type="com.wkmk.tk.web.form.TkClassUserActionForm" />
+  		<form-bean name="tkClassPasswordActionForm" type="com.wkmk.tk.web.form.TkClassPasswordActionForm" />
+  		<form-bean name="tkClassGroupActionForm" type="com.wkmk.tk.web.form.TkClassGroupActionForm" />
+  		<form-bean name="tkClassGroupUserActionForm" type="com.wkmk.tk.web.form.TkClassGroupUserActionForm" />
+  		<form-bean name="tkClassUploadActionForm" type="com.wkmk.tk.web.form.TkClassUploadActionForm" />
+  		<form-bean name="tkClassErrorQuestionActionForm" type="com.wkmk.tk.web.form.TkClassErrorQuestionActionForm" />
+  		<form-bean name="tkUserErrorQuestionActionForm" type="com.wkmk.tk.web.form.TkUserErrorQuestionActionForm" />
+  		<form-bean name="tkBookContentTaskActionForm" type="com.wkmk.tk.web.form.TkBookContentTaskActionForm" />
+  		<form-bean name="tkUserBookContentActionForm" type="com.wkmk.tk.web.form.TkUserBookContentActionForm" />
+  		<form-bean name="tkQuestionsSimilarWatchActionForm" type="com.wkmk.tk.web.form.TkQuestionsSimilarWatchActionForm" />
+  		<form-bean name="tkBookContentWatchActionForm" type="com.wkmk.tk.web.form.TkBookContentWatchActionForm" />
+  		<form-bean name="tkBookContentPowerActionForm" type="com.wkmk.tk.web.form.TkBookContentPowerActionForm" />
+  		<form-bean name="tkBookContentFilmActionForm" type="com.wkmk.tk.web.form.TkBookContentFilmActionForm" />
+  		<form-bean name="tkBookFileActionForm" type="com.wkmk.tk.web.form.TkBookFileActionForm" />
+  		<form-bean name="tkBookFileDownloadActionForm" type="com.wkmk.tk.web.form.TkBookFileDownloadActionForm" />
+  		<form-bean name="tkBookContentPriceActionForm" type="com.wkmk.tk.web.form.TkBookContentPriceActionForm" />
+  		<form-bean name="tkBookContentBuyActionForm" type="com.wkmk.tk.web.form.TkBookContentBuyActionForm" />
+  		<form-bean name="tkQuestionsInfoFileActionForm" type="com.wkmk.tk.web.form.TkQuestionsInfoFileActionForm" />
+  		<form-bean name="tkBookContentFilmAuditionActionForm" type="com.wkmk.tk.web.form.TkBookContentFilmAuditionActionForm" />
+  		<form-bean name="tkBookContentFilmAuditionWatchActionForm" type="com.wkmk.tk.web.form.TkBookContentFilmAuditionWatchActionForm" />
+  		<form-bean name="tkBookContentFilmWatchActionForm" type="com.wkmk.tk.web.form.TkBookContentFilmWatchActionForm" />
+  		<form-bean name="tkBookContentCommentActionForm" type="com.wkmk.tk.web.form.TkBookContentCommentActionForm" />
+  		<form-bean name="tkPaperTypeActionForm" type="com.wkmk.tk.web.form.TkPaperTypeActionForm" />
+  		<form-bean name="tkPaperFileActionForm" type="com.wkmk.tk.web.form.TkPaperFileActionForm" />
+  		<form-bean name="tkPaperFileDownloadActionForm" type="com.wkmk.tk.web.form.TkPaperFileDownloadActionForm" />
+  		<form-bean name="tkBookContentGoodfilmActionForm" type="com.wkmk.tk.web.form.TkBookContentGoodfilmActionForm" />
+  		<form-bean name="tkTextBookInfoActionForm" type="com.wkmk.tk.web.form.TkTextBookInfoActionForm" />
+  		<form-bean name="tkTextBookBuyActionForm" type="com.wkmk.tk.web.form.TkTextBookBuyActionForm" />
+  	</form-beans>
+  	<global-forwards>
+  	</global-forwards>
+  	<action-mappings>
+  		<action name="tkPaperInfoActionForm" parameter="method" path="/tkPaperInfoAction" scope="request" type="com.wkmk.tk.web.action.TkPaperInfoAction" validate="false">
+			<forward contextRelative="true" name="main" path="/tk/paperinfo/paperinfo_main.jsp"/>
+			<forward contextRelative="true" name="tree" path="/tk/paperinfo/paperinfo_tree.jsp"/>
+			<forward contextRelative="true" name="list" path="/tk/paperinfo/paperinfo_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/tk/paperinfo/paperinfo_edit.jsp"/>
+		    <forward contextRelative="true" name="question_pervier" path="/tk/paperinfo/paperinfo_question_pervier.jsp"/>
+		</action>
+		<action name="tkPaperContentActionForm" parameter="method" path="/tkPaperContentAction" scope="request" type="com.wkmk.tk.web.action.TkPaperContentAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="tkPaperAnswerActionForm" parameter="method" path="/tkPaperAnswerAction" scope="request" type="com.wkmk.tk.web.action.TkPaperAnswerAction" validate="false">
+			<forward contextRelative="true" name="main" path="/tk/analysis/analysis_main.jsp"/>
+			<forward contextRelative="true" name="jobanalysis" path="/tk/analysis/job_analysis.jsp"/>
+			<forward contextRelative="true" name="userquestions" path="/tk/analysis/user_questions.jsp"/>
+			<forward contextRelative="true" name="jobstat" path="/tk/analysis/job_stat.jsp"/>
+			<forward contextRelative="true" name="piechart" path="/tk/analysis/pie_chart.jsp"/>
+		    <forward contextRelative="true" name="error_questions" path="/tk/analysis/error_question.jsp"/>
+		</action>
+		<action name="tkQuestionsKnopointActionForm" parameter="method" path="/tkQuestionsKnopointAction" scope="request" type="com.wkmk.tk.web.action.TkQuestionsKnopointAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="tkPaperStyleActionForm" parameter="method" path="/tkPaperStyleAction" scope="request" type="com.wkmk.tk.web.action.TkPaperStyleAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="tkPaperCartActionForm" parameter="method" path="/tkPaperCartAction" scope="request" type="com.wkmk.tk.web.action.TkPaperCartAction" validate="false">
+			<forward contextRelative="true" name="main" path="/tk/papercart/papercart_main.jsp"/>
+            <forward contextRelative="true" name="leftmain" path="/tk/papercart/papercart_leftmain.jsp"/>			
+			<forward contextRelative="true" name="subject" path="/tk/papercart/papercart_subject.jsp"/>
+			<forward contextRelative="true" name="tree" path="/tk/papercart/papercart_tree.jsp"/>
+			<forward contextRelative="true" name="questionmain" path="/tk/papercart/papercart_question_main.jsp"/>
+			<forward contextRelative="true" name="question_a_list" path="/tk/papercart/papercart_question_a_list.jsp"/>
+		    <forward contextRelative="true" name="question_c_list" path="/tk/papercart/papercart_question_c_list.jsp"/>
+	        <forward contextRelative="true" name="question_f_list" path="/tk/papercart/papercart_question_f_list.jsp"/>
+		    <forward contextRelative="true" name="children_question" path="/tk/papercart/papercart_question_children_question.jsp"/>
+		    <forward contextRelative="true" name="question_a_children" path="/tk/papercart/papercart_question_a_children.jsp"/>
+		    <forward contextRelative="true" name="question_c_children" path="/tk/papercart/papercart_question_c_children.jsp"/>
+		    <forward contextRelative="true" name="error" path="/tk/papercart/papercart_error.jsp"/>
+		    <forward contextRelative="true" name="pervier" path="/tk/papercart/papercart_pervier.jsp"/>
+		    <forward contextRelative="true" name="pervier_error" path="/tk/papercart/papercart_pervier_error.jsp"/>
+		    <forward contextRelative="true" name="before_updatescore" path="/tk/papercart/papercart_score_edit.jsp"/>
+	        <forward contextRelative="true" name="updatescore_close" path="/tk/papercart/papercart_score_close.jsp"/>
+	        <forward contextRelative="true" name="addpaperinfo" path="/tk/papercart/papercart_addpaperinfo.jsp"/>
+		    <forward contextRelative="true" name="info_error" path="/tk/papercart/papercart_info_error.jsp"/>
+		    <forward contextRelative="true" name="info_success" path="/tk/papercart/papercart_info_success.jsp"/>
+		    <forward contextRelative="true" name="paperinfo_success" path="/tk/papercart/papercart_paperinfo_success.jsp"></forward>
+		    <forward contextRelative="true" name="Inteligenc_paper" path="/tk/papercart/papercart_inteligenc_paper.jsp"/>
+		    <forward contextRelative="true" name="inteligence_error" path="/tk/papercart/papercart_inteligence_error.jsp"/>
+		</action>
+		<action name="tkQuestionsInfoActionForm" parameter="method" path="/tkQuestionsInfoAction" scope="request" type="com.wkmk.tk.web.action.TkQuestionsInfoAction" validate="false">
+		    <forward contextRelative="true" name="main" path="/tk/questions/questioninfo_main.jsp"/>
+		    <forward contextRelative="true" name="tree" path="/tk/questions/questioninfo_tree.jsp"/>
+			<forward contextRelative="true" name="list" path="/tk/questions/questioninfo_list.jsp"/>
+			<forward contextRelative="true" name="tab" path="/tk/questions/questioninfo_tab.jsp"/>
+			<forward contextRelative="true" name="a_edit" path="/tk/questions/questioninfo_a_edit.jsp"/>
+			<forward contextRelative="true" name="a_detail" path="/tk/questions/questioninfo_a_detail.jsp"/>
+			<forward contextRelative="true" name="b_edit" path="/tk/questions/questioninfo_b_edit.jsp"/>
+			<forward contextRelative="true" name="b_detail" path="/tk/questions/questioninfo_b_detail.jsp"/>
+			<forward contextRelative="true" name="c_edit" path="/tk/questions/questioninfo_c_edit.jsp"/>
+			<forward contextRelative="true" name="c_detail" path="/tk/questions/questioninfo_c_detail.jsp"/>
+			<forward contextRelative="true" name="e_edit" path="/tk/questions/questioninfo_e_edit.jsp"/>
+		    <forward contextRelative="true" name="e_edit2" path="/tk/questions/questioninfo_e_edit2.jsp"/>
+			<forward contextRelative="true" name="e_edit3" path="/tk/questions/questioninfo_e_edit3.jsp"/>
+			<forward contextRelative="true" name="e_detail" path="/tk/questions/questioninfo_e_detail.jsp"/>
+			<forward contextRelative="true" name="e_detail2" path="/tk/questions/questioninfo_e_detail2.jsp"/>
+			<forward contextRelative="true" name="f_edit" path="/tk/questions/questioninfo_f_edit.jsp"/>
+			<forward contextRelative="true" name="f_detail" path="/tk/questions/questioninfo_f_detail.jsp"/>
+			<forward contextRelative="true" name="m_edit" path="/tk/questions/questioninfo_m_edit.jsp"/>
+			<forward contextRelative="true" name="m_detail" path="/tk/questions/questioninfo_m_detail.jsp"/>
+			<forward contextRelative="true" name="s_edit" path="/tk/questions/questioninfo_s_edit.jsp"/>
+			<forward contextRelative="true" name="s_detail" path="/tk/questions/questioninfo_s_detail.jsp"/>
+			<forward contextRelative="true" name="childrentab" path="/tk/questions/questioninfo_children_tab.jsp"/>
+            <forward contextRelative="true" name="childerlist" path="/tk/questions/questioninfo_children_list.jsp"/>
+            <forward contextRelative="true" name="similar_list" path="/tk/questions/questioninfo_similar_list.jsp"/>
+            <forward contextRelative="true" name="unsimilar_list" path="/tk/questions/questioninfo_similar_unlist.jsp"/>
+            <forward contextRelative="true" name="filmInfo" path="/tk/questions/questioninfo_filminfo_list.jsp"/>
+            <forward contextRelative="true" name="unfilmInfo" path="/tk/questions/questioninfo_filminfo_unlist.jsp"/>
+            <forward contextRelative="true" name="filmdetail" path="/tk/questions/questioninfo_filminfo_detail.jsp"/>
+            <forward contextRelative="true" name="error" path="/tk/questions/questioninfo_error.jsp"/>
+            <forward contextRelative="true" name="picdetail" path="/tk/questions/questioninfo_picdetail.jsp"/>
+		</action>
+		<action name="tkQuestionsTypeActionForm" parameter="method" path="/tkQuestionsTypeAction" scope="request" type="com.wkmk.tk.web.action.TkQuestionsTypeAction" validate="false">
+			<forward contextRelative="true" name="main" path="/tk/type/questionType_main.jsp"/>
+			<forward contextRelative="true" name="tree" path="/tk/type/questionType_tree.jsp"/>
+			<forward contextRelative="true" name="list" path="/tk/type/questionType_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/tk/type/questionType_edit.jsp"/>
+		</action>
+		<action name="tkQuestionsFilmActionForm" parameter="method" path="/tkQuestionsFilmAction" scope="request" type="com.wkmk.tk.web.action.TkQuestionsFilmAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="tkQuestionsSimilarActionForm" parameter="method" path="/tkQuestionsSimilarAction" scope="request" type="com.wkmk.tk.web.action.TkQuestionsSimilarAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="tkBookInfoActionForm" parameter="method" path="/tkBookInfoAction" scope="request" type="com.wkmk.tk.web.action.TkBookInfoAction" validate="false">
+			<forward contextRelative="true" name="main" path="/tk/bookinfo/bookinfo_main.jsp"/>
+			<forward contextRelative="true" name="list" path="/tk/bookinfo/bookinfo_list.jsp"/>
+			<forward contextRelative="true" name="tree" path="/tk/bookinfo/bookinfo_tree.jsp"/>
+			<forward contextRelative="true" name="edit" path="/tk/bookinfo/bookinfo_edit.jsp"/>
+			<forward contextRelative="true" name="detail" path="/tk/bookinfo/bookinfo_detail.jsp"/>
+		    <forward contextRelative="true" name="two_code_success" path="/tk/bookinfo/bookinfo_code_success.jsp"/>
+		</action>
+		
+		<action name="tkBookContentActionForm" parameter="method" path="/tkBookContentAction" scope="request" type="com.wkmk.tk.web.action.TkBookContentAction" validate="false">
+			<forward contextRelative="true" name="main" path="/tk/bookcontent/bookcontent_main.jsp"/>
+			<forward contextRelative="true" name="tree" path="/tk/bookcontent/bookcontent_tree.jsp"/>
+			<forward contextRelative="true" name="list" path="/tk/bookcontent/bookcontent_list.jsp"/>
+		    <forward contextRelative="true" name="edit" path="/tk/bookcontent/bookcontent_edit.jsp" />
+		    <forward contextRelative="true" name="page_list" path="/tk/bookcontent/bookcontent_page_list.jsp"/>
+		    <forward contextRelative="true" name="before_replaceQuestion" path="/tk/bookcontent/before_replacequestion.jsp"/>
+		    <forward contextRelative="true" name="before_replace" path="/tk/bookcontent/before_replace.jsp"/>
+		</action>
+		<action name="tkBookContentQuestionActionForm" parameter="method" path="/tkBookContentQuestionAction" scope="request" type="com.wkmk.tk.web.action.TkBookContentQuestionAction" validate="false">
+			<forward contextRelative="true" name="list" path="/tk/bookcontentquestion/bookcontent_question_list.jsp"/>
+			<forward contextRelative="true" name="unlist" path="/tk/bookcontentquestion/bookcontent_question_unlist.jsp"/>
+		    <forward contextRelative="true" name="detail" path="/tk/bookcontentquestion/bookcontent_question_detail.jsp"/>
+		</action>
+		<action name="tkClassInfoActionForm" parameter="method" path="/tkClassInfoAction" scope="request" type="com.wkmk.tk.web.action.TkClassInfoAction" validate="false">
+			<forward contextRelative="true" name="list" path="/tk/class/class_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/tk/class/class_edit.jsp"/>
+			<forward contextRelative="true" name="myclass" path="/tk/class/my_class.jsp"/>
+			<forward contextRelative="true" name="detail" path="/tk/class/class_detail.jsp"/>
+			<forward contextRelative="true" name="bookcontents" path="/tk/class/book_content.jsp"/>
+			<forward contextRelative="true" name="students" path="/tk/class/student_list.jsp"/>
+			<forward contextRelative="true" name="cub_detail" path="/tk/class/cub_detail.jsp"/>
+			<forward contextRelative="true" name="analysis" path="/tk/class/analysis.jsp"/>
+			<forward contextRelative="true" name="analysisbookcontents" path="/tk/class/analysis_bookcontents.jsp"/>
+			<forward contextRelative="true" name="statisticalClassType" path="/tk/class/statistical_classtype.jsp"/>
+			<forward contextRelative="true" name="statisticalClassAdd" path="/tk/class/statistical_classadd.jsp"/>
+		</action>
+		<action name="tkClassUserActionForm" parameter="method" path="/tkClassUserAction" scope="request" type="com.wkmk.tk.web.action.TkClassUserAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="tkClassPasswordActionForm" parameter="method" path="/tkClassPasswordAction" scope="request" type="com.wkmk.tk.web.action.TkClassPasswordAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="tkClassGroupActionForm" parameter="method" path="/tkClassGroupAction" scope="request" type="com.wkmk.tk.web.action.TkClassGroupAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="tkClassGroupUserActionForm" parameter="method" path="/tkClassGroupUserAction" scope="request" type="com.wkmk.tk.web.action.TkClassGroupUserAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="tkClassUploadActionForm" parameter="method" path="/tkClassUploadAction" scope="request" type="com.wkmk.tk.web.action.TkClassUploadAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="tkClassErrorQuestionActionForm" parameter="method" path="/tkClassErrorQuestionAction" scope="request" type="com.wkmk.tk.web.action.TkClassErrorQuestionAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="tkUserErrorQuestionActionForm" parameter="method" path="/tkUserErrorQuestionAction" scope="request" type="com.wkmk.tk.web.action.TkUserErrorQuestionAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+			<forward contextRelative="true" name="statisticalUserErrorQuestion" path="/tk/usererrorquestion/statistical_usererrorquestion.jsp"/>
+		</action>
+		<action name="tkBookContentTaskActionForm" parameter="method" path="/tkBookContentTaskAction" scope="request" type="com.wkmk.tk.web.action.TkBookContentTaskAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="tkUserBookContentActionForm" parameter="method" path="/tkUserBookContentAction" scope="request" type="com.wkmk.tk.web.action.TkUserBookContentAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="userlist" path="/tk/userbookcontent/user_list.jsp"/>
+			<forward contextRelative="true" name="main" path="/tk/userbookcontent/bookcontent_main.jsp"/>
+			<forward contextRelative="true" name="tree" path="/tk/userbookcontent/bookcontent_tree.jsp"/>
+			<forward contextRelative="true" name="bookContentList" path="/tk/userbookcontent/bookcontent_list.jsp"/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="tkQuestionsSimilarWatchActionForm" parameter="method" path="/tkQuestionsSimilarWatchAction" scope="request" type="com.wkmk.tk.web.action.TkQuestionsSimilarWatchAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="tkBookContentWatchActionForm" parameter="method" path="/tkBookContentWatchAction" scope="request" type="com.wkmk.tk.web.action.TkBookContentWatchAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+			<forward contextRelative="true" name="statisticalContentWatch" path="/tk/contentwatch/statistical_contentwatch.jsp"/>
+		</action>
+		<action name="tkBookContentPowerActionForm" parameter="method" path="/tkBookContentPowerAction" scope="request" type="com.wkmk.tk.web.action.TkBookContentPowerAction" validate="false">
+			<forward contextRelative="true" name="userlist" path="/tk/contentpower/user_list.jsp"/>
+			<forward contextRelative="true" name="main" path="/tk/contentpower/contentpower_main.jsp"/>
+		    <forward contextRelative="true" name="tree" path="/tk/contentpower/contentpower_tree.jsp"/>
+		    <forward contextRelative="true" name="list" path="/tk/contentpower/contentpower_list.jsp"/>
+		    <forward contextRelative="true" name="bookcontent_main" path="/tk/contentpower/bookcontent_main.jsp"/>
+		    <forward contextRelative="true" name="booktree" path="/tk/contentpower/book_tree.jsp"/>
+		    <forward contextRelative="true" name="question_list" path="/tk/contentpower/question_list.jsp"/>
+		    <forward contextRelative="true" name="vwhuserlist" path="/tk/contentpower/vwhuser_list.jsp"/>
+		    <forward contextRelative="true" name="vwhbookcontent_main" path="/tk/contentpower/vwhbookcontent_main.jsp"/>
+		    <forward contextRelative="true" name="vwhbooktree" path="/tk/contentpower/vwhbook_tree.jsp"/>
+		</action>
+		<action name="tkBookContentFilmActionForm" parameter="method" path="/tkBookContentFilmAction" scope="request" type="com.wkmk.tk.web.action.TkBookContentFilmAction" validate="false">
+			<forward contextRelative="true" name="list" path="/tk/contentfilm/contentfilm_list.jsp"/>
+			<forward contextRelative="true" name="listguanli" path="/tk/contentfilm/contentfilm_guanlilist.jsp"/>
+			<forward contextRelative="true" name="edit" path="/tk/contentfilm/contentfilm_edit.jsp"/>
+			<forward contextRelative="true" name="edit1" path="/tk/contentfilm/contentfilm_editguanli.jsp"/>
+			<forward contextRelative="true" name="main" path="/tk/contentfilm/contentfilm_main.jsp"/>
+			<forward contextRelative="true" name="tree" path="/tk/contentfilm/contentfilm_tree.jsp"/>
+			<forward contextRelative="true" name="mycontentfilmmain" path="/tk/contentfilm/contentfilm_mymain.jsp"/>
+			<forward contextRelative="true" name="mycontentfilmtree" path="/tk/contentfilm/contentfilm_mytree.jsp"/>
+			<forward contextRelative="true" name="mycontentfilmlist" path="/tk/contentfilm/contentfilm_mylist.jsp"/>
+			<forward contextRelative="true" name="editmy" path="/tk/contentfilm/contentfilm_myedit.jsp"/>
+		</action>
+		<action name="tkBookContentFilmActionForm" parameter="method" path="/tkBookContentFilmUploadAction" scope="request" type="com.wkmk.tk.web.action.TkBookContentFilmUploadAction" validate="false">
+			<forward contextRelative="true" name="list" path="/tk/contentfilmupload/contentfilm_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/tk/contentfilmupload/contentfilm_edit.jsp"/>
+			<forward contextRelative="true" name="add" path="/tk/contentfilmupload/contentfilm_add.jsp"/>
+			<forward contextRelative="true" name="main" path="/tk/contentfilmupload/contentfilm_main.jsp"/>
+			<forward contextRelative="true" name="tree" path="/tk/contentfilmupload/contentfilm_tree.jsp"/>
+		</action>
+		<action name="tkBookFileActionForm" parameter="method" path="/tkBookFileAction" scope="request" type="com.wkmk.tk.web.action.TkBookFileAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="tkBookFileDownloadActionForm" parameter="method" path="/tkBookFileDownloadAction" scope="request" type="com.wkmk.tk.web.action.TkBookFileDownloadAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="tkBookContentPriceActionForm" parameter="method" path="/tkBookContentPriceAction" scope="request" type="com.wkmk.tk.web.action.TkBookContentPriceAction" validate="false">
+			<forward contextRelative="true" name="list" path="/tk/contentprice/contentprice_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/tk/contentprice/contentprice_edit.jsp"/>
+			<forward contextRelative="true" name="failure" path="/tk/contentprice/contentprice_fail.jsp"/>
+			<forward contextRelative="true" name="failure1" path="/tk/contentprice/contentprice_fail1.jsp"/>
+			<forward contextRelative="true" name="success" path="/tk/contentprice/contentprice_success.jsp"/>
+			<forward contextRelative="true" name="addlist" path="/tk/contentprice/contentpriceadd_list.jsp"/>
+			<forward contextRelative="true" name="main" path="/tk/contentprice/contentprice_initmain.jsp"/>
+			<forward contextRelative="true" name="initedit" path="/tk/contentprice/contentprice_initedit.jsp"/>
+		</action>
+		<action name="tkBookContentBuyActionForm" parameter="method" path="/tkBookContentBuyAction" scope="request" type="com.wkmk.tk.web.action.TkBookContentBuyAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="tkQuestionsInfoFileActionForm" parameter="method" path="/tkQuestionsInfoFileAction" scope="request" type="com.wkmk.tk.web.action.TkQuestionsInfoFileAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="tkBookContentFilmAuditionActionForm" parameter="method" path="/tkBookContentFilmAuditionAction" scope="request" type="com.wkmk.tk.web.action.TkBookContentFilmAuditionAction" validate="false">
+			<forward contextRelative="true" name="main" path="/tk/contentfilmaudition/contentfilmaudition_main.jsp"/>
+			<forward contextRelative="true" name="tree" path="/tk/contentfilmaudition/contentfilmaudition_tree.jsp"/>
+			<forward contextRelative="true" name="list" path="/tk/contentfilmaudition/contentfilmaudition_list.jsp"/>
+			<forward contextRelative="true" name="bookcontentfilmlist" path="/tk/contentfilmaudition/contentfilm_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/tk/contentfilmaudition/contentfilmaudition_edit.jsp"/>
+			<forward contextRelative="true" name="filmlist" path="/tk/contentfilmaudition/pix_list.jsp"/>
+		</action>
+		<action name="tkBookContentFilmAuditionWatchActionForm" parameter="method" path="/tkBookContentFilmAuditionWatchAction" scope="request" type="com.wkmk.tk.web.action.TkBookContentFilmAuditionWatchAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="tkBookContentFilmWatchActionForm" parameter="method" path="/tkBookContentFilmWatchAction" scope="request" type="com.wkmk.tk.web.action.TkBookContentFilmWatchAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+			<forward contextRelative="true" name="statisticalFilmWatch" path="/tk/contentfilmwatch/statistical_filmwatch.jsp"/>
+		</action>
+		<action name="tkBookContentCommentActionForm" parameter="method" path="/tkBookContentCommentAction" scope="request" type="com.wkmk.tk.web.action.TkBookContentCommentAction" validate="false">
+			<forward contextRelative="true" name="list" path="/tk/contentcomment/contentcomment_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/tk/contentcomment/contentcomment_edit.jsp"/>
+			<forward contextRelative="true" name="main" path="/tk/contentcomment/contentcomment_main.jsp"/>
+			<forward contextRelative="true" name="tree" path="/tk/contentcomment/contentcomment_tree.jsp"/>
+		</action>
+		<action name="tkPaperTypeActionForm" parameter="method" path="/tkPaperTypeAction" scope="request" type="com.wkmk.tk.web.action.TkPaperTypeAction" validate="false">
+			<forward contextRelative="true" name="list" path="/tk/papertype/papertype_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/tk/papertype/papertype_edit.jsp"/>
+		</action>
+		<action name="tkPaperFileActionForm" parameter="method" path="/tkPaperFileAction" scope="request" type="com.wkmk.tk.web.action.TkPaperFileAction" validate="false">
+			<forward contextRelative="true" name="list" path="/tk/paperfile/list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/tk/paperfile/edit.jsp"/>
+			<forward contextRelative="true" name="upload" path="/tk/paperfile/upload.jsp"/>
+			<forward contextRelative="true" name="main" path="/tk/paperfile/main.jsp"/>
+			<forward contextRelative="true" name="tree" path="/tk/paperfile/tree.jsp"/>
+			<forward contextRelative="true" name="paperstatistical" path="/tk/paperfile/statistical.jsp"/>
+		</action>
+		<action name="tkPaperFileDownloadActionForm" parameter="method" path="/tkPaperFileDownloadAction" scope="request" type="com.wkmk.tk.web.action.TkPaperFileDownloadAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="tkBookContentGoodfilmActionForm" parameter="method" path="/tkBookContentGoodfilmAction" scope="request" type="com.wkmk.tk.web.action.TkBookContentGoodfilmAction" validate="false">
+			<forward contextRelative="true" name="main" path="/tk/goodfilm/goodfilm_main.jsp"/>
+			<forward contextRelative="true" name="tree" path="/tk/goodfilm/goodfilm_tree.jsp"/>
+			<forward contextRelative="true" name="list" path="/tk/goodfilm/goodfilm_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/tk/goodfilm/goodfilm_edit.jsp"/>
+		</action>
+		<action name="" parameter="method" path="/tkBookContentBuyStatisticsAction" scope="request" type="com.wkmk.tk.web.action.TkBookContentBuyStatisticsAction" validate="false">
+			<forward contextRelative="true" name="main" path="/tk/contentbuystatistics/statistics_main.jsp"/>
+			<forward contextRelative="true" name="tree" path="/tk/contentbuystatistics/statistics_tree.jsp"/>
+			<forward contextRelative="true" name="list" path="/tk/contentbuystatistics/statistics_list.jsp"/>
+		</action>
+		<action name="tkTextBookInfoActionForm" parameter="method" path="/tkTextBookInfoAction" scope="request" type="com.wkmk.tk.web.action.TkTextBookInfoAction" validate="false">
+			<forward contextRelative="true" name="list" path="/tk/textbookinfo/textbookinfo_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/tk/textbookinfo/textbookinfo_edit.jsp"/>
+		</action>
+		<action name="tkTextBookBuyActionForm" parameter="method" path="/tkTextBookBuyAction" scope="request" type="com.wkmk.tk.web.action.TkTextBookBuyAction" validate="false">
+			<forward contextRelative="true" name="list" path="/tk/textbookbuy/textbookbuy_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/tk/textbookbuy/textbookbuy_edit.jsp"/>
+		</action>
+  	</action-mappings>
+</struts-config>

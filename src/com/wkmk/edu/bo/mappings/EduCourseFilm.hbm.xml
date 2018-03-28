@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.edu.bo.EduCourseFilm" table="edu_course_film">
+<id name="coursefilmid" type="java.lang.Integer" column="coursefilmid">  <generator class="native" /> </id>
+<property  name="qrcodeno" type="java.lang.String" column="qrcodeno"/>
+<property  name="title" type="java.lang.String" column="title"/>
+<property  name="filmid" type="java.lang.Integer" column="filmid"/>
+<property  name="coursecolumnid" type="java.lang.Integer" column="coursecolumnid"/>
+<property  name="courseid" type="java.lang.Integer" column="courseid"/>
+<property  name="orderindex" type="java.lang.Integer" column="orderindex"/>
+<property  name="status" type="java.lang.String" column="status"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+<property  name="hits" type="java.lang.Integer" column="hits"/>
+<property  name="sellcount" type="java.lang.Integer" column="sellcount"/>
+<property  name="price" type="java.lang.Float" column="price"/>
+<property  name="discount" type="java.lang.Float" column="discount"/>
+<property  name="sellprice" type="java.lang.Float" column="sellprice"/>
+</class>
+</hibernate-mapping>

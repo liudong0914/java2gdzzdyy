@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.zx.bo.ZxHomeworkReportQuestion" table="zx_homework_report_question">
+<id name="rqid" type="java.lang.Integer" column="rqid">  <generator class="native" /> </id>
+<property  name="content" type="java.lang.String" column="content"/>
+<property  name="scorerate" type="java.lang.String" column="scorerate"/>
+<property  name="rightanswer" type="java.lang.String" column="rightanswer"/>
+<property  name="wrongreason" type="java.lang.String" column="wrongreason"/>
+<property  name="contentfilmid" type="java.lang.Integer" column="contentfilmid"/>
+<property  name="reportid" type="java.lang.Integer" column="reportid"/>
+</class>
+</hibernate-mapping>

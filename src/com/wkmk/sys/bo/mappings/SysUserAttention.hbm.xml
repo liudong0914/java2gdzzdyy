@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.sys.bo.SysUserAttention" table="sys_user_attention">
+<id name="attentionid" type="java.lang.Integer" column="attentionid">  <generator class="native" /> </id>
+<property  name="nickname" type="java.lang.String" column="nickname"/>
+<property  name="openid" type="java.lang.String" column="openid"/>
+<property  name="sex" type="java.lang.String" column="sex"/>
+<property  name="language" type="java.lang.String" column="language"/>
+<property  name="city" type="java.lang.String" column="city"/>
+<property  name="province" type="java.lang.String" column="province"/>
+<property  name="country" type="java.lang.String" column="country"/>
+<property  name="headimgurl" type="java.lang.String" column="headimgurl"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+<property  name="deletedate" type="java.lang.String" column="deletedate"/>
+<property  name="registertime" type="java.lang.String" column="registertime"/>
+<property  name="unregistertime" type="java.lang.String" column="unregistertime"/>
+<property  name="userid" type="java.lang.Integer" column="userid"/>
+<property  name="unitid" type="java.lang.Integer" column="unitid"/>
+</class>
+</hibernate-mapping>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.tk.bo.TkPaperType" table="tk_paper_type" lazy="false">
+<id name="typeid" type="java.lang.Integer" column="typeid">  <generator class="native" /> </id>
+<property  name="typename" type="java.lang.String" column="typename"/>
+<property  name="typeno" type="java.lang.String" column="typeno"/>
+<property  name="parentno" type="java.lang.String" column="parentno"/>
+<property  name="status" type="java.lang.String" column="status"/>
+</class>
+</hibernate-mapping>

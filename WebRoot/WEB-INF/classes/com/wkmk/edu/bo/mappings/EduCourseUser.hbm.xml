@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.edu.bo.EduCourseUser" table="edu_course_user">
+<id name="courseuserid" type="java.lang.Integer" column="courseuserid">  <generator class="native" /> </id>
+<property  name="courseclassid" type="java.lang.Integer" column="courseclassid"/>
+<property  name="courseid" type="java.lang.Integer" column="courseid"/>
+<property  name="userid" type="java.lang.Integer" column="userid"/>
+<property  name="status" type="java.lang.String" column="status"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+<property  name="usertype" type="java.lang.String" column="usertype"/>
+<property  name="vip" type="java.lang.String" column="vip"/>
+<property  name="startdate" type="java.lang.String" column="startdate"/>
+<property  name="enddate" type="java.lang.String" column="enddate"/>
+<property  name="validitytime" type="java.lang.String" column="validitytime"/>
+</class>
+</hibernate-mapping>

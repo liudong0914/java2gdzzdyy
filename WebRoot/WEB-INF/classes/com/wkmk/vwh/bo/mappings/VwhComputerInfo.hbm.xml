@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.vwh.bo.VwhComputerInfo" table="vwh_computer_info">
+<id name="computerid" type="java.lang.Integer" column="computerid">  <generator class="native" /> </id>
+<property  name="computername" type="java.lang.String" column="computername"/>
+<property  name="ip" type="java.lang.String" column="ip"/>
+<property  name="port" type="java.lang.String" column="port"/>
+<property  name="unitid" type="java.lang.Integer" column="unitid"/>
+</class>
+</hibernate-mapping>

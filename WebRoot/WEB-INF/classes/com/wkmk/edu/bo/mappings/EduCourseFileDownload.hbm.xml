@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.wkmk.edu.bo.EduCourseFileDownload" table="edu_course_file_download">
+<id name="downloadid" type="java.lang.Integer" column="downloadid">  <generator class="native" /> </id>
+<property  name="fileid" type="java.lang.Integer" column="fileid"/>
+<property  name="userid" type="java.lang.Integer" column="userid"/>
+<property  name="createdate" type="java.lang.String" column="createdate"/>
+</class>
+</hibernate-mapping>

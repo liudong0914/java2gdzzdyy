@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+    <form-beans>
+  		<form-bean name="sysKeywordFilterActionForm" type="com.wkmk.sys.web.form.SysKeywordFilterActionForm" />
+  		<form-bean name="sysModuleInfoActionForm" type="com.wkmk.sys.web.form.SysModuleInfoActionForm" />
+  		<form-bean name="sysProductInfoActionForm" type="com.wkmk.sys.web.form.SysProductInfoActionForm" />
+  		<form-bean name="sysRoleInfoActionForm" type="com.wkmk.sys.web.form.SysRoleInfoActionForm" />
+  		<form-bean name="sysRoleModuleActionForm" type="com.wkmk.sys.web.form.SysRoleModuleActionForm" />
+  		<form-bean name="sysUnitDeptActionForm" type="com.wkmk.sys.web.form.SysUnitDeptActionForm" />
+  		<form-bean name="sysUnitDeptMemberActionForm" type="com.wkmk.sys.web.form.SysUnitDeptMemberActionForm" />
+  		<form-bean name="sysUnitInfoActionForm" type="com.wkmk.sys.web.form.SysUnitInfoActionForm" />
+  		<form-bean name="sysUserInfoActionForm" type="com.wkmk.sys.web.form.SysUserInfoActionForm" />
+  		<form-bean name="sysUserInfoDetailActionForm" type="com.wkmk.sys.web.form.SysUserInfoDetailActionForm" />
+  		<form-bean name="sysUserLogActionForm" type="com.wkmk.sys.web.form.SysUserLogActionForm" />
+  		<form-bean name="sysUserRoleActionForm" type="com.wkmk.sys.web.form.SysUserRoleActionForm" />
+  		<form-bean name="sysImageUploadActionForm" type="com.wkmk.sys.web.form.SysImageUploadActionForm" />
+  		<form-bean name="sysUserTeachingActionForm" type="com.wkmk.sys.web.form.SysUserTeachingActionForm" />
+  		<form-bean name="sysAreaInfoActionForm" type="com.wkmk.sys.web.form.SysAreaInfoActionForm" />
+  		<form-bean name="sysUserAttentionActionForm" type="com.wkmk.sys.web.form.SysUserAttentionActionForm" />
+  	    <form-bean name="sysUmsUnitUserInfoActionForm" type="com.wkmk.sys.web.form.SysUmsUnitUserInfoActionForm" />
+  	    <form-bean name="sysUserMoneyActionForm" type="com.wkmk.sys.web.form.SysUserMoneyActionForm" />
+  	    <form-bean name="sysUserPayActionForm" type="com.wkmk.sys.web.form.SysUserPayActionForm" />
+  	    <form-bean name="sysUserPayTradeActionForm" type="com.wkmk.sys.web.form.SysUserPayTradeActionForm" />
+  	    <form-bean name="sysMessageInfoActionForm" type="com.wkmk.sys.web.form.SysMessageInfoActionForm" />
+  	    <form-bean name="sysUserSearchKeywordsActionForm" type="com.wkmk.sys.web.form.SysUserSearchKeywordsActionForm" />
+  	    <form-bean name="sysSmsInfoActionForm" type="com.wkmk.sys.web.form.SysSmsInfoActionForm" />
+  	    <form-bean name="sysPayPasswordActionForm" type="com.wkmk.sys.web.form.SysPayPasswordActionForm" />
+  	    <form-bean name="sysMessageUserActionForm" type="com.wkmk.sys.web.form.SysMessageUserActionForm" />
+  	    <form-bean name="sysTeacherQualificationActionForm" type="com.wkmk.sys.web.form.SysTeacherQualificationActionForm" />
+  	    <form-bean name="sysUserComplaintActionForm" type="com.wkmk.sys.web.form.SysUserComplaintActionForm" />
+  	    <form-bean name="sysPaymentAccountActionForm" type="com.wkmk.sys.web.form.SysPaymentAccountActionForm" />
+  	    <form-bean name="sysUserGiveMoneyActionForm" type="com.wkmk.sys.web.form.SysUserGiveMoneyActionForm" />
+  	    <form-bean name="sysUserGiveMoneyActivityActionForm" type="com.wkmk.sys.web.form.SysUserGiveMoneyActivityActionForm" />
+  	    <form-bean name="sysUserDisableActionForm" type="com.wkmk.sys.web.form.SysUserDisableActionForm" />
+  	</form-beans>
+  	<global-forwards>
+  		<forward name="failure" path="/sys/comm/failure.jsp" contextRelative="true"/>
+    	<forward name="success" path="/sys/comm/success.jsp" contextRelative="true"/>
+    	<forward name="close" path="/sys/comm/close.jsp" contextRelative="true"/>
+  	</global-forwards>
+  	<action-mappings>
+  	    <action path="/fileUploadAction" scope="request" type="com.util.action.FileUploadAction" validate="false"/>
+  	    <action path="/exportArea" scope="request" type="com.wkmk.util.action.ExportAreaAction" validate="false"/>
+  	    <action path="/newXml" scope="request" type="com.wkmk.util.action.NewAnalysisXmlAction" validate="false" />
+  	    <action path="/Xml" scope="request" type="com.wkmk.util.action.AnalysisXmlAction" validate="false" />
+  	    <action path="/analysisPaperXml" scope="request" type="com.wkmk.util.action.AnalysisPaperXmlAction" validate="false" />
+  	    <action path="/vurl" scope="request" type="com.wkmk.util.action.VideoUrlAction" validate="false"/>
+  	    <action path="/sysUserAttentionAction" type="com.wkmk.sys.web.action.SysUserAttentionAction" scope="request" validate="false" parameter="method"/>
+    	<action path="/qrcodeToolsAction" type="com.wkmk.util.action.QrcodeToolsAction" scope="request" validate="false" parameter="method">
+      		<forward name="edit" contextRelative="true" path="/sys/qrcode/edit.jsp"/>
+    	</action>
+    	<action path="/admin" type="com.wkmk.sys.web.action.SysAdminLoginAction" scope="request" validate="false">
+      		<forward name="index" contextRelative="true" path="/sys/login/login.jsp"/>
+      		<forward name="index1" contextRelative="true" path="/sys/login1/login.jsp"/>
+    	</action>
+    	<action path="/switchAction" type="com.util.action.SwitchAction" scope="request" parameter="method">
+      		<forward name="sorry" contextRelative="true" path="/sys/comm/sorry.jsp"/>
+    	</action>
+		<action path="/sysUserLoginAction" name="sysUserInfoActionForm" type="com.wkmk.sys.web.action.SysUserLoginAction" scope="request" validate="false" parameter="method">
+      		<forward name="relogin" contextRelative="true" path="/sys/login/login.jsp"/>
+      		<forward name="relogin1" contextRelative="true" path="/sys/login1/login.jsp"/>
+      		<forward name="manager" contextRelative="true" path="/main.action" redirect="true"/>
+      		<forward name="index" contextRelative="true" path="/index.html" redirect="true"/>
+    	</action>
+    	<action path="/main" type="com.wkmk.sys.web.action.SysFrameAction" scope="request" validate="false">
+      		<forward name="main" contextRelative="true" path="/sysLayoutAction.do?method=main"/>
+    	</action>
+    	<action path="/sysLayoutAction" type="com.wkmk.sys.web.action.SysLayoutAction" scope="request" parameter="method" validate="false">
+      		<forward name="main" contextRelative="true" path="/sys/layout/main.jsp"/>
+      		<forward name="left" contextRelative="true" path="/sys/layout/left.jsp"/>
+      		<forward name="right" contextRelative="true" path="/sys/layout/right.jsp"/>
+      		<forward name="welcome" contextRelative="true" path="/sys/layout/welcome.jsp"/>
+      		<forward name="welcome0" contextRelative="true" path="/sys/layout/welcome0.jsp"/>
+    	</action>
+    	<action name="sysImageUploadActionForm" parameter="method" path="/sysImageUploadAction" scope="request" type="com.wkmk.sys.web.action.SysImageUploadAction" validate="false">
+			<forward contextRelative="true" name="uploadimage" path="/sys/upload/upload_image.jsp"/>
+			<forward contextRelative="true" name="uploadimagedeal" path="/sys/upload/upload_image_deal.jsp"/>
+   		</action>
+		<action name="sysKeywordFilterActionForm" parameter="method" path="/sysKeywordFilterAction" scope="request" type="com.wkmk.sys.web.action.SysKeywordFilterAction" validate="false">
+			<forward contextRelative="true" name="edit" path="/sys/keyword/keyword_filter_edit.jsp"/>
+		</action>
+		<action name="sysModuleInfoActionForm" parameter="method" path="/sysModuleInfoAction" scope="request" type="com.wkmk.sys.web.action.SysModuleInfoAction" validate="false">
+			<forward contextRelative="true" name="productlist" path="/sys/module/product_list.jsp"/>
+			<forward contextRelative="true" name="list" path="/sys/module/module_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/sys/module/module_edit.jsp"/>
+			<forward contextRelative="true" name="main" path="/sys/module/module_main.jsp"/>
+			<forward contextRelative="true" name="tree" path="/sys/module/module_tree.jsp"/>
+		</action>
+		<action name="sysProductInfoActionForm" parameter="method" path="/sysProductInfoAction" scope="request" type="com.wkmk.sys.web.action.SysProductInfoAction" validate="false">
+			<forward contextRelative="true" name="list" path="/sys/product/product_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/sys/product/product_edit.jsp"/>
+		</action>
+		<action name="sysRoleInfoActionForm" parameter="method" path="/sysRoleInfoAction" scope="request" type="com.wkmk.sys.web.action.SysRoleInfoAction" validate="false">
+			<forward contextRelative="true" name="list" path="/sys/role/role_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/sys/role/role_edit.jsp"/>
+		</action>
+		<action name="sysRoleModuleActionForm" parameter="method" path="/sysRoleModuleAction" scope="request" type="com.wkmk.sys.web.action.SysRoleModuleAction" validate="false">
+			<forward contextRelative="true" name="main" path="/sys/role/rolemodule_main.jsp"/>
+			<forward contextRelative="true" name="frame" path="/sys/role/rolemodule_frame.jsp"/>
+		</action>
+		<action name="sysUnitDeptActionForm" parameter="method" path="/sysUnitDeptAction" scope="request" type="com.wkmk.sys.web.action.SysUnitDeptAction" validate="false">
+			<forward contextRelative="true" name="list" path="/sys/dept/dept_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/sys/dept/dept_edit.jsp"/>
+			<forward contextRelative="true" name="main" path="/sys/dept/dept_main.jsp"/>
+			<forward contextRelative="true" name="tree" path="/sys/dept/dept_tree.jsp"/>
+		</action>
+		<action name="sysUnitDeptMemberActionForm" parameter="method" path="/sysUnitDeptMemberAction" scope="request" type="com.wkmk.sys.web.action.SysUnitDeptMemberAction" validate="false">
+			<forward contextRelative="true" name="main" path="/sys/dept/deptmember_main.jsp"/>
+			<forward contextRelative="true" name="outmember" path="/sys/dept/deptmember_outmember.jsp"/>
+			<forward contextRelative="true" name="inmember" path="/sys/dept/deptmember_inmember.jsp"/>
+			<forward contextRelative="true" name="deptmain" path="/sys/dept/userdept_main.jsp"/>
+			<forward contextRelative="true" name="frame" path="/sys/dept/userdept_frame.jsp"/>
+		</action>
+		<action name="sysUnitInfoActionForm" parameter="method" path="/sysUnitInfoAction" scope="request" type="com.wkmk.sys.web.action.SysUnitInfoAction" validate="false">
+			<forward contextRelative="true" name="list" path="/sys/unit/unit_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/sys/unit/unit_edit.jsp"/>
+			<forward contextRelative="true" name="editself" path="/sys/unit/unitself_edit.jsp"/>
+			<forward contextRelative="true" name="seoedit" path="/sys/unit/unitseo_edit.jsp"/>
+		</action>
+		<action name="sysUserInfoActionForm" parameter="method" path="/sysUserInfoAction" scope="request" type="com.wkmk.sys.web.action.SysUserInfoAction" validate="false">
+			<forward contextRelative="true" name="list" path="/sys/user/user_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/sys/user/user_edit.jsp"/>
+			<forward contextRelative="true" name="editself" path="/sys/user/userself_edit.jsp"/>
+			<forward contextRelative="true" name="modifypassword" path="/sys/user/password_modify.jsp"/>
+			<forward contextRelative="true" name="batchadduserinfo" path="/sys/user/batchadduserinfo_edit.jsp"/>
+			<forward contextRelative="true" name="batchsuccess" path="/sys/user/batch_success.jsp"/>
+		</action>
+		<action name="sysUserInfoActionForm" parameter="method" path="/sysUserInfoCheckAction" scope="request" type="com.wkmk.sys.web.action.SysUserInfoCheckAction" validate="false">
+			<forward contextRelative="true" name="list" path="/sys/user/usercheck_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/sys/user/usercheck_edit.jsp"/>
+			<forward contextRelative="true" name="dellist" path="/sys/user/userdel_list.jsp"/>
+		</action>
+		<action name="sysUserLogActionForm" parameter="method" path="/sysUserLogAction" scope="request" type="com.wkmk.sys.web.action.SysUserLogAction" validate="false">
+			<forward contextRelative="true" name="list" path="/sys/log/log_list.jsp"/>
+		</action>
+		<action name="sysUserRoleActionForm" parameter="method" path="/sysUserRoleAction" scope="request" type="com.wkmk.sys.web.action.SysUserRoleAction" validate="false">
+			<forward contextRelative="true" name="main" path="/sys/role/roleuser_main.jsp"/>
+			<forward contextRelative="true" name="outroleuser" path="/sys/role/roleuser_outrole.jsp"/>
+			<forward contextRelative="true" name="inroleuser" path="/sys/role/roleuser_inrole.jsp"/>
+			<forward contextRelative="true" name="rolemain" path="/sys/role/userrole_main.jsp"/>
+			<forward contextRelative="true" name="frame" path="/sys/role/userrole_frame.jsp"/>
+		</action>
+		<action name="sysRoleInfoActionForm" parameter="method" path="/sysAdminRoleInfoAction" scope="request" type="com.wkmk.sys.web.action.SysAdminRoleInfoAction" validate="false">
+			<forward contextRelative="true" name="list" path="/sys/admin/role_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/sys/admin/role_edit.jsp"/>
+		</action>
+		<action name="sysRoleModuleActionForm" parameter="method" path="/sysAdminRoleModuleAction" scope="request" type="com.wkmk.sys.web.action.SysAdminRoleModuleAction" validate="false">
+			<forward contextRelative="true" name="main" path="/sys/admin/rolemodule_main.jsp"/>
+			<forward contextRelative="true" name="frame" path="/sys/admin/rolemodule_frame.jsp"/>
+		</action>
+		<action name="sysUserRoleActionForm" parameter="method" path="/sysAdminUserRoleAction" scope="request" type="com.wkmk.sys.web.action.SysAdminUserRoleAction" validate="false">
+			<forward contextRelative="true" name="main" path="/sys/admin/roleuser_main.jsp"/>
+			<forward contextRelative="true" name="outroleuser" path="/sys/admin/roleuser_outrole.jsp"/>
+			<forward contextRelative="true" name="inroleuser" path="/sys/admin/roleuser_inrole.jsp"/>
+		</action>
+		<action name="sysUserTeachingActionForm" parameter="method" path="/sysUserTeachingAction" scope="request" type="com.wkmk.sys.web.action.SysUserTeachingAction" validate="false">
+			<forward contextRelative="true" name="edit" path="/sys/teaching/teaching_edit.jsp"/>
+		</action>
+		<action name="sysAreaInfoActionForm" parameter="method" path="/sysAreaInfoAction" scope="request" type="com.wkmk.sys.web.action.SysAreaInfoAction" validate="false">
+			<forward contextRelative="true" name="beforeimport" path="/sys/area/import.jsp"/>
+		</action>
+		<action name="sysUnitInfoActionForm" parameter="method" path="/sysUmsUnitInfoAction" scope="request" type="com.wkmk.sys.web.action.SysUmsUnitInfoAction" validate="false">
+			<forward contextRelative="true" name="list" path="/sys/ums/unit_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/sys/ums/unit_edit.jsp"/>
+		</action>
+		<action name="sysUserInfoActionForm" parameter="method" path="/sysUmsUserInfoAction" scope="request" type="com.wkmk.sys.web.action.SysUmsUserInfoAction" validate="false">
+			<forward contextRelative="true" name="list" path="/sys/ums/user_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/sys/ums/user_edit.jsp"/>
+			<forward contextRelative="true" name="reportList" path="/sys/ums/report_userlist.jsp"/>
+			<forward contextRelative="true" name="reportUserInfoList" path="/sys/ums/report_userinfolist.jsp"/>
+			<forward contextRelative="true" name="reportUserLogList" path="/sys/ums/report_userloglist.jsp"/>
+			<forward contextRelative="true" name="reportUserMoneyList" path="/sys/ums/report_usermoneylist.jsp"/>
+			<forward contextRelative="true" name="reportUserPayList" path="/sys/ums/report_userpaylist.jsp"/>
+			<forward contextRelative="true" name="statisticalUserInfo" path="/sys/ums/statistical_userinfo.jsp"/>
+			<forward contextRelative="true" name="statisticalUserAdd" path="/sys/ums/statistical_useradd.jsp"/>
+			<forward contextRelative="true" name="statisticalUserLog" path="/sys/ums/statistical_userlog.jsp"/>
+			<forward contextRelative="true" name="statisticalUserMoney" path="/sys/ums/statistical_usermoney.jsp"/>
+			<forward contextRelative="true" name="statisticalUserPay" path="/sys/ums/statistical_userpay.jsp"/>
+			<forward contextRelative="true" name="statisticalPersonalMoney" path="/sys/ums/statistical_personalmoney.jsp"/>
+			<forward contextRelative="true" name="user_import" path="/sys/ums/user_import.jsp"/>
+		    <forward contextRelative="true" name="import_success" path="/sys/ums/userimport_success.jsp"/>
+		</action>
+		<action name="sysUserRoleActionForm" parameter="method" path="/sysUmsUserRoleAction" scope="request" type="com.wkmk.sys.web.action.SysUmsUserRoleAction" validate="false">
+			<forward contextRelative="true" name="frame" path="/sys/ums/userrole_frame.jsp"/>
+		</action>
+		<action name="sysUserInfoActionForm" parameter="method" path="/sysUmsUnitUserInfoAction" scope="request" type="com.wkmk.sys.web.action.SysUmsUnitUserInfoAction" validate="false">
+			<forward contextRelative="true" name="list" path="/sys/ums/unituser_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/sys/ums/unituser_edit.jsp"/>
+		    <forward contextRelative="true" name="school_import" path="/sys/ums/school_import.jsp"/>
+		    <forward contextRelative="true" name="import_success" path="/sys/ums/import_success.jsp"/>
+		</action>
+		<action name="sysUserMoneyActionForm" parameter="method" path="/sysUserMoneyAction" scope="request" type="com.wkmk.sys.web.action.SysUserMoneyAction" validate="false">
+			<forward contextRelative="true" name="list" path="/sys/money/money_list.jsp"/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="sysUserPayActionForm" parameter="method" path="/sysUserPayAction" scope="request" type="com.wkmk.sys.web.action.SysUserPayAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="sysUserPayTradeActionForm" parameter="method" path="/sysUserPayTradeAction" scope="request" type="com.wkmk.sys.web.action.SysUserPayTradeAction" validate="false">
+			<forward contextRelative="true" name="list" path="/sys/pay/payTrade_list.jsp"/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="sysMessageInfoActionForm" parameter="method" path="/sysMessageInfoAction" scope="request" type="com.wkmk.sys.web.action.SysMessageInfoAction" validate="false">
+			<forward contextRelative="true" name="list" path="/sys/message/message_list.jsp"/>
+			<forward contextRelative="true" name="main" path="/sys/message/message_main.jsp"/>
+			<forward contextRelative="true" name="tree" path="/sys/message/message_tree.jsp"/>
+			<forward contextRelative="true" name="userlist" path="/sys/message/user_list.jsp"/>
+			<forward contextRelative="true" name="sendcontacts" path="/sys/message/send_contacts.jsp"/>
+			<forward contextRelative="true" name="sendgroup" path="/sys/message/send_group.jsp"/>
+			<forward contextRelative="true" name="detail" path="/sys/message/message_detail.jsp"/>
+			<forward contextRelative="true" name="messageuserlist" path="/sys/message/message_user_list.jsp"/>
+		</action>
+		<action name="sysUserSearchKeywordsActionForm" parameter="method" path="/sysUserSearchKeywordsAction" scope="request" type="com.wkmk.sys.web.action.SysUserSearchKeywordsAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="sysSmsInfoActionForm" parameter="method" path="/sysSmsInfoAction" scope="request" type="com.wkmk.sys.web.action.SysSmsInfoAction" validate="false">
+			<forward contextRelative="true" name="list" path="/sys/sms/smslist.jsp"/>
+			<forward contextRelative="true" name="detail" path="/sys/sms/sms_detail.jsp"/>
+		</action>
+		<action name="sysPayPasswordActionForm" parameter="method" path="/sysPayPasswordAction" scope="request" type="com.wkmk.sys.web.action.SysPayPasswordAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="sysMessageUserActionForm" parameter="method" path="/sysMessageUserAction" scope="request" type="com.wkmk.sys.web.action.SysMessageUserAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="sysTeacherQualificationActionForm" parameter="method" path="/sysTeacherQualificationAction" scope="request" type="com.wkmk.sys.web.action.SysTeacherQualificationAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path="/sys/teacherqualific/teacherqualific_edit.jsp"/>
+			<forward contextRelative="true" name="checklist" path="/sys/teacherqualific/teacherqualificcheck_list.jsp"/>
+			<forward contextRelative="true" name="checkedit" path="/sys/teacherqualific/teacherqualificcheck_edit.jsp"/>
+			<forward contextRelative="true" name="beforeUpdateTwo" path="/sys/teacherqualific/teacherqualifictwo_edit.jsp"/>
+			<forward contextRelative="true" name="view" path="/sys/teacherqualific/teacherqualific_view.jsp"/>
+		</action>
+		<action name="sysUserComplaintActionForm" parameter="method" path="/sysUserComplaintAction" scope="request" type="com.wkmk.sys.web.action.SysUserComplaintAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="sysPaymentAccountActionForm" parameter="method" path="/sysPaymentAccountAction" scope="request" type="com.wkmk.sys.web.action.SysPaymentAccountAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="sysUserGiveMoneyActionForm" parameter="method" path="/sysUserGiveMoneyAction" scope="request" type="com.wkmk.sys.web.action.SysUserGiveMoneyAction" validate="false">
+			<forward contextRelative="true" name="list" path=""/>
+			<forward contextRelative="true" name="edit" path=""/>
+		</action>
+		<action name="sysUserGiveMoneyActivityActionForm" parameter="method" path="/sysUserGiveMoneyActivityAction" scope="request" type="com.wkmk.sys.web.action.SysUserGiveMoneyActivityAction" validate="false">
+			<forward contextRelative="true" name="list" path="/sys/givemoneyactivity/givemoneyactivity_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/sys/givemoneyactivity/givemoneyactivity_edit.jsp"/>
+		</action>
+		<action name="sysUserDisableActionForm" parameter="method" path="/sysUserDisableAction" scope="request" type="com.wkmk.sys.web.action.SysUserDisableAction" validate="false">
+			<forward contextRelative="true" name="list" path="/sys/disable/sysdisable_list.jsp"/>
+			<forward contextRelative="true" name="edit" path="/sys/disable/sysdisable_edit.jsp"/>
+			<forward contextRelative="true" name="view" path="/sys/disable/sysdisable_view.jsp"/>
+			<forward contextRelative="true" name="success" path="/sys/disable/sysdisable_success.jsp"/>
+			<forward contextRelative="true" name="fail" path="/sys/disable/sysdisable_fail.jsp"/>
+		</action>
+  	</action-mappings>
+</struts-config>
