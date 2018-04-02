@@ -56,9 +56,23 @@
 		</tr>
 	</table>
 </div>
+<div class="box_tool_min padding_top2 padding_bottom2 padding_right0">
+	<div class="center">
+	<div class="left">
+	<div class="right">
+		<div class="padding_top5 padding_left10">
+		<a href="javascript:;" onclick="exportOrders()"><span class="icon_export">导出订单</span></a>
+		<div class="clear"></div>
+		</div>
+	</div>		
+	</div>	
+	</div>
+	<div class="clear"></div>
+</div>
 <div id="scrollContent" >
 	<table class="tableStyle" useClick="false" useCheckBox="true" sortMode="true">
 		<tr>
+			<th width="25"></th>
 			<th class="ali02" width="20">序号</th>
 			<th class="ali02"><span onclick="sortHandler('username')" id="span_username">订购教材名称</span></th>
 			<!-- <th class="ali02" width="50"><span onclick="sortHandler('userip')" id="span_userip">单价</span></th> -->
@@ -69,6 +83,7 @@
 			<th class="ali02" width="70"><span onclick="sortHandler('paytype')" id="span_paytype">收件人姓名</span></th>
 			<th class="ali02" width="90"><span onclick="sortHandler('state')" id="span_state">收件人电话</span></th>
 			<th class="ali02" width="50"><span onclick="sortHandler('isdelivery')" id="span_isdelivery">发货状态</span></th>
+			<th class="ali02" width="100"><span onclick="sortHandler('createdate')" id="span_createdate">订购日期</span></th>
 			<th class="ali02" width="50">操作</th>
 		</tr>
 		<!--循环列出所有数据-->
@@ -87,6 +102,7 @@
 					userInfo = (SysUserInfo)obj[2];
 			%>
 		<tr>
+			<td><input type="checkbox" name="checkid" value="<%=bookBuy.getTextbookbuyid() %>"/></td>
 			<td class="ali02"><%=i+1%></td>
 			<td class="ali02"><%=bookInfo.getTextbookname() %></td>
 			<%-- <td class="ali02"><%=bookInfo.getPrice() %></td> --%>
@@ -103,6 +119,7 @@
 				 已发货
 			<%} %>
 			</td>
+			<td class="ali02"><%=bookBuy.getCreatedate() %></td>
 			<td class="ali02">
 				<div class="img_edit0 hand" title="修改" onclick="editThisRecord('tkTextBookBuyAction.do','<%=bookBuy.getTextbookbuyid() %>')"></div>
 			</td>
@@ -134,6 +151,24 @@
 	    document.pageForm.action = '/tkTextBookBuyAction.do?method=list';
    		document.pageForm.submit();
 	
+	}
+	
+	//教材订购记录导出excel
+	function exportOrders(){
+		var id = document.getElementsByName('checkid');
+	    var value = new Array();
+	    for(var i = 0; i < id.length; i++){
+	     if(id[i].checked)
+	     value.push(id[i].value);
+	    } 
+		if("" == value.toString()){
+			alert("至少选择一个订购记录进行导出！")
+			return false;
+		}
+		console.log(value.toString());
+		
+	    document.pageForm.action = '/tkTextBookBuyAction.do?method=exportOrders&idArray='+value.toString();
+		document.pageForm.submit();
 	}
 </script>
 </body>

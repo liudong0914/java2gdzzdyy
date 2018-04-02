@@ -60,6 +60,7 @@ public interface TkTextBookBuyManager {
 	 */
 	public List getTkTextBookBuys (List<SearchModel> condition, String orderby, int pagesize);
 
+	public List getTkTextBookBuys(String textbookbuyids,String sorderindex);
 	/**
 	 *获取一页教材基本信息表集合
 	 *@param start int

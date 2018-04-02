@@ -90,6 +90,22 @@ public class TkTextBookBuyManagerImpl implements TkTextBookBuyManager{
 	public List getTkTextBookBuys(List<SearchModel> condition,String orderby,int pagesize){
 		return baseDAO.getObjects("TkTextBookBuy",condition,orderby,pagesize);
 	}
+	
+	public List getTkTextBookBuys(String textbookbuyids,String sorderindex) {
+		String sql = "select a,b,c from TkTextBookBuy as a,TkTextBookInfo as b,SysUserInfo as c where a.textbookid=b.textbookid and a.buyuserid=c.userid and a.status='1'";
+		if (textbookbuyids != null && textbookbuyids.trim().length() > 0) {
+			sql += " and a.textbookbuyid in (" + textbookbuyids +")";
+		}
+		if (sorderindex != null && sorderindex.trim().length() > 0) {
+			sql += " order by " + sorderindex;
+		}
+		List list = baseDAO.getObjects(sql);
+		if (list != null && list.size() > 0) {
+			return  list;
+		} else {
+			return null;
+		}
+	}
 
 	/**
 	 *获取一页教材基本信息表集合
