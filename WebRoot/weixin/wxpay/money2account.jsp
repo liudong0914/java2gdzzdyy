@@ -67,7 +67,7 @@ function pay(){
    	    	    $.ajax({
    	    	    	type:"post",
    	    	       	url:"/wxpay/weixinPay.app?method=getPrepayid",
-   	    	       	data:"tradetype=1&money=" + money + "&openid=${openid}&userid=${userid}&body=进步学堂在线充值&timestamp=<%=jsticket.get("timestamp") %>&nonce_str=<%=jsticket.get("nonceStr") %>&activityid=${moneyActivity.activityid }",
+   	    	       	data:"tradetype=1&money=" + money + "&openid=${openid}&userid=${userid}&body=广东省中职德育云平台在线充值&timestamp=<%=jsticket.get("timestamp") %>&nonce_str=<%=jsticket.get("nonceStr") %>&activityid=${moneyActivity.activityid }",
    	    	       	async: false,
    	    	       	success:function(msg){
    	    	       		//ajax返回消息后，可以去掉蒙板

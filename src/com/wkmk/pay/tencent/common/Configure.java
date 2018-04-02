@@ -12,13 +12,13 @@ public class Configure {
 	// 收到API的返回的时候也要用这个key来对返回的数据算下签名，跟API的Sign数据进行比较，如果值不一致，有可能数据被第三方给篡改
 
 	//API密钥【手动填写，生成规则：APPID进行md5加密】
-	private static String key = "2d6053c9125fa4f92b2df49f90ac4472";
+	private static String key = "7a3e156187e78e24a4972f52d8f3729e";
 
 	//微信分配的公众号ID（开通公众号之后可以获取到）
-	private static String appID = "wx0d1caac7050b1b62";
+	private static String appID = "wx0a2fa099dccffdc9";
 
 	//微信支付分配的商户号ID（开通公众号的微信支付功能之后可以获取到）
-	private static String mchID = "1443520102";
+	private static String mchID = "1501013911";
 
 	//受理模式下给子商户分配的子商户号
 	private static String subMchID = "";
@@ -40,7 +40,7 @@ public class Configure {
 	public static final String UNIFIED_ORDER_API = "https://api.mch.weixin.qq.com/pay/unifiedorder";
 	
 	//统一下单接口回调地址
-	public static final String NOTIFY_URL = "http://www.hxnlmooc.com/payWxpayNotifyAction.do";
+	public static final String NOTIFY_URL = "http://yun.gdzzdy.cn/payWxpayNotifyAction.do";
 
 	public static boolean isUseThreadToDoReport() {
 		return useThreadToDoReport;

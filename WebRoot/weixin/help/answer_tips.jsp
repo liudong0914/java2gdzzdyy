@@ -157,7 +157,7 @@ wx.ready(function(){
 <p class="password_p password_p01" style="padding-right:10px;">
 尊敬的[${sysUserInfo.username }]老师，您好！
 </br></br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为了保障学生的利益，同时也为了保障您个人的利益，在线回答学生提问挣得学币（学币可提现），需要在进步学堂平台经过教师资格在线认证通过后，方可回答问题。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为了保障学生的利益，同时也为了保障您个人的利益，在线回答学生提问挣得学币（学币可提现），需要在广东省中职德育云平台平台经过教师资格在线认证通过后，方可回答问题。
 </br></br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请通过电脑访问网址<%=MpUtil.HOMEPAGE %>/plogin.do?method=cert&key=${key }进行教师资格在线认证，认证地址有效期为5分钟，如失效请重新获取。
 </p> 

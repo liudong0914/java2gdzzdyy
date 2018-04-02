@@ -17,7 +17,7 @@ public class MailSender{
 	
 	public MailSender(){
 		try {
-			this.sender = new InternetAddress(MimeUtility.encodeText("进步学堂技术服务")+"<service@wkmk.com>").toString();
+			this.sender = new InternetAddress(MimeUtility.encodeText("广东省中职德育云平台技术服务")+"<service@wkmk.com>").toString();
 			this.javaMailSenderImpl = new JavaMailSenderImpl();
 			this.javaMailSenderImpl.setHost("smtp.exmail.qq.com");
 			

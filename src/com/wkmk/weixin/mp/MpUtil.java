@@ -51,21 +51,14 @@ import com.wkmk.weixin.bo.MpMessageInfoText;
 import com.wkmk.weixin.bo.MpMessageInfoVoice;
 
 public class MpUtil {
-	//测试微信公众号配置,师科作业宝：APPSECRET,TOKEN,HOMEPAGE
-//	public static final String APPID = "wx1acfb7045a4747f3";
-//	public static final String APPSECRET = "9e67f186469b53c4a8a2b1bc860c53b0";
-//	public static final String TOKEN = "wkmk";
-//	public static final String APPNAME = "师科作业宝";
-//	public static final String APPSNAME = "师科作业宝";
-//	public static final String HOMEPAGE = "http://school2.javadev.cn";
-	
-	//成功力-职业课程学习平台
-	public static final String APPID = "wx0d1caac7050b1b62";
-	public static final String APPSECRET = "6c61f7bcdd120505f2ce1d5563a34ba1";
-	public static final String TOKEN = "mooc";
-	public static final String APPNAME = "职业课程学习平台";
-	public static final String APPSNAME = "职业课程学习平台";
-	public static final String HOMEPAGE = "http://www.hxnlmooc.com";
+
+	//广东省中职德育云平台
+	public static final String APPID = "wx0a2fa099dccffdc9";
+	public static final String APPSECRET = "6dccce6c54d1af5b7714ea465f4e4b01";
+	public static final String TOKEN = "dyyun";
+	public static final String APPNAME = "广东省中职德育云平台";
+	public static final String APPSNAME = "广东省中职德育云平台";
+	public static final String HOMEPAGE = "http://yun.gdzzdy.cn";
 	
 	/**
 	 * 获取用户id
@@ -1200,7 +1193,7 @@ public class MpUtil {
 //		System.out.println(DES.getEncryptPwd("6"));  //8D956DFA61F0A037      学生
 //		System.out.println(DES.getEncryptPwd("25"));  //00034694A3E9BC20  老师
 //		System.out.println(MD5.getEncryptPwd("123456"));
-		String encryptPwd = MD5.getEncryptPwd("123456");
+		String encryptPwd = MD5.getEncryptPwd("wx0a2fa099dccffdc9");
 		System.out.println(encryptPwd);
 		
 		//String access_token = MpUtil.getAccessToken(MpUtil.APPID, MpUtil.APPSECRET);

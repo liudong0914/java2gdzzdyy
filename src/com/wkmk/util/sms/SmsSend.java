@@ -7,18 +7,15 @@ import org.apache.commons.httpclient.methods.PostMethod;
 public class SmsSend {
 	
 	/*
-	 *公司测试账号
 	 *http://sms.webchinese.cn/User/?action=sms
-	 *账号：北京成功合力   密码84650630
-	 *子账号：jbxt      密码84650630
 	 */
 	public static boolean send(String mobile, String content) {
 		try {
 			HttpClient client = new HttpClient();
-			PostMethod post = new PostMethod("http://gbk.sms.webchinese.cn");
+			PostMethod post = new PostMethod("http://gbk.api.smschinese.cn");
 			post.addRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=gbk");
-			NameValuePair[] data = { new NameValuePair("Uid", "jbxt"),
-					new NameValuePair("Key", "eb179491669eed90c5a1"),
+			NameValuePair[] data = { new NameValuePair("Uid", "gdzzdy"),
+					new NameValuePair("Key", "d41d8cd98f00b204e980"),//暂时屏蔽，等中德申请短信平台账号
 					new NameValuePair("smsMob", mobile),
 					new NameValuePair("smsText", content) };
 			post.setRequestBody(data);
@@ -44,7 +41,7 @@ public class SmsSend {
 	}
 
 	public static void main(String[] args) throws Exception {
-		SmsSend.send("15201212201", "申请修改支付密码，验证码:127128(5分钟内有效)，如非本人操作请忽略。"); 
+		SmsSend.send("13716692817", "申请修改支付密码，验证码:127128(5分钟内有效)，如非本人操作请忽略。"); 
 	}
 
 }

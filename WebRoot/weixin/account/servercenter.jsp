@@ -33,8 +33,8 @@
     <p class="service_p">联系地址：北京市东城区安定门外大街138号皇城国际中心B座806室</p>
     <p class="service_p service_p01">上班时间：08:00 ~ 17:00（工作日）</p>
      -->
-    <p class="service_p">公司名称：北京成功合力文化发展有限公司</p>
+    <p class="service_p">组织名称：广东省中等职业学校德育研究会</p>
 </div>
-<div class="service_bottom">Copyright © 2016-<%=DateTime.getDateYear() %></div>
+<div class="service_bottom">Copyright © 2017-<%=DateTime.getDateYear() %></div>
 </body>
 </html>

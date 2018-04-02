@@ -420,7 +420,7 @@ function strlen(str) {
  <div class="wk_buy">
         <a class="wk_buy_a" onclick="closeQuestionPay()"></a> 
         <p class="wk_buy_p">请输入支付密码</p>    
-        <p class="wk_buy_p2">进步学堂</p> 
+        <p class="wk_buy_p2">广东省中职德育云平台</p> 
         <p class="wk_buy_p3">¥<span id="price"></span><span style="font-size:12px;">(学币)</span></p> 	
         <p class="wk_buy_p4">余额：${sysUserInfo.money }(学币)<span style="font-size:14px;text-align:right;float:right;padding-right:10px;color:#0000ff;text-decoration:underline;" onclick="wxpay()">微信在线支付</span></p>
         <p class="wk_buy_p" id="yebz" style="display:none;color:#00aa00;text-decoration:underline;cursor:pointer;" onclick="recharge()">余额不足，去充值</p>
@@ -703,7 +703,7 @@ function wxpay(){
    	    	    $.ajax({
    	    	    	type:"post",
    	    	       	url:"/wxpay/weixinPay.app?method=getPrepayid",
-   	    	       	data:"tradetype=4&money=" + money + "&questionid=${payid }&openid=${openid}&userid=${userid}&body=支付进步学堂在线答疑提问&timestamp=<%=jsticket.get("timestamp") %>&nonce_str=<%=jsticket.get("nonceStr") %>",
+   	    	       	data:"tradetype=4&money=" + money + "&questionid=${payid }&openid=${openid}&userid=${userid}&body=支付广东省中职德育云平台在线答疑提问&timestamp=<%=jsticket.get("timestamp") %>&nonce_str=<%=jsticket.get("nonceStr") %>",
    	    	       	async: false,
    	    	       	success:function(msg){
    	    	       		//ajax返回消息后，可以去掉蒙板

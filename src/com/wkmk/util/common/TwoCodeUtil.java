@@ -188,7 +188,7 @@ public class TwoCodeUtil {
 		if (!FileUtil.isExistDir(filepath)) {
 			FileUtil.creatDir(filepath);
 		}
-		String url = "http://www.hxnlmooc.com/twoCode.app?qrcodeno=" + twocodeno;
+		String url = MpUtil.HOMEPAGE + "/twoCode.app?qrcodeno=" + twocodeno;
 		ZXingUtil.encodeQRCodeImage(url, null, filepath, 300, 300, null);
 		return twocodepath;
 	}

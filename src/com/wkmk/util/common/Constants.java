@@ -13,7 +13,7 @@ public class Constants {
 	//产品版本号规范标记：当前版本号_时间，如：V1.0.0.1_20170227130000
 	public static final String PRODUCT_VERSION = "V1.0.0.0";
 	
-	public static final String PRODUCT_NAME = "职业核心能力课程平台";
+	public static final String PRODUCT_NAME = "广东省中职德育云平台";
 	
 	// 对象类型
 	public static final Integer DEFAULT_UNITID = 1;

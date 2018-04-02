@@ -19,9 +19,7 @@ window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appi
 <div id="container">
 	<div class="container_welcome">
     	<div class="conrainer_welcome_font" style="font-size:14px;">
-        	<p>进步学堂是一款智能化学习平台。进步学堂能够帮助学生实现个性化学习，辅助老师实现智能批改作业，同时可以帮助老师了解到全班每个学习的个性化学习需求，从而进行针对性的教学。</p>
-        	<br />
-			<p>进步学堂的图书，给广大师生提供线上智能平台+线下纸本图书的全新立体式学习模式。</p>
+        	<p>广东省中职德育云平台是一款智能化学习平台。广东省中职德育云平台能够帮助学生实现个性化学习，辅助老师实现智能批改作业，同时可以帮助老师了解到全班每个学习的个性化学习需求，从而进行针对性的教学。</p>
         </div>
     </div>
 	<div class="container_welcome_moble">

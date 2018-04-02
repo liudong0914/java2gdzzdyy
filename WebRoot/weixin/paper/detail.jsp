@@ -82,7 +82,7 @@ wx.ready(function(){
 	
 	//分享到朋友圈
 	wx.onMenuShareTimeline({
-	    title: '${fileinfo.filename}【进步学堂】', // 分享标题
+	    title: '${fileinfo.filename}【广东省中职德育云平台】', // 分享标题
 	    link: '<%=MpUtil.HOMEPAGE %>/weixinPaper.app?method=getPaperFileDetail&userid=${userid}&fileid=${fileinfo.fileid}', // 分享链接
 	    imgUrl: '<%=MpUtil.HOMEPAGE %>/weixin/images/${fileext_img }', // 分享图标
 	    success: function () { 

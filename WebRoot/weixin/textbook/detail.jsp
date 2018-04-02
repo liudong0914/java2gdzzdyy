@@ -31,7 +31,7 @@
    <%--  <p>作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;者：${textBookInfo.author }</p> --%>
     <p>出&nbsp;&nbsp;版&nbsp;&nbsp;社：${textBookInfo.press}</p>
     <p>单&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价：<c:if test="${textBookInfo.price == '0'}">0.00</c:if><c:if test="${textBookInfo.price != '0'}"><fmt:formatNumber type="number" value="${textBookInfo.price }" pattern="#.00"/></c:if></p>
-    <p>折&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;扣：<c:if test="${textBookInfo.discount == '10'}">视数量多少优惠</c:if><c:if test="${textBookInfo.discount != '10'}">${textBookInfo.discount}折</c:if></p>
+    <p>折&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;扣：<c:if test="${textBookInfo.discount == '10'}">原价</c:if><c:if test="${textBookInfo.discount != '10'}">${textBookInfo.discount}折</c:if></p>
     <p>售&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价：<c:if test="${textBookInfo.sellprice == '0'}">0.00</c:if><c:if test="${textBookInfo.sellprice != '0'}"><fmt:formatNumber type="number" value="${textBookInfo.sellprice }" pattern="#.00"/></c:if></p>
     <p class="testpaper_details_p">范围种类：${textBookInfo.type }</p>
     <p class="testpaper_details_p">订购电话：${textBookInfo.phone}</p>

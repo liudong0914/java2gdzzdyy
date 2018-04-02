@@ -24,11 +24,11 @@
 --%>
 <div class="font">
 	<span>请先关注</span>
-    <span class="font_p">“进步学堂”</span>
+    <span class="font_p">“广东省中职德育云平台”</span>
     <span>微信公众号</span>
 </div>
 <div class="code">
-	<img src="/weixin/tip/lmzyb.jpg" />
+	<img src="/weixin/tip/gdzzdyy.jpg" />
     <p>提示：长按二维码图片自动识别</p>
 </div>
 </body>

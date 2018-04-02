@@ -66,7 +66,7 @@ float sellprice = question.getMoney()*Constants.BUY_QUESTION_DISCOUNT/10;
     <div class="wk_buy" >
         <a class="wk_buy_a02"></a> 
         <p class="wk_buy_p">请输入支付密码</p>    
-        <p class="wk_buy_p2">进步学堂</p> 
+        <p class="wk_buy_p2">广东省中职德育云平台</p> 
         <p class="wk_buy_p3"><%=sellprice %><span style="font-size:12px;">(学币)</span></p> 	
         <p class="wk_buy_p4">余额：${sysUserInfo.money }(学币)<span style="font-size:14px;text-align:right;float:right;padding-right:10px;color:#0000ff;text-decoration:underline;" onclick="wxpay()">微信在线支付</span></p>
         <%
@@ -688,7 +688,7 @@ function wxpay(){
 	//点击支付弹出蒙板，避免重复点击
     document.getElementById("div_hidden").style.display = "block";
     
-    var buytitle = "购买进步学堂在线答疑提问解答答案";
+    var buytitle = "购买广东省中职德育云平台在线答疑提问解答答案";
    	wx.checkJsApi({
    	    jsApiList: ['chooseWXPay'], // 需要检测的JS接口列表，所有JS接口列表见附录2,
    	    success: function(res) {

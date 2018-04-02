@@ -37,11 +37,17 @@ public class WeixinMenuAction extends BaseAction {
 			HttpServletRequest request, HttpServletResponse response) {
 		try {
 			String code = request.getParameter("code");
+			System.out.println("code="+code);
 			String accessjson = MpUtil.getAccessTokenByCode(MpUtil.APPID, MpUtil.APPSECRET, code);
+			System.out.println("APPID="+MpUtil.APPID);
+			System.out.println("APPSECRET="+MpUtil.APPSECRET);
+			System.out.println("code="+code);
 			// 根据菜单模式决定跳转页面
 			String keycode = request.getParameter("state");
+			System.out.println("keycode="+keycode);
 			// 获取当前用户微信号
 			String openid = MpUtil.getAccessTokenValue(accessjson, "openid");
+			System.out.println("openid="+openid);
 			if (openid != null && !"".equals(openid)) {
 				//根据openid去取是否绑定用户
 				SysUserAttentionManager suam = (SysUserAttentionManager) getBean("sysUserAttentionManager");

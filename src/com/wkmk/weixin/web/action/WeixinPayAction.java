@@ -222,7 +222,7 @@ public class WeixinPayAction extends BaseAction {
 				model.setState("0");
 				model.setUserid(Integer.valueOf(userid));
 				if("1".equals(tradetype)){
-					model.setSubject("微信充值:进步学堂,订单号:" + out_trade_no);
+					model.setSubject("微信充值:广东省中职德育云平台,订单号:" + out_trade_no);
 					model.setTradetype("1");
 					model.setTradetypeid("0");
 				}else if("5".equals(tradetype)){

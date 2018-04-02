@@ -23,7 +23,7 @@
     <div class="wk_buy" >
         <a class="wk_buy_a"></a> 
         <p class="wk_buy_p">请输入支付密码</p>    
-        <p class="wk_buy_p2">进步学堂</p> 
+        <p class="wk_buy_p2">广东省中职德育云平台</p> 
         <p class="wk_buy_p3" id="a">¥<span style="font-size:12px;"></span></p> 	
         <p class="wk_buy_p4">余额：<fmt:formatNumber type="number" value="${sysUserInfo.money }" pattern="#.00"/><span style="font-size:14px;text-align:right;float:right;padding-right:10px;color:#0000ff;text-decoration:underline;" onclick="wxpay()">微信在线支付</span></p>
         <%
