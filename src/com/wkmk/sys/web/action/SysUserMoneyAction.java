@@ -2,6 +2,7 @@ package com.wkmk.sys.web.action;
 
 import java.util.ArrayList;
 
+import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -9,6 +10,8 @@ import javax.servlet.http.HttpSession;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
+import org.springframework.mail.javamail.MimeMessageHelper;
 
 import com.util.action.BaseAction;
 import com.util.search.PageList;
@@ -19,6 +22,7 @@ import com.wkmk.sys.bo.SysUserMoney;
 import com.wkmk.sys.service.SysUserInfoManager;
 import com.wkmk.sys.service.SysUserMoneyManager;
 import com.wkmk.sys.web.form.SysUserMoneyActionForm;
+import com.wkmk.util.sms.TextBookOrderSenderMailImpl;
 
 /**
  *<p>Description: 用户交易记录</p>
@@ -178,5 +182,43 @@ public class SysUserMoneyAction extends BaseAction {
 			manager.delSysUserMoney(checkids[i]);
 		}
 		return list(actionMapping, actionForm, httpServletRequest, httpServletResponse);
+	}
+	
+	
+	private  void sendMsg(String clientSendString){
+		try {
+			System.out.println("开始发送邮件");
+			
+			TextBookOrderSenderMailImpl mailSender = new TextBookOrderSenderMailImpl();
+			JavaMailSenderImpl senderImpl = mailSender.getJavaMailSenderImpl();
+			
+			// 设定收件人、寄件人、主题与内文
+			MimeMessage mailMessage = senderImpl.createMimeMessage();
+			MimeMessageHelper messageHelper = new MimeMessageHelper(mailMessage, true, "gbk");
+			messageHelper.setFrom(mailSender.getSender());
+			messageHelper.setTo("947390587@qq.com");
+			//messageHelper.setTo("liud@dukeliud.cn");
+			messageHelper.setSubject("(测试数据)教材订购成功，请尽快发货处理！");	
+			
+			messageHelper.setText("<html><head><meta http-equiv=\"Content-Type\" content=\"text/html;charset=gbk\"></head><body>广东省中职德育云平台教材订购成功，请尽快安排教材发货服务。</br>订单数据：</br>" + clientSendString + "</br></body></html>", true);	
+			
+			senderImpl.send(mailMessage);
+		} catch (Exception e) {
+			e.printStackTrace();		
+		}
+	}
+	public ActionForward testMsg(ActionMapping actionMapping,
+			ActionForm actionForm, HttpServletRequest request,
+			HttpServletResponse response) {
+//		sendMsg("教材名称:把立德树人制度化;</br>订购总数:100;</br>订购总价:1000;</br>收件人:张三;</br>收件人电话:13051120665;</br>收件地址:北京市西城区");
+		final String clientSendString = "教材名称:把立德树人制度化;</br>订购总数:100;</br>订购总价:1000;</br>收件人:张三;</br>收件人电话:13051120665;</br>收件地址:北京市西城区";
+		Runnable runnable = new Runnable() {
+			public void run() {
+				sendMsg(clientSendString);
+			}
+		}; 
+		new Thread(runnable).start();
+		System.out.println("测试邮件已发送===========");
+		return null;
 	}
 }

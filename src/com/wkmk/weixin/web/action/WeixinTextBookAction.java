@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -20,6 +21,8 @@ import net.sf.json.JSONObject;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
+import org.springframework.mail.javamail.MimeMessageHelper;
 
 import com.util.action.BaseAction;
 import com.util.date.DateTime;
@@ -46,6 +49,7 @@ import com.wkmk.sys.bo.SysUserAttention;
 import com.wkmk.sys.bo.SysUserInfo;
 import com.wkmk.sys.bo.SysUserLog;
 import com.wkmk.sys.bo.SysUserMoney;
+import com.wkmk.sys.bo.SysUserPayTrade;
 import com.wkmk.sys.service.SysPayPasswordManager;
 import com.wkmk.sys.service.SysUserAttentionManager;
 import com.wkmk.sys.service.SysUserInfoManager;
@@ -70,6 +74,8 @@ import com.wkmk.tk.service.TkTextBookInfoManager;
 import com.wkmk.util.common.CacheUtil;
 import com.wkmk.util.common.Constants;
 import com.wkmk.util.common.IpUtil;
+import com.wkmk.util.sms.TextBookOrderSendMail;
+import com.wkmk.util.sms.TextBookOrderSenderMailImpl;
 import com.wkmk.vwh.bo.VwhFilmInfo;
 import com.wkmk.weixin.mp.MpUtil;
 
@@ -276,6 +282,16 @@ public class WeixinTextBookAction extends BaseAction {
                 result = "ok";
                 
                 addLog(request, title, sysUserInfo);
+                
+                //启动线程，发送通知邮件
+                //sendMsg("教材名称:把立德树人制度化;</br>订购总数:100;</br>订购总价:1000;</br>收件人:张三;</br>收件人电话:13051120665;</br>收件地址:北京市西城区");
+	            final String clientSendString = "教材名称："+textBookInfo.getTextbookname()+";</br>订购总数："+totalnum+";</br>订购总价："+moneyFloat+";</br>收件人："+recipientname+";</br>收件人电话："+recipientphone+";</br>收件地址："+recipientaddress;
+				Runnable runnable = new Runnable() {
+					public void run() {
+						sendMsg(clientSendString);
+					}
+				}; 
+				new Thread(runnable).start();
             }else {
                 //支付密码输入错误
                 SysPayPasswordManager sppm = (SysPayPasswordManager) getBean("sysPayPasswordManager");
@@ -304,6 +320,26 @@ public class WeixinTextBookAction extends BaseAction {
         return null;
     }
     
+	private void sendMsg(String clientSendString){
+		try {
+			TextBookOrderSenderMailImpl mailSender = new TextBookOrderSenderMailImpl();
+			JavaMailSenderImpl senderImpl = mailSender.getJavaMailSenderImpl();
+			
+			// 设定收件人、寄件人、主题与内文
+			MimeMessage mailMessage = senderImpl.createMimeMessage();
+			MimeMessageHelper messageHelper = new MimeMessageHelper(mailMessage, true, "gbk");
+			messageHelper.setFrom(mailSender.getSender());
+			messageHelper.setTo("5471946@qq.com");
+			messageHelper.setSubject("教材订购成功，请尽快发货处理！");	
+			
+			messageHelper.setText("<html><head><meta http-equiv=\"Content-Type\" content=\"text/html;charset=gbk\"></head><body>广东省中职德育云平台教材订购成功，请尽快安排教材发货服务。</br>订单数据：</br>" + clientSendString + "</br></body></html>", true);	
+			
+			senderImpl.send(mailMessage);
+		} catch (Exception e) {
+			e.printStackTrace();		
+		}
+	}
+	
     /*
      * 系统日志记录
      */

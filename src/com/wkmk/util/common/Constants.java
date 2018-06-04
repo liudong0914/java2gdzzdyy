@@ -220,7 +220,7 @@ public class Constants {
 	//龙币活动类型
 	public static String CODETYPE_COURSETYPEID = "coursetypeid";
 	public static String[] CODETYPE_COURSETYPEID_ID = { "1", "2", "3" };
-	public static String[] CODETYPE_COURSETYPEID_NAME = { "院校企业", "退役军人", "医护行业" };
+	public static String[] CODETYPE_COURSETYPEID_NAME = { "名家论坛", "名师讲坛", "名师课堂" };
 	
 	// 允许创建课程
 	public static String CODETYPE_CANADDCOURSE = "canaddcourse";

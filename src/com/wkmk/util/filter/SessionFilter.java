@@ -26,7 +26,7 @@ public class SessionFilter implements Filter {
 		HttpServletResponse httpResponse = (HttpServletResponse) response;
 		
 		String requestURI = httpRequest.getRequestURI().toString();
-	    if(!(requestURI.indexOf("admin.action") != -1 || requestURI.indexOf("plogin.do") != -1 || requestURI.indexOf("sysUserLoginAction.do") != -1 || requestURI.indexOf("vurl.action") != -1 || requestURI.indexOf("clientService.action") != -1 || requestURI.indexOf("appService.action") != -1 || requestURI.indexOf("appWeikeService.action") != -1 || requestURI.indexOf("tkQuestionToolsService.action") != -1 || requestURI.indexOf("payWxpayNotifyAction.do") != -1 || requestURI.indexOf("automationOrder.action") != -1)){
+	    if(!(requestURI.indexOf("admin.action") != -1 || requestURI.indexOf("plogin.do") != -1 || requestURI.indexOf("sysUserLoginAction.do") != -1 || requestURI.indexOf("vurl.action") != -1 || requestURI.indexOf("clientService.action") != -1 || requestURI.indexOf("appService.action") != -1 || requestURI.indexOf("appWeikeService.action") != -1 || requestURI.indexOf("tkQuestionToolsService.action") != -1 || requestURI.indexOf("payWxpayNotifyAction.do") != -1 || requestURI.indexOf("automationOrder.action") != -1|| requestURI.indexOf("textBookOrderSendMail.do") != -1)){
 	    	HttpSession session = httpRequest.getSession();
 	    	if(session.getAttribute("s_userid") == null){
 	    		//不过滤fileUploadAction.do这个是因为在360浏览器中上传报http上传错误，和浏览器权限设置有关，通过此设置可以使其正常。
